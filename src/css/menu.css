@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #00BFFF;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu .menu-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  .menu a {
+    margin-left: 20px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  

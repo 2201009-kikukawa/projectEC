@@ -1,6 +1,28 @@
-<a href="login-input.php">ログイン</a>
-<a href="search.php">検索</a>
-<a href="cart-show.php">カート</a>
-<a href="tsuchi.php">通知</a>
-<a href="mypage.php">マイページ</a>
-<hr>
+<link rel="stylesheet" href="../css/menu.css">
+<div class="footer">
+  <div xmlns="http://www.w3.org/1999/xhtml" style="color: #FFA500; font-family: Inter; font-size: 32px; font-weight: bold;">
+    鮮魚Online🐟
+  </div>
+  <div class="menu">
+    <div class="menu-right">
+      <a href="login-input.php" >ログイン</a>
+      <a href="cart-show.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
+      <img src="../image/cart.png" alt="カート" style="width: 25px; margin-bottom: 5px;">
+      カート
+      </a>
+      <a href="tsuchi.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
+      <img src="../image/beru.png" alt="通知" style="width: 25px; margin-bottom: 5px;">
+        通知
+      </a>
+      <a href="search.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
+        <img src="../image/kensaku.png" alt="検索" style="width: 25px; margin-bottom: 5px;">
+        検索
+      </a>
+      <a href="mypage.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
+      <img src="../image/my.png" alt="検索" style="width: 25px; margin-bottom: 5px;">
+        マイページ
+      </a>
+     
+    </div>
+  </div>
+</div>
