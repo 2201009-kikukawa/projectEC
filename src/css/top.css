@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans');
+
+html, body {
+  height: 100%;
+  background-color: #D0F0FF;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Calligraffitti';
+}
+
+h3 {
+  font-family: 'Open Sans';
+}
+
+.sea {
+    border: none; /* 点線を非表示に */
+  }
+  
+  .LightWaves {
+    animation: lightwaves 2s infinite;
+    position: relative;
+  }
+
+@keyframes lightwaves {
+    0%,100% { transform: translate(0,0); }
+    25%     { transform: translate(5px,5px); transform: scale(1.05); }
+    50%     { transform: translate(25px, 5px); }
+    75%     { transform: translate(12px,10px); transform: scale(1.05); }
+}
+
+.DarkWaves {
+  animation: darkwaves 3.8s infinite;
+}
+
+@keyframes darkwaves {
+    0%,100% { transform: translate(0,0); }
+    25%     { transform: translate(25px, 5px); transform: scale(1.05); }
+    50%     { transform: translate(12px,10px); }
+    75%     { transform: translate(5px,5px); }
+}
+
+.WhiteWaves {
+  animation: whitewaves 4s alternate ease infinite;
+}
+
+@keyframes whitewaves {
+    0% { transform: translate(0,25px); }
+    100%     { transform: translate(25px,35px); }
+}
+
+
+
