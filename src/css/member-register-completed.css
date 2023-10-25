@@ -1,0 +1,29 @@
+.contents-container {
+  margin: 0 auto;
+  width: 60%;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.button-input {
+  display: block;
+  margin: 2rem auto;
+  color: #fff;
+  background: #00BFFF;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.4rem 0.4rem;
+  text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0.4rem;
+}
+
+h3 {
+    text-align: center;
+    margin: 1rem;
+}
