@@ -34,11 +34,9 @@
             <h3 class="required">住所</h3>
             <input type="text" name="register_birthdate" class="form-input" required /><br>
             <h3 class="required">お支払方法の登録</h3>
-            <div class="custom-radio">
-            <input type="radio" name="credit" value="1" />クレジットカード・デビットカード<br />
-            <input type="radio" name="credit" value="2" />コンビニ払い<br />
-            <input type="radio" name="credit" value="3" />携帯払い<br /><br>
-            </div>
+            <input type="radio" name="credit" value="1" class="custom-radio"/>クレジットカード・デビットカード<br />
+            <input type="radio" name="credit" value="2" class="custom-radio"/>コンビニ払い<br />
+            <input type="radio" name="credit" value="3" class="custom-radio"/>携帯払い<br /><br>
             <h3>クレジットを登録されたお客様</h3>
             クレジットカード・デビットカード
             <input type="text" name="credit_name" class="" required /><br /><br>

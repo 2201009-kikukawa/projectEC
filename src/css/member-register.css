@@ -16,7 +16,6 @@ h1{
     width: 60%;
     padding: 1rem;
     max-width: 800px;
-
 }
 
 .required_item{
@@ -50,4 +49,27 @@ h1{
     padding: 0.4rem 0.4rem;
     text-align: center;
 }
+
+.custom-radio{
+    appearance: none;
+  position: absolute;
+}
+
+.custom-radio::before {
+    content: ''; 
+    display: block; 
+    border-radius: 50%; 
+    border: 1px solid orange;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .custom-radio::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+  }
 
