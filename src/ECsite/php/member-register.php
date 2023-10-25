@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    
+
     <!-- ヘッダーの読み込み -->
-<?php include("./menu.php"); ?>
-    <form action=".php" method="post">
+    <?php include("./menu.php"); ?>
+    <form action="member-register-completed.php" method="post">
         <div class="contents-container">
             <h1>会員登録</h1>
             <div class="required_item">
@@ -35,9 +35,9 @@
             <h2 class="required">住所</h2>
             <input type="text" name="register_birthdate" class="form-input" required /><br>
             <h3 class="required">お支払方法の登録</h3>
-            <input type="radio" name="credit" value="1" class="custom-radio"/>クレジットカード・デビットカード<br />
-            <input type="radio" name="credit" value="2" class="custom-radio"/>コンビニ払い<br />
-            <input type="radio" name="credit" value="3" class="custom-radio"/>携帯払い<br /><br>
+            <input type="radio" name="credit" value="1" class="custom-radio" />クレジットカード・デビットカード<br />
+            <input type="radio" name="credit" value="2" class="custom-radio" />コンビニ払い<br />
+            <input type="radio" name="credit" value="3" class="custom-radio" />携帯払い<br /><br>
             <h2>クレジットを登録されたお客様</h2>
             クレジットカード・デビットカード
             <input type="text" name="credit_name" class="credit_debit-input" required /><br /><br>
