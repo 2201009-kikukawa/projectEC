@@ -1,0 +1,41 @@
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: calc(100vh - 400px); 
+    margin-top: 20vh; 
+}
+
+.button-input {
+    display: block;
+    margin: 1rem auto; 
+    color: #FFF;
+    background: #4169E1;
+    font-size: 1rem;
+    border-radius: 14px;
+    padding: 0.4rem 0.4rem;
+    text-align: center;
+    width: 228px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+h1 {
+    margin: 1rem auto; 
+    text-align: center;
+}
+
+p {
+    margin: 1rem auto; 
+    text-align: center;
+}
+
+.gazou {
+    width: 532px;
+    height: 347px;
+    flex-shrink: 0;
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+}
