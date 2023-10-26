@@ -3,17 +3,17 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>一般商品一覧</title>
+        <title>オークション商品一覧</title>
         <link rel="stylesheet" href="../../css/productshow.css">
     </head>
     <body>
         <?php require 'menu.php'?>
         <div class="continer">
         <header>
-            <div class="pagetxt">一般商品</div>
+            <div class="pagetxt">オークション商品</div>
             
             <div class="buttons">  
-            <button type="submit" class="auctionbutton"><a href="auctionshow.php" class="auctiontxt">オークションに切り替える</a></button>
+                <button type="submit" class="auctionbutton"><a href="productshow.php" class="auctiontxt">一般商品に切り替える</a></button>
                 <button type="submit" class="allshow"><div class="allshowtxt">すべて</div></button>
                 
                 <select name="sort" class="sort">
@@ -51,7 +51,7 @@
             <main>
             <?php
             $pdo = new PDO($connect,USER,PASS);
-            $sql = $pdo->query('SELECT * FROM product WHERE productflag = 0');
+            $sql = $pdo->query('SELECT * FROM product WHERE productflag = 1');
             foreach($sql as $row){
             require 'shopsearch.php';
             echo '<a href="#">';
