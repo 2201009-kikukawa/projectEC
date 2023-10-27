@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>一般商品一覧</title>
-        <link rel="stylesheet" href="../../css/productshow.css">
+        <link rel="stylesheet" href="../css/productshow.css">
     </head>
     <body>
         <?php require 'menu.php'?>
