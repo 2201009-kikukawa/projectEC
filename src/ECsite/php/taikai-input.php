@@ -1,5 +1,5 @@
 <?php require 'menu.php'; ?>
-<link rel="stylesheet" href="../../css/taikai.css">
+<link rel="stylesheet" href="../css/taikai.css">
 <h2>退会ページ</h2>
 <h1>パスワード確認</h1>
 <p>アカウント削除のリクエストを完了するにはアカウントに登録された</br>パスワードを入力してください</p>
