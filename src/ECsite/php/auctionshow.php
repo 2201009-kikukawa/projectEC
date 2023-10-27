@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>オークション商品一覧</title>
-        <link rel="stylesheet" href="../../css/auctionshow.css">
+        <link rel="stylesheet" href="../css/auctionshow.css">
     </head>
     <body>
         <?php require 'menu.php'?>
