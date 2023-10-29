@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <!-- cssの読み込み -->
-    <link rel="stylesheet" href="../../css/member-register.css" />
+    <link rel="stylesheet" href="../css/member-register.css" />
     <title>会員登録画面</title>
 </head>
 

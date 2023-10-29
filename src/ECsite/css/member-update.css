@@ -35,7 +35,9 @@ h1 {
   width: 100%;
   padding: 0.8rem 0;
   border-width: 0.5px;
-  background: #D9D9D9;
+  background: #d9d9d9;
+  flex-grow: 1;
+  margin-right: 10px;
   border: none;
 }
 
@@ -51,20 +53,38 @@ h1 {
   text-align: center;
 }
 
-.credit-input{
+.credit-input {
   text-align: justify;
   text-justify: auto;
   padding: 0.3rem 0;
-  background: #D9D9D9;
+  background: #d9d9d9;
   border: none;
 }
 
-.credit_debit-input{
+.credit_debit-input {
   text-align: justify;
   text-justify: auto;
-  width: 65.5%;
+  width: 51%;
   padding: 0.3rem 0;
-  background: #D9D9D9;
+  background: #d9d9d9;
   border: none;
+}
+
+.button-edit {
+  display: inline-block;
+  width: 100px;
+  color: #fff;
+  background: #ff0000;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.4rem 0.4rem;
+  margin-left: 10px;
+  border: none;
+}
+
+.input-edit {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
 }
 

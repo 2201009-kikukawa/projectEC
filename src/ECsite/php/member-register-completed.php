@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <!-- cssの読み込み -->
-    <link rel="stylesheet" href="../../css/member-register-completed.css" />
+    <link rel="stylesheet" href="../css/member-register-completed.css" />
     <title>会員登録完了画面</title>
 </head>
 
@@ -17,7 +17,7 @@
             <h3>アカウントが登録されました<br>
                 さっそく商品を見てみましょう！</h3>
             <button type="submit" class="button-input">ホームへ</button>
-            <img src="../../image/umi2.png" alt="umi2" class="img">
+            <img src="../image/umi2.png" alt="umi2" class="img">
         </div>
     </form>
 </body>

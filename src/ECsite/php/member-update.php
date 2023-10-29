@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <!-- cssの読み込み -->
-    <link rel="stylesheet" href="../../css/member-update.css" />
-    <title>会員登録画面</title>
+    <link rel="stylesheet" href="../css/member-update.css" />
+    <title>会員登録完了画面</title>
 </head>
 
 <body>
@@ -14,26 +14,44 @@
     <?php include("./menu.php"); ?>
     <form action="member-register-completed.php" method="post">
         <div class="contents-container">
-            <h1>会員登録</h1>
+            <h1>会員情報</h1>
             <div class="required_item">
                 <h3 class="required">必須項目</h3>
             </div>
             <h2 class="required">メールアドレス</h2>
-            <input type="text" name="register_mell" class="form-input" required /><br>
+            <div class="input-edit">
+                <input type="text" name="register_mell" class="form-input" required />
+                <button type="submit" class="button-edit">編集</button>
+            </div><br>
             <h2 class="required">パスワード</h2>
-            <input type="text" name="register_pass" class="form-input" required /><br>
+            <div class="input-edit">
+                <input type="text" name="register_pass" class="form-input" required />
+                <button type="submit" class="button-edit">編集</button>
+            </div><br>
             <h2 class="required">アカウント名</h2>
-            <input type="text" name="register_account_name" class="form-input" required /><br>
+            <div class="input-edit">
+                <input type="text" name="register_account_name" class="form-input" required />
+                <button type="submit" class="button-edit">編集</button>
+            </div><br>
             <h2 class="required">生年月日</h2>
-            <input type="text" name="register_birthdate" class="form-input" required /><br>
+            <div class="input-edit">
+                <input type="text" name="register_birthdate" class="form-input" required />
+                <button type="submit" class="button-edit">編集</button>
+            </div><br>
             <h2 class="required">性別</h2>
             <input type="radio" name="gender" value="1" />女性<br />
             <input type="radio" name="gender" value="2" />男性<br />
             <input type="radio" name="gender" value="3" />その他<br /><br>
             <h2 class="required">郵便番号</h2>
-            <input type="text" name="register_birthdate" class="form-input" required /><br>
+            <div class="input-edit">
+                <input type="text" name="register_birthdate" class="form-input" required />
+                <button type="submit" class="button-edit">編集</button>
+            </div><br>
             <h2 class="required">住所</h2>
-            <input type="text" name="register_birthdate" class="form-input" required /><br>
+            <div class="input-edit">
+                <input type="text" name="register_birthdate" class="form-input" required />
+                <button type="submit" class="button-edit">編集</button>
+            </div><br>
             <h3 class="required">お支払方法の登録</h3>
             <input type="radio" name="credit" value="1" class="custom-radio" />クレジットカード・デビットカード<br />
             <input type="radio" name="credit" value="2" class="custom-radio" />コンビニ払い<br />
