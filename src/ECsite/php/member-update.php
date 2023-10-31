@@ -12,7 +12,7 @@
 
     <!-- ヘッダーの読み込み -->
     <?php include("./menu.php"); ?>
-    <form action="member-register-completed.php" method="post">
+    <form action="member-update-completed.php" method="post">
         <div class="contents-container">
             <h1>会員情報</h1>
             <div class="required_item">
@@ -20,12 +20,12 @@
             </div>
             <h2 class="required">メールアドレス</h2>
             <div class="input-edit">
-                <input type="text" name="register_mell" class="form-input" required />
+                <input type="text" name="register_mell" class="form-input" required readonly/>
                 <button type="submit" class="button-edit">編集</button>
             </div><br>
             <h2 class="required">パスワード</h2>
             <div class="input-edit">
-                <input type="text" name="register_pass" class="form-input" required />
+                <input type="text" name="register_pass" class="form-input" required readonly/>
                 <button type="submit" class="button-edit">編集</button>
             </div><br>
             <h2 class="required">アカウント名</h2>
@@ -65,10 +65,10 @@
             セキュリティコード
             <input type="text" name="securitycord" class="credit-input" required /><br />
             <button type="submit" class="button-input">会員情報を登録する</button>
-            <!-- jsの読み込み -->
-            <script src="../script/member-register.js"></script>
         </div>
     </form>
+    <!-- jsの読み込み -->
+            <script src="../script/member-update.js"></script>
 </body>
 
 </html>
