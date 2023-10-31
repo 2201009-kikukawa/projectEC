@@ -188,6 +188,9 @@ img{
 }
 
 .mainitemtxt{
+    margin: 10px;
+    position: relative;
+    top: 20px;
     background-color:rgb(217, 217, 217) ;
     border:solid 1px #000;
     border-radius: 15px;
@@ -197,6 +200,7 @@ img{
     height: 40%;
     text-decoration: none;
 }
+
 
 .price{
     color: #FF8C00;
