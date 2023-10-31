@@ -20,7 +20,7 @@
 </form>
 <div style="text-align: right">
 <link rel="stylesheet" href="../css/sea.css">
-  <img src="../../image/sea.png">
+  <img src="../../image/umi2.png">
 </div>
 </div>
 </body>
