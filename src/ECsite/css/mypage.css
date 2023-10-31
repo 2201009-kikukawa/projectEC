@@ -1,0 +1,61 @@
+h1 {
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.my-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* ボタン間の隙間 */
+    margin: 4rem auto;
+    width: 30%;
+    padding: 1rem;
+    max-width: 800px;
+}
+
+.my-button {
+    width: 100%;
+    padding: 13px 0;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+        to right,
+        #0000ff 0%,
+        #0000ff 50%,
+        #87CEEB 50%,
+        #87CEEB 100%
+    );
+    box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+    transition: background-position ease 0.4s;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.my-button:hover {
+    background-position: 0 0;
+}
+
+.top-button {
+    position: absolute;
+    top: 155;
+    left: 80;
+    width: auto;
+    padding: 10px 20px;
+
+    display: block;
+  
+  color: #fff;
+  background: #00BFFF;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.5rem 3rem 0.5rem;
+  text-align: center;
+  border: none;
+}
+
