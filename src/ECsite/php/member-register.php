@@ -31,9 +31,9 @@
             <input type="radio" name="gender" value="2" />男性<br />
             <input type="radio" name="gender" value="3" />その他<br /><br>
             <h2 class="required">郵便番号</h2>
-            <input type="text" name="register_birthdate" class="form-input" required /><br>
+            <input type="text" name="register-postcode" class="form-input" required /><br>
             <h2 class="required">住所</h2>
-            <input type="text" name="register_birthdate" class="form-input" required /><br>
+            <input type="text" name="register_address" class="form-input" required /><br>
             <h3 class="required">お支払方法の登録</h3>
             <input type="radio" name="credit" value="1" class="custom-radio" />クレジットカード・デビットカード<br />
             <input type="radio" name="credit" value="2" class="custom-radio" />コンビニ払い<br />
@@ -49,6 +49,7 @@
             <button type="submit" class="button-input">会員情報を登録する</button>
             <!-- jsの読み込み -->
             <script src="../script/member-register.js"></script>
+            <script src="../script/member-register-validate.js"></script>
         </div>
     </form>
 </body>

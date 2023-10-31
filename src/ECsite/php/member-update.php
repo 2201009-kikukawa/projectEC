@@ -69,6 +69,7 @@
     </form>
     <!-- jsの読み込み -->
             <script src="../script/member-update.js"></script>
+            <script src="../script/member-update-validate.js"></script>
 </body>
 
 </html>
