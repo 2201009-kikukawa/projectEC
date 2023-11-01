@@ -12,11 +12,11 @@
 
 .button {
     display: block;
-    margin: 2rem auto;
-    color: #fff;
-    background: #ff0000;
+	margin: 2rem auto;
+    color: #FFF;
+    background: #F00;
     border: 1px solid #333;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 14px;
     padding: 0.4rem 0.4rem;
     text-align: center;
