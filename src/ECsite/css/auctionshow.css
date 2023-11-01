@@ -196,6 +196,9 @@ img{
     font-size: 12px;
     height: 40%;
     text-decoration: none;
+    margin: 10px;
+    position: relative;
+    top: 20px;
 }
 
 .price{
@@ -209,8 +212,9 @@ img{
 
 .shopname,
 .itemname,
-.price {
-    margin-top: 10px; /* 各要素間の上部の余白を追加 */
+.price,
+.time {
+    margin-top: 5px; /* 各要素間の上部の余白を追加 */
 }
 
 main a{
