@@ -14,7 +14,7 @@
       
     <a href="login-input" class="btn_06">ログイン・会員登録</a>
 
-    <a href="search.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
+    <a href="shohin-shibori.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
         <img src="../image/kensaku.png" alt="検索" style="width: 25px; margin-bottom: 5px;">
         検索
       </a>
