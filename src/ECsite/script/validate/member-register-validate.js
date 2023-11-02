@@ -1,3 +1,16 @@
+// ページが読み込まれたときにラジオボタンを選択しないように設定
+window.addEventListener('load', function () {
+    const genderRadios = document.getElementsByName('gender');
+    for (const radio of genderRadios) {
+        radio.checked = false;
+    }
+
+    const paymentRadios = document.getElementsByName('credit');
+    for (const radio of paymentRadios) {
+        radio.checked = false;
+    }
+});
+
 // メールアドレスのバリデーション
 const emailField = document.getElementById('email');
 const emailError = document.getElementById('email-error');
@@ -62,9 +75,9 @@ birthdateField.addEventListener('input', function () {
     const birthdateValue = birthdateField.value;
 
     if (birthdateValue === '') {
-        birthdateError.textContent = '生年月日を入力してください。';
+        birthdateError.textContent = '生年月日を入力してください.';
     } else if (!/^\d{8}$/.test(birthdateValue)) {
-        birthdateError.textContent = '生年月日は8桁の数字で入力してください。';
+        birthdateError.textContent = '生年月日は8桁の数字で入力してください.';
     } else {
         birthdateError.textContent = '';
     }
@@ -79,9 +92,9 @@ postcodeField.addEventListener('input', function () {
     const postcodeValue = postcodeField.value;
 
     if (postcodeValue === '') {
-        postcodeError.textContent = '郵便番号を入力してください。';
+        postcodeError.textContent = '郵便番号を入力してください.';
     } else if (!/^\d{7}$/.test(postcodeValue)) {
-        postcodeError.textContent = '郵便番号は7桁の数字で入力してください。';
+        postcodeError.textContent = '郵便番号は7桁の数字で入力してください.';
     } else {
         postcodeError.textContent = '';
     }
@@ -96,9 +109,9 @@ addressField.addEventListener('input', function () {
     const addressValue = addressField.value;
 
     if (addressValue === '') {
-        addressError.textContent = '住所を入力してください。';
+        addressError.textContent = '住所を入力してください.';
     } else if (addressValue.length > 100) {
-        addressError.textContent = '住所は100文字以内で入力してください。';
+        addressError.textContent = '住所は100文字以内で入力してください.';
     } else {
         addressError.textContent = '';
     }
@@ -113,7 +126,7 @@ creditCardNumberField.addEventListener('input', function () {
     const creditCardNumberValue = creditCardNumberField.value;
 
     if (creditCardNumberValue !== '' && !/^\d{16}$/.test(creditCardNumberValue)) {
-        creditCardNumberError.textContent = 'クレジットカード番号は数字で16桁で入力してください。';
+        creditCardNumberError.textContent = 'クレジットカード番号は数字で16桁で入力してください.';
     } else {
         creditCardNumberError.textContent = '';
     }
@@ -128,12 +141,70 @@ securityCodeField.addEventListener('input', function () {
     const securityCodeValue = securityCodeField.value;
 
     if (securityCodeValue !== '' && !/^\d{3}$/.test(securityCodeValue)) {
-        securityCodeError.textContent = 'セキュリティコードは3桁の数字で入力してください。';
+        securityCodeError.textContent = 'セキュリティコードは3桁の数字で入力してください.';
     } else {
         securityCodeError.textContent = '';
     }
     validateForm();
 });
+
+// 性別のラジオボタンのバリデーション
+function validateGender() {
+    const genderRadios = document.getElementsByName('gender');
+    let genderSelected = false;
+
+    for (const radio of genderRadios) {
+        if (radio.checked) {
+            genderSelected = true;
+            break;
+        }
+    }
+
+    const genderError = document.getElementById('gender-error');
+    if (!genderSelected) {
+        genderError.textContent = '性別を選択してください';
+    } else {
+        genderError.textContent = ''; // ラジオボタンが選択されている場合、エラーメッセージをクリア
+    }
+    validateForm();
+}
+
+// 性別のラジオボタンの変更を監視
+const genderRadios = document.getElementsByName('gender');
+for (const radio of genderRadios) {
+    radio.addEventListener('change', function () {
+        validateGender();
+    });
+}
+
+// お支払方法のラジオボタンのバリデーション
+function validatePaymentMethod() {
+    const paymentRadios = document.getElementsByName('credit');
+    let paymentSelected = false;
+
+    for (const radio of paymentRadios) {
+        if (radio.checked) {
+            paymentSelected = true;
+            break;
+        }
+    }
+
+    const paymentError = document.getElementById('payment-error');
+    if (!paymentSelected) {
+        paymentError.textContent = 'お支払方法を選択してください';
+    } else {
+        paymentError.textContent = ''; // ラジオボタンが選択されている場合、エラーメッセージをクリア
+    }
+    validateForm();
+}
+
+// お支払方法のラジオボタンの変更を監視
+const paymentRadios = document.getElementsByName('credit');
+for (const radio of paymentRadios) {
+    radio.addEventListener('change', function () {
+        validatePaymentMethod();
+    });
+}
 
 // フォーム全体のバリデーションを行う関数
 function validateForm() {
@@ -156,6 +227,9 @@ function validateForm() {
 const submitButton = document.querySelector('button[type="submit"]');
 submitButton.addEventListener('click', function (event) {
     validateForm();
+    validateGender(); // 性別のラジオボタンのバリデーションを実行
+    validatePaymentMethod(); // お支払方法のラジオボタンのバリデーションを実行
+
     const form = document.querySelector('form');
     const errorFields = form.querySelectorAll('.error');
 

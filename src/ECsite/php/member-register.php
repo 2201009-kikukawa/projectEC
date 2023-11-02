@@ -37,7 +37,9 @@
             <h2 class="required">性別</h2>
             <input type="radio" name="gender" value="1" />女性<br />
             <input type="radio" name="gender" value="2" />男性<br />
-            <input type="radio" name="gender" value="3" />その他<br /><br>
+            <input type="radio" name="gender" value="3" />その他<br />
+            <span class="error" id="gender-error" style="color: red;"></span>
+            <br>
             <h2 class="required">郵便番号</h2>
             <input type="text" name="register-postcode" class="form-input" id="postcode" required />
             <span class="error" id="postcode-error" style="color: red;"></span>
@@ -49,7 +51,9 @@
             <h3 class="required">お支払方法の登録</h3>
             <input type="radio" name="credit" value="1" class="custom-radio" />クレジットカード・デビットカード<br />
             <input type="radio" name="credit" value="2" class="custom-radio" />コンビニ払い<br />
-            <input type="radio" name="credit" value="3" class="custom-radio" />携帯払い<br /><br>
+            <input type="radio" name="credit" value="3" class="custom-radio" />携帯払い<br />
+            <span class="error" id="payment-error" style="color: red;"></span>
+            <br>
             <h2>クレジットを登録されたお客様</h2>
             クレジットカード・デビットカード
             <input type="text" name="credit_name" class="credit_debit-input" id="credit-card-number"/>
