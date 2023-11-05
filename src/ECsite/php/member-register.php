@@ -59,6 +59,7 @@
             <input type="text" name="credit_name" class="credit_debit-input" id="credit-card-number"/>
             <span class="error" id="credit-card-number-error" style="color: red;"></span>
             <br><br>
+            クレジットカード有効期間
             <select id="month" class="credit-input"></select>月
             <select id="day" class="credit-input"></select>年<br /><br>
             セキュリティコード
