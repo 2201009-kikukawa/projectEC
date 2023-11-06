@@ -31,8 +31,6 @@ emailField.addEventListener('input', function () {
     validateForm();
 });
 
-
-
 // パスワードのバリデーション
 const passwordField = document.getElementById('password');
 const passwordError = document.getElementById('password-error');
