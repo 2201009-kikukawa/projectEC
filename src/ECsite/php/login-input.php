@@ -19,7 +19,7 @@
     <center><br><a href="mypage.php">新規登録はこちらから</a></br></center>
 </form>
 <div style="text-align: right">
-<link rel="stylesheet" href="../css/sea.css">
+<link rel="stylesheet" href="../css/login.css">
   <img src="../../image/umi2.png">
 </div>
 </div>
