@@ -1,12 +1,56 @@
-/* チェックボックスの装飾 */
-.checkbox_input {
+.centered-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; 
+}
+  
+  .search_container {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #999;
+    padding: 3px 10px;
+    border-radius: 20px;
+    height: 2.3em;
+    width: 550px;
+    overflow: hidden;
+    margin-bottom: 0; /* 余白を取り除く */
+}
+
+  .search_container input[type="text"]{
+    border: none;
+    height: 2.0em;
+  }
+  .search_container input[type="text"]:focus {
+    outline: 0;
+  }
+  .search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    border: none;
+    background: #3879D9;
+    color: #fff;
+    position: absolute;
+    width: 3.5em;
+    height: 3.0em;
+    right:0px;
+    top: -3px;
+    outline : none;
+  }
+
+
+
+  .checkbox_input {
     display: none;
+    margin-left: -5px; /* チェックボックスを左に5pxずらす */
 }
 
 .checkbox_parts {
-    padding-left: 25px;
+    display: inline-block;
+    width: 30%; 
+    margin-right: 2%; 
+    text-align: center; 
     position: relative;
-    margin-right: 25px;
 }
 
 .checkbox_parts::before {
@@ -20,7 +64,7 @@
     border: 1px solid #999;
 }
 
-.checkbox_input:checked+.checkbox_parts::after {
+.checkbox_input:checked + .checkbox_parts::after {
     content: "";
     display: block;
     position: absolute;
@@ -32,6 +76,13 @@
     border-bottom: 3px solid #0050c1;
     border-right: 3px solid #0050c1;
 }
+
+/* 3列に表示 */
+.checkbox_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 /*他エリア*/
 .wrapper {
