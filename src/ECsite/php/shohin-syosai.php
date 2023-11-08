@@ -1,44 +1,49 @@
-<?php session_start(); ?>
 <?php require 'menu.php'; ?>
 <?php require 'db-connect.php'; ?>
 
 <?php
-    $pdo = new ec ($connect,USER,PASS);
+// 1. URLパラメータ 'product_id' の存在を確認
+if (isset($_GET['product_id'])) {
+    $product_id = $_GET['product_id'];
 
-    if($pdo->connect_error){
-        die("データベース接続エラー: ".$pdo->connect_error);
-    }
+    // 2. データベース接続を確立
+    $pdo = new PDO($connect, USER, PASS);
 
-    $sql=$pdo->prepare('select*from product where id=?');
-    $result = $pdo->query($sql);
+    // 3. 商品情報を取得
+    $productQuery = $pdo->prepare('SELECT * FROM product WHERE id = ?');
+    $productQuery->execute([$product_id]);
+    $product = $productQuery->fetch();
 
-    if($result->num_rows > 0){
-        while ($row=$result->fetch_assoc()){
-            $product_name = $row["product_name"];
-            $price = $row["price"];
-            $product_data = $row["product_data"];
+    if ($product) {
+        // 商品情報を表示
+        echo '<p><img alt="image" src="image/', $product['id'], '.jpg"></p>';
+        echo '<form action="cart-show.php" method="post">';
+        echo '<p>商品名</p>';
+        echo "<p>{$product['product_name']}</p>";
+        echo "<p>{$product['price']} 円</p>";
+        echo "<p>出荷予定日: {$product['delivery_date']}</p>";
+        echo '<p>商品説明</p>';
+        echo "<p>{$product['product_data']}</p>";
 
+        // 4. 商品のレビュー情報を取得
+        $reviewQuery = $pdo->prepare('SELECT * FROM reviews WHERE product_id = ?');
+        $reviewQuery->execute([$product_id]);
+        $reviews = $reviewQuery->fetchAll();
+
+        foreach ($reviews as $review) {
+            echo '<p><strong>ユーザー名:</strong>', $review['account_name'], '</p>';
+            echo '<p><strong>評価:</strong>', $review['review_value'], '</p>';
+            echo '<p><strong>投稿日 ', $review['review_date'], '</p>';
+            echo '<p>', $review['review_text'], '</p>';
         }
-    }else{
-        echo "データが見つかりませんでした";
-    }
 
-    $pdo->close();
+        echo '<p><input type="submit" value="カートに入れる"></p>';
+        echo '<input type="button" value="戻る" onClick="history.go(-1)">';
+        echo '</form>';
+    } else {
+        echo "商品が見つかりません。";
+    }
+} else {
+    echo "商品 ID が指定されていません。";
+}
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>商品詳細ページ</title>
-</head>
-<body>
-    <main>
-        <section class="product-details">
-            <h1><?php echo $product_name; ?></h1>
-            <p class = "price">価格: <?php echo $price; ?>円</p>
-            <p><?php echo $product_data; ?></p>
-            <button id="addToCartBtn">カートに追加</button>
-</section>
-</main>
-</body>
-</html>
