@@ -21,7 +21,7 @@
 </form>
 <div style="text-align: right">
 <link rel="stylesheet" href="../css/login.css">
-  <img src="../../image/umi2.png">
+  <img src=".././image/umi2.png">
 </div>
 </div>
 </body>
