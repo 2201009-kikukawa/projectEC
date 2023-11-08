@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+label{
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
