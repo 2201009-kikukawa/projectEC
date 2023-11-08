@@ -1,0 +1,175 @@
+.listlinkbutton{
+    text-align: center;
+    border-radius: 20px;
+    background: #00BFFF;
+    width: 270px;
+    height: 45px;
+    position: relative;
+    left: 69vw;
+    margin-bottom: -15px;
+    top: -2vw;
+}
+
+.maincontiner{
+    display: flex;
+    text-align: -webkit-center;
+    position: relative;
+    margin-left: 15%;
+}
+
+.mainitem1,.mainitem2{
+    flex:1;
+    height: 10%;
+}
+.time{
+    font-size: 29px;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: -20px;
+}
+
+.listlink{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.imgarea{
+    text-align: center;
+    border: 1px solid #000;
+    background: #F1EDED;
+    margin-top: 30px;
+    width: 65%;
+    height: 40%;
+}
+
+.imgitem{
+    width: 90%;
+    height: 80%;
+    padding: 16px;
+}
+
+.textarea{
+    background: #FFF6F6;
+    border: solid 1px #000;
+    width: 65%;
+    height: 35%;
+    text-align: center;
+    margin-top: -13px;
+}
+
+.informationarea{
+    background: #FFF6F6;
+    border: solid 1px #000;
+    text-align: left;
+    width: 74%;
+    margin-top: 31px;
+    position: relative;
+    left: -29%;
+}
+
+.productname{
+    font-size: 20px;
+    margin-top: 9px;
+    margin-left: 15px;
+}
+
+.menbername{
+    font-size: 20px;
+    margin-top: -3px;
+    margin-left: 15px;
+}
+
+.finishtxt{
+    display: inline;
+    border: 1px solid #000;
+    background: #D9D9D9;
+    font-size: 15%;
+}
+
+.noticebutton{
+    width: 8%;
+    text-align: center;
+    border: 1px solid #000;
+    background: #D9D9D9;
+}
+
+.belimg{
+    width: 30%;
+}
+
+.notice{
+    position: relative;
+    right: 20%;
+    left: 30%;
+}
+
+.pricearea{
+    background: #FFF6F6;
+    border: solid 1px #000;
+    position: relative;
+    left: -29%;
+    margin-top: -26px;
+    height: 300px;
+    width: 74%;
+}
+
+.currentpricetxt{
+    position: relative;
+    right: 30%;
+    font-size: 150%;
+}
+
+.currentprice{
+    position: relative;
+    right: 30%;
+    margin-top: -5%;
+    font-size: 120%;
+}
+
+.bitpricetxt{
+    position: relative;
+    right: 30%;
+    font-size: 150%;
+    margin-top: 2%;
+}
+
+.bitpricearea{
+    position: relative;
+    right: 23%;
+    margin-top: -5%;
+    font-size: 120%;
+}
+
+.bitbuttontxt{
+    font-style: normal;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    position: relative;
+    top: 8px;
+}
+
+.bitbutton{
+    background: #FF8C00;
+    border-radius: 20px;
+    width: 200px;
+    height: 45px;
+    position: relative;
+    left: 22%;
+}
+.returnbuttontxt{
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    background: #D9D9D9;
+    width: 15%;
+    display: block;
+    text-align: center;
+    position: relative;
+    left: 28%;
+    font-size: 130%;
+}

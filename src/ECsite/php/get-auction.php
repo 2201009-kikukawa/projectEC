@@ -8,7 +8,7 @@ $currentTimestamp = time();
 $pdo = new PDO($connect, USER, PASS);
 $sql = $pdo->query("SELECT p.*, a.currentprice, a.finishtime, s.shop_name,
                    CASE
-                     WHEN a.finishtime > $currentTimestamp THEN a.finishtime - $currentTimestamp
+                     WHEN UNIX_TIMESTAMP(a.finishtime) > $currentTimestamp THEN UNIX_TIMESTAMP(a.finishtime) - $currentTimestamp
                      ELSE 0
                    END AS remaining_time
                    FROM product p

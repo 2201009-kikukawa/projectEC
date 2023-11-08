@@ -49,7 +49,7 @@
 
             <main>
                 <div v-for="product in sortedProducts" :key="product.id" class="mainitem">
-                    <a :href="'#procdut/' + product.id">
+                    <a href="auctiondetail.php">
                         <div class="itemimg">
                             <img :src="'../image/' + product.picyure" alt="魚の写真" style="height:100px; width: 170px;">
                         </div>
@@ -59,7 +59,7 @@
                             <div class="itemname">{{ product.product_name }}</div>
                             <div class="price">現在価格{{ product.currentprice }}円</div>
                             <div class="time">
-                                <span v-if="product.remaining_time > 0">終了まで{{ product.remaining_time }}秒</span>
+                                <span v-if="product.remaining_time > 0">終了まで{{ formatTime(product.remaining_time) }}</span>
                                 <span v-else>終了しました</span>
                             </div>
                         </div>
