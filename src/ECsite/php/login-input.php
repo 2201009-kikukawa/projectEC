@@ -4,6 +4,7 @@
     <title>Login Form</title>
 </head>
 <body>
+<?php include("./menu.php"); ?>
 <center><h2><div xmlns="http://www.w3.org/1999/xhtml" style="color: #FFA500; font-family: Inter; font-size: 32px; font-weight: bold;">
     鮮魚Online🐟
   </div></h2></center>
