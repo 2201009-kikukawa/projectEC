@@ -59,7 +59,7 @@
                             <div class="itemname">{{ product.product_name }}</div>
                             <div class="price">現在価格{{ product.currentprice }}円</div>
                             <div class="time">
-                                <span v-if="product.remaining_time > 0">終了まで{{ product.remaining_time }}秒</span>
+                                <span v-if="product.remaining_time > 0">終了まで{{ formatTime(product.remaining_time) }}</span>
                                 <span v-else>終了しました</span>
                             </div>
                         </div>
