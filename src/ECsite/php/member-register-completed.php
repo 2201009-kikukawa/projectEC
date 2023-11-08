@@ -10,12 +10,12 @@ $register_birthdate = $_POST['register_birthdate']; // フォームからの日�
 // 日付のフォーマットを変更
 $birthdate_formatted = date('Y-m-d', strtotime($register_birthdate));
 
-$sql = $pdo->prepare('insert into menber values(null,?,?,?,?,?,?,?,null)');
+$sql = $pdo->prepare('insert into menber values(null,?,?,?,?,?,?,?,?)');
 $sql->execute([
     $_POST['register_mell'], $password_hash,
     $_POST['register_account_name'],$birthdate_formatted,
     $_POST['gender'], $_POST['register-postcode'],
-    $_POST['register_address']
+    $_POST['register_address'],$_POST['credit']
 ]);
 
 
@@ -28,10 +28,10 @@ $expiration_date = "{$year}-{$month}-28"; // 仮に日付を1日として設定
 // 文字列をDATE型に変換
 $expiration_date = date('Y-m-d', strtotime($expiration_date));
 
-$sql = $pdo->prepare('insert into credit values(null,null,?,?,?,null)');
+$sql = $pdo->prepare('insert into credit values(null,null,?,?,?)');
 $sql->execute([
     $_POST['credit_name'],$expiration_date,
-    $_POST['credit-input']
+    $_POST['securitycord']
 ]);
 ?>
 
