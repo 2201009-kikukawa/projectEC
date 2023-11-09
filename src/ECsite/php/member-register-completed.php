@@ -18,7 +18,8 @@ $sql->execute([
     $_POST['register_address'],$_POST['credit']
 ]);
 
-
+// 会員IDを取得
+$member_id = $pdo->lastInsertId();
 
 
 $month = $_POST['month']; // フォームから選択された月の値
@@ -30,9 +31,9 @@ $expiration_date = "{$year}-{$month}-28"; // 仮に日付を1日として設定
 // 文字列をDATE型に変換
 $expiration_date = date('Y-m-d', strtotime($expiration_date));
 
-$sql = $pdo->prepare('insert into credit values(null,,?,?,?)');
+$sql = $pdo->prepare('insert into credit values(null,?,?,?,?)');
 $sql->execute([
-    $_POST['credit_name'],$expiration_date,
+    $member_id,$_POST['credit_name'],$expiration_date,
     $_POST['securitycord']
 ]);
 ?>
