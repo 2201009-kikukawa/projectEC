@@ -64,8 +64,8 @@
               <span class="checkbox_parts"> 貝類・加工品</span></label>
           </span>
           
-            <input type="reset" name="shibori" value="絞り込み項目をリセット">
-            <input type="submit" name="shibori" value="検索">
+            <input type="reset" name="shibori" class="re-button" value="絞り込み項目をリセット">
+            <input type="submit" name="shibori" class="kensaku-button" value="検索">
         </div>
       </form>
     </div>

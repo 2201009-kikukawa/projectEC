@@ -122,3 +122,44 @@ h2{
 .hide_item {
     display: none;
 }
+
+
+.re-button {
+    position: absolute;
+    top: 450;
+    left: 200;
+    width: 310px;
+    height: 55px;
+    padding: 10px 20px;
+
+    display: block;
+  
+  color: #000;
+  background: #D9D9D9;
+  border: 1px solid #333;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  padding: 0.5rem 3rem 0.5rem;
+  text-align: center;
+  border: none;
+}
+
+.kensaku-button {
+    position: absolute;
+    top: 450;
+    left: 750;
+   width: 310px;
+    height: 55px;
+    padding: 10px 20px;
+
+    display: block;
+  
+  color: #fff;
+  background: #00BFFF;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.5rem 3rem 0.5rem;
+  text-align: center;
+  border: none;
+}
