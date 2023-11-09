@@ -17,11 +17,11 @@
     <input type="password" id="pass" name="pass" required><br><br>
     <input type="submit" value="ログイン" style="background-color:#00bfff;">
     </div></center>
-    <center><br><a href="mypage.php">新規登録はこちらから</a></br></center>
+    <center><br><a href="mypage.php"><font color="#00bfff">新規登録はこちらから</font></a></br></center>
 </form>
 <div style="text-align: right">
 <link rel="stylesheet" href="../css/login.css">
-  <img src=".././image/umi2.png">
+  <img src="../image/umi2.png" alt="umi2" class="img">
 </div>
 </div>
 </body>
