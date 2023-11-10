@@ -11,10 +11,6 @@ label{
   width: 100px;
 }
 
-.button-input {
-border-radius: 14px;
-}
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -72,3 +68,16 @@ border-radius: 14px;
     max-width: 30%;
     max-height: 100%;
   }  
+
+  .button-input{
+    display: block;
+    margin: 2.6rem auto;
+    color: #fff;
+    background: #00BFFF;
+    border: 1px solid #333;
+    font-size: 1.5rem;
+    border-radius: 14px;
+    padding: 0.2rem 0.8rem 0.2rem;
+    text-align: center;
+    border: none;
+  }
