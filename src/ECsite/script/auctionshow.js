@@ -41,7 +41,6 @@ new Vue({
             const minutes = Math.floor((timeInSeconds % 3600) / 60);
             const seconds = timeInSeconds % 60;
             
-            // ゼロパディングを適用して h:i:s 形式にフォーマット
             const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
             
             return formattedTime;

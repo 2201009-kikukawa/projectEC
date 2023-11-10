@@ -55,9 +55,13 @@
     background: #FFF6F6;
     border: solid 1px #000;
     width: 65%;
-    height: 35%;
-    text-align: center;
+    height: 20vh;
+    text-align: left;
     margin-top: -13px;
+}
+
+.textitem{
+    padding: 5px;
 }
 
 .informationarea{
