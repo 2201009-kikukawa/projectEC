@@ -11,6 +11,10 @@ label{
   width: 100px;
 }
 
+.button-input {
+border-radius: 14px;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
