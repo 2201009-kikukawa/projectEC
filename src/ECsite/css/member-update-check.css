@@ -1,16 +1,36 @@
-.text {
+
+
+h1{
+    text-align: center;
+   
+}
+h2{
+    text-align: center;
+}
+p{
     text-align: center;
 }
 
-.password {
-    width: 300px;
-    height: 30px;
-    text-align: center;
-    border-radius: 20px;
-    background: #D9D9D9;
+.contents-container{
+    margin: 4rem auto;
+    width: 30%;
+    padding: 1rem;
+    max-width: 800px;
 }
 
-.button {
+
+
+.form-input{
+    text-align: justify;
+    text-justify: auto;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.8rem 0;
+    border-width: 0.5px;
+}
+
+.button-input{
     display: block;
 	margin: 2rem auto;
     color: #FFF;
