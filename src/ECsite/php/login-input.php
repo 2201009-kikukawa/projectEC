@@ -9,7 +9,7 @@
     鮮魚Online🐟
   </div></h2></center>
   <center><h3>ログインページ</h3></center>
-<form action="login.php" method="POST"> <!-- フォームのアクションを適切なファイルに指定する -->
+<form action="login-output.php" method="POST"> <!-- フォームのアクションを適切なファイルに指定する -->
 <center><div style="border: 3px solid; width: 300px;">
     <label for="name">アカウント名:</label>
     <input type="text" id="name" name="name" required><br><br>
