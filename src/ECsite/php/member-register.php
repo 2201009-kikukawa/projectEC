@@ -61,7 +61,7 @@
             <br><br>
             クレジットカード有効期間
             <select id="month" name="month"class="credit-input"></select>月
-            <select id="day" name="year" class="credit-input"></select>年<br /><br>
+            <select id="year" name="year" class="credit-input"></select>年<br /><br>
             セキュリティコード
             <input type="text" name="securitycord" class="credit-input" id="security-code" />
             <span class="error" id="security-code-error" style="color: red;"></span>

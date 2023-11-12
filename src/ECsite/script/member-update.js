@@ -8,12 +8,13 @@ for (let i = 1; i <= 12; i++) {
 }
 
 // 年のオプションを生成
-const daySelect = document.getElementById("day");
-for (let i = 2023; i <= 2040; i++) {
+const yearSelect = document.getElementById("year");
+const currentYear = new Date().getFullYear();
+for (let i = currentYear; i <= currentYear + 20; i++) {
   const option = document.createElement("option");
   option.value = i;
   option.text = i;
-  daySelect.appendChild(option);
+  yearSelect.appendChild(option);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
