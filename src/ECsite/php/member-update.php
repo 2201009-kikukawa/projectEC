@@ -73,14 +73,14 @@ if (isset($_SESSION['menber'])) {
             <br>
             <h2 class="required">郵便番号</h2>
             <div class="input-edit">
-                <input type="text" name="register_birthdate" class="form-input" id="postcode" required value="<?php echo $post_num; ?>" />
+                <input type="text" name="register-postcode" class="form-input" id="postcode" required value="<?php echo $post_num; ?>" />
                 <button type="button" class="button-edit">編集</button>
             </div>
             <span class="error" id="postcode-error" style="color: red;"></span>
             <br>
             <h2 class="required">住所</h2>
             <div class="input-edit">
-                <input type="text" name="register_birthdate" class="form-input" id="address" required value="<?php echo $address; ?>" />
+                <input type="text" name="register_address" class="form-input" id="address" required value="<?php echo $address; ?>" />
                 <button type="button" class="button-edit">編集</button>
             </div>
             <span class="error" id="address-error" style="color: red;"></span>
