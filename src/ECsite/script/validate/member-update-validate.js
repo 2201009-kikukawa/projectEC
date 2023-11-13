@@ -1,16 +1,3 @@
-// ページが読み込まれたときにラジオボタンを選択しないように設定
-window.addEventListener('load', function () {
-    const genderRadios = document.getElementsByName('gender');
-    for (const radio of genderRadios) {
-        radio.checked = false;
-    }
-
-    const paymentRadios = document.getElementsByName('credit');
-    for (const radio of paymentRadios) {
-        radio.checked = false;
-    }
-});
-
 // メールアドレスのバリデーション
 const emailField = document.getElementById('email');
 const emailError = document.getElementById('email-error');

@@ -1,7 +1,8 @@
 <?php session_start(); ?>
 <?php
-$mell = $password = $account_name = $birthday = $gender = $post_num = $address = $payment_id = $credit_number = $month = $year = $securitycode = '';
+$id = $mell = $password = $account_name = $birthday = $gender = $post_num = $address = $payment_id = $credit_number = $month = $year = $securitycode = '';
 if (isset($_SESSION['menber'])) {
+    $id = $_SESSION['menber']['id'];
     $mell = $_SESSION['menber']['mell'];
     $password = $_SESSION['menber']['password'];
     $account_name = $_SESSION['menber']['account_name'];

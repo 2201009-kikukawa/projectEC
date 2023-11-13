@@ -4,7 +4,7 @@
 $password_hash = password_hash($_POST['register_pass'], PASSWORD_DEFAULT);
 
 $pdo = new PDO($connect, USER, PASS);
-$id=4;
+$id=$_SESSION['menber']['id'];
 $register_birthdate = $_POST['register_birthdate']; // フォームからの日付の値
 
 // 日付のフォーマットを変更
@@ -26,8 +26,6 @@ $_SESSION['menber']=[
     'credit_number'=>"", 'month'=>"",
     'year'=>"",'securitycode'=>""];
 
-// 会員IDを取得
-$member_id = $pdo->lastInsertId();
 
 if ($_POST['credit'] == 1) { // "クレジットカード・デビットカード" が選択されているか確認
 $month = $_POST['month']; // フォームから選択された月の値
@@ -44,7 +42,7 @@ $expiration_date = date('Y-m-d', strtotime($expiration_date));
 $sql = $pdo->prepare('update credit set credit_number=?, lifetime=?, securitycode=? where menber_id=?');
 $sql->execute([
     $_POST['credit_name'],$expiration_date,
-    $_POST['securitycord'],$member_id
+    $_POST['securitycord'],$id
 ]);
 
 $_SESSION['menber']=[
