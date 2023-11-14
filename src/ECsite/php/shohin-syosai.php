@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $pdo = new PDO($connect, USER, PASS);
 
     // 3. 商品情報を取得
-    $productQuery = $pdo->prepare('SELECT * FROM product WHERE id = ?');
+    $productQuery = $pdo->prepare('SELECT * FROM product WHERE product_id = ?');
     $productQuery->execute([$product_id]);
     $product = $productQuery->fetch();
 

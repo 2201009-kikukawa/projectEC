@@ -50,7 +50,7 @@
 
             <main>
                 <div v-for="product in sortedProducts" :key="product.id" class="mainitem">
-                    <a :href="'syohin-syosai.php?id=' + product.product_id">
+                    <a :href="'shohin-syosai.php?id=' + product.product_id">
                         <div class="itemimg">
                             <img :src="'../image/' + product.picyure" alt="魚の写真" style="height:100px; width: 170px;">
                         </div>
