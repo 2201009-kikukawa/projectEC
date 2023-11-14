@@ -40,7 +40,6 @@ h1 {
 }
 
 .button-post {
-  display: block;
   color: #fff;
   background: #00f;
   border: none;
@@ -52,8 +51,6 @@ h1 {
 }
 
 .button-back {
-  display: block;
-  margin: 2rem auto;
   color: #000;
   border: none;
   font-size: 1rem;
@@ -64,6 +61,10 @@ h1 {
 }
 
 .recommend {
+  font-size: 1.4rem;
+}
+
+.reviewP {
   font-size: 1.4rem;
 }
 
@@ -93,4 +94,15 @@ h1 {
 
 .rating-stars input:checked ~ label {
   color: #ffcc00; /* Color for selected stars */
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }

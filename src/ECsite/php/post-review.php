@@ -12,8 +12,8 @@
 
     <!-- ヘッダーの読み込み -->
     <?php include("./menu.php"); ?>
-    <form action="post-review-completed.php" method="post">
-        <div class="contents-container">
+    <div class="contents-container">
+        <form action="post-review-completed.php" method="post">
             <h1>レビュー投稿</h1>
             <div class="required_item">
                 <h3 class="required">必須項目</h3>
@@ -34,17 +34,20 @@
                 <input type="radio" name="rating" id="star5" value="5" />
                 <label for="star5"></label>
             </div>
+            <p class="reviewP">レビュー本文</p>
+            全角1000文字以下
+            <textarea id="review" name="review" rows="12" cols="50"></textarea>
 
 
-
-
-            <button type="submit" class="button-post">投稿する</button>
+            <div class="button-container">
+                <button type="submit" class="button-back">戻る</button>
+                <button type="submit" class="button-post">投稿する</button>
+            </div>
             <!-- jsの読み込み -->
             <script src="../script/post-review.js"></script>
             <script src="../script/validate/post-review-validate.js"></script>
-        </div>
-    </form>
-    <button type="submit" class="button-back">戻る</button>
+        </form>
+    </div>
 </body>
 
 </html>
