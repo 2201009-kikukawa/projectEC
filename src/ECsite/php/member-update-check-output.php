@@ -15,13 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'address' => $row['address'], 'login' => $row['login'],
             'password' => $row['password']
         ];
-        echo '<link rel="stylesheet" href="../css/kanryou.css">';
-        echo '<div class="center-content">';
-        echo '<h1>退会完了</h1>';
-        echo '<p>アカウントは正常に削除されました</br>ご利用ありがとうございました</p>';
-        echo '<button onclick="location.href=\'./top.php\'" class="button-input">サイトTOPへ戻る</button>';
-        echo '</div>';
-        echo '<img src="../image/umi2.png" class="gazou">'; 
+        $redirect_file = "member-update.php";
     } else {
         echo '<link rel="stylesheet" href="../css/kanryou.css">';
         echo '<div class="center-content">';
