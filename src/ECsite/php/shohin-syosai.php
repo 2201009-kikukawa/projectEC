@@ -3,14 +3,15 @@
 
 <?php
 // 1. URLパラメータ 'product_id' の存在を確認
-if (isset($_GET['product_id'])) {
-    $product_id = $_GET['product_id'];
+
+if (isset($_GET['id'])) {
+    $product_id = $_GET['id'];
 
     // 2. データベース接続を確立
     $pdo = new PDO($connect, USER, PASS);
 
     // 3. 商品情報を取得
-    $productQuery = $pdo->prepare('SELECT * FROM product WHERE id = ?');
+    $productQuery = $pdo->prepare('SELECT * FROM product WHERE product_id = ?');
     $productQuery->execute([$product_id]);
     $product = $productQuery->fetch();
 
