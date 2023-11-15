@@ -13,7 +13,7 @@
     <!-- ヘッダーの読み込み -->
     <?php include("./menu.php"); ?>
     <div class="contents-container">
-        <form action="post-review-completed.php" method="post" onsubmit="return validateForm()">
+        <form id="reviewForm" action="post-review-completed.php" method="post" onsubmit="return validateForm()">
             <h1>レビュー投稿</h1>
             <div class="required_item">
                 <h3 class="required">必須項目</h3>
@@ -34,9 +34,11 @@
                 <input type="radio" name="rating" id="star5" value="5" />
                 <label for="star5"></label>
             </div>
+            <p id="rating-error" class="error"></p>
             <p class="reviewP">レビュー本文</p>
             全角1000文字以下
-            <textarea id="review" name="review" rows="12" cols="50"></textarea>
+            <textarea id="review" name="review" rows="12" cols="50" oninput="validateReviewLength()"></textarea>
+            <p id="review-length-error" class="error"></p>
 
 
             <div class="button-container">
