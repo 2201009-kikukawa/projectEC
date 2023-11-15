@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.4rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.button-input {
+  display: block;
+  margin: 2.6rem auto;
+  color: #fff;
+  background: #4169E1;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.5rem 1.5rem 0.5rem;
+  text-align: center;
+  border: none;
+  margin-top: 6rem;
+}
+
+.img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-width: 30%;
+  max-height: 100%;
+}
+
