@@ -40,7 +40,7 @@
 
 
             <div class="button-container">
-                <button type="submit" class="button-back">戻る</button>
+                <button type="button" class="button-back" onClick="history.go(-1)">戻る</button>
                 <button type="submit" class="button-post">投稿する</button>
             </div>
             <!-- jsの読み込み -->
