@@ -1,4 +1,3 @@
-<?php require 'menu.php'?>
 <?php
 if (!empty($_SESSION['product'])) {
 echo '<table>';

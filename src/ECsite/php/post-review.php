@@ -13,7 +13,7 @@
     <!-- ヘッダーの読み込み -->
     <?php include("./menu.php"); ?>
     <div class="contents-container">
-        <form action="post-review-completed.php" method="post">
+        <form action="post-review-completed.php" method="post" onsubmit="return validateForm()">
             <h1>レビュー投稿</h1>
             <div class="required_item">
                 <h3 class="required">必須項目</h3>
@@ -43,11 +43,11 @@
                 <button type="button" class="button-back" onClick="history.go(-1)">戻る</button>
                 <button type="submit" class="button-post">投稿する</button>
             </div>
-            <!-- jsの読み込み -->
-            <script src="../script/post-review.js"></script>
-            <script src="../script/validate/post-review-validate.js"></script>
         </form>
     </div>
+    <!-- jsの読み込み -->
+    <script src="../script/post-review.js"></script>
+    <script src="../script/validate/post-review-validate.js"></script>
 </body>
 
 </html>
