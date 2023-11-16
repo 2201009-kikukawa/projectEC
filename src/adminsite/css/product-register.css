@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.4rem;
+}
+
+.contents-container {
+  margin: 1rem auto;
+  width: 60%;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.required_item {
+  text-align: right;
+  color: red;
+}
+
+.required::after {
+  content: " ＊";
+  color: red;
+}
+
+.form-input {
+  text-align: justify;
+  text-justify: auto;
+  display: block;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-width: 0.5px;
+  background: #D9D9D9;
+  border: none;
+}
+
+.button-input {
+  display: block;
+  margin: 2rem auto;
+  color: #fff;
+  background: #4169e1;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.4rem 0.4rem;
+  text-align: center;
+}
+
+.credit-input{
+  text-align: justify;
+  text-justify: auto;
+  padding: 0.3rem 0;
+  background: #D9D9D9;
+  border: none;
+}
+
+.credit_debit-input{
+  text-align: justify;
+  text-justify: auto;
+  width: 65.5%;
+  padding: 0.3rem 0;
+  background: #D9D9D9;
+  border: none;
+}
+
