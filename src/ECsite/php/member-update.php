@@ -1,20 +1,20 @@
 <?php session_start(); ?>
 <?php
 $id = $mell = $password = $account_name = $birthday = $gender = $post_num = $address = $payment_id = $credit_number = $month = $year = $securitycode = '';
-if (isset($_SESSION['menber'])) {
-    $id = $_SESSION['menber']['id'];
-    $mell = $_SESSION['menber']['mell'];
-    $password = $_SESSION['menber']['password'];
-    $account_name = $_SESSION['menber']['account_name'];
-    $birthday = $_SESSION['menber']['birthday'];
-    $gender = $_SESSION['menber']['gender'];
-    $post_num = $_SESSION['menber']['post_num'];
-    $address = $_SESSION['menber']['address'];
-    $payment_id = $_SESSION['menber']['payment_id'];
-    $credit_number = $_SESSION['menber']['credit_number'];
-    $month = $_SESSION['menber']['month'];
-    $year = $_SESSION['menber']['year'];
-    $securitycode = $_SESSION['menber']['securitycode'];
+if (isset($_SESSION['member'])) {
+    $id = $_SESSION['member']['id'];
+    $mell = $_SESSION['member']['mell'];
+    $password = $_SESSION['member']['password'];
+    $account_name = $_SESSION['member']['account_name'];
+    $birthday = $_SESSION['member']['birthday'];
+    $gender = $_SESSION['member']['gender'];
+    $post_num = $_SESSION['member']['post_num'];
+    $address = $_SESSION['member']['address'];
+    $payment_id = $_SESSION['member']['payment_id'];
+    $credit_number = $_SESSION['member']['credit_number'];
+    $month = $_SESSION['member']['month'];
+    $year = $_SESSION['member']['year'];
+    $securitycode = $_SESSION['member']['securitycode'];
 }
 ?>
 

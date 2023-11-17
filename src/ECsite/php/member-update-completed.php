@@ -4,20 +4,20 @@
 $password_hash = password_hash($_POST['register_pass'], PASSWORD_DEFAULT);
 
 $pdo = new PDO($connect, USER, PASS);
-$id=$_SESSION['menber']['id'];
+$id=$_SESSION['member']['id'];
 $register_birthdate = $_POST['register_birthdate']; // フォームからの日付の値
 
 // 日付のフォーマットを変更
 $birthdate_formatted = date('Y-m-d', strtotime($register_birthdate));
 
-$sql = $pdo->prepare('update menber set mell=?, PASSWORD=?, account_name=?,birthday=?, gender=?, post_num=?,address=?,payment_id=? where menber_id=?');
+$sql = $pdo->prepare('update member set mell=?, PASSWORD=?, account_name=?,birthday=?, gender=?, post_num=?,address=?,payment_id=? where menber_id=?');
 $sql->execute([
     $_POST['register_mell'], $password_hash,
     $_POST['register_account_name'],$birthdate_formatted,
     $_POST['gender'], $_POST['register-postcode'],
     $_POST['register_address'],$_POST['credit'],$id
 ]);
-$_SESSION['menber']=[
+$_SESSION['member']=[
     'id'=>$id, 'mell'=>$_POST['register_mell'],
     'password'=>$password_hash,'account_name'=>$_POST['register_account_name'],
     'birthday'=>$_POST['register_birthdate'],'gender'=>$_POST['gender'],
@@ -45,7 +45,7 @@ $sql->execute([
     $_POST['securitycord'],$id
 ]);
 
-$_SESSION['menber']=[
+$_SESSION['member']=[
     'id'=>$id, 'mell'=>$_POST['register_mell'],
     'password'=>$password_hash,'account_name'=>$_POST['register_account_name'],
     'birthday'=>$_POST['register_birthdate'],'gender'=>$_POST['gender'],

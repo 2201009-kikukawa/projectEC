@@ -10,7 +10,7 @@ $register_birthdate = $_POST['register_birthdate']; // フォームからの日�
 // 日付のフォーマットを変更
 $birthdate_formatted = date('Y-m-d', strtotime($register_birthdate));
 
-$sql = $pdo->prepare('insert into menber values(null,?,?,?,?,?,?,?,?)');
+$sql = $pdo->prepare('insert into member values(null,?,?,?,?,?,?,?,?)');
 $sql->execute([
     $_POST['register_mell'], $password_hash,
     $_POST['register_account_name'],$birthdate_formatted,
