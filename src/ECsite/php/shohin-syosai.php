@@ -16,9 +16,18 @@
         // 星がない場合の処理（未評価の可能性）
         $emptyStars = 5 - $fullStars - $halfStars;
         for ($i = 0; $i < $emptyStars; $i++) {
-            echo '□'; // 未評価のマーク
+            echo ' '; // 未評価のマーク
         }
     }
+    function calculateAverageRating($reviews) {
+        $totalRating = 0;
+        foreach ($reviews as $review) {
+            $totalRating += $review['review_value'];
+        }
+        $averageRating = $totalRating / count($reviews);
+        return $averageRating;
+    }
+    
 ?>    
 <?php
 require 'menu.php';
@@ -42,23 +51,28 @@ if (isset($_GET['id'])) {
         echo '<p>商品説明</p>';
         echo "<p>{$product['product_data']}</p>";
 
-        $reviewQuery = $pdo->prepare('SELECT AVG(review_value) AS average_rating, COUNT(*) AS total_reviews FROM review WHERE product_id = ?');
-        $reviewQuery->execute([$product_id]);
-        $reviews = $reviewQuery->fetch();
-        
-        if ($reviews && $reviews['average_rating'] !== null && $reviews['total_reviews'] !== null) {
-            echo 'レビュー ';
-            $averageRating = round($reviews['average_rating'], 2);
-            displayStars($averageRating);
-            echo ' 投稿数: '.$reviews['total_reviews'];
-        
-            $reviewDetailsQuery = $pdo->prepare('SELECT * FROM review WHERE product_id = ?');
-            $reviewDetailsQuery->execute([$product_id]);
-            $reviewDetails = $reviewDetailsQuery->fetchAll();
-        
+        // レビュー情報とユーザー名を取得するクエリを実行
+        $reviewDetailsQuery = $pdo->prepare('
+            SELECT review.*, member.account_name
+            FROM review
+            JOIN member ON review.member_id = member.member_id
+            WHERE review.product_id = ?'
+        );
+
+        $reviewDetailsQuery->execute([$product_id]);
+        $reviewDetails = $reviewDetailsQuery->fetchAll();
+
+        if ($reviewDetails) {
+            $averageRating = calculateAverageRating($reviewDetails); // レビューの平均評価を計算する関数を想定
+            echo 'レビュー   '.$averageRating.'   ';
+            $averageRating.displayStars($averageRating);
+            echo ' 投稿数: '.count($reviewDetails).'件';
+            echo '<a href="post-review.php">レビューを投稿</a>';
             foreach ($reviewDetails as $review) {
                 echo '<p><strong>ユーザー名:</strong>', $review['account_name'], '</p>';
-                echo '<p><strong>評価:</strong>', $review['review_value'], '</p>';
+                echo '<p><strong>評価: </strong>'.$review['review_value'];
+                displayStars($review['review_value']);
+                echo '</p>';
                 echo '<p><strong>投稿日:</strong>', $review['review_date'], '</p>';
                 echo '<p>', $review['review_text'], '</p>';
             }
@@ -76,3 +90,4 @@ if (isset($_GET['id'])) {
     echo "商品 ID が指定されていません。";
 }
 ?>
+
