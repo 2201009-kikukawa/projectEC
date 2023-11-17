@@ -110,4 +110,35 @@ select {
 #image {
   display: block;
   margin: 0 auto; /* 画像を中央に配置 */
+  display: none; /* 元々のファイル選択ボタンを非表示にする */
 }
+
+/* 画像のスタイル変更 */
+#imagePreview {
+  display: block;
+  margin: 0 auto; /* 画像を水平方向に中央揃え */
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 0.4rem 0.4rem;
+  color: #fff;
+  background: #00BFFF;
+  border: 1px solid #333;
+  font-size: 1.2rem;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* ファイル選択ボタンのラベルテキストを変更 */
+.label-text {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* ファイル選択ボタンのスタイル変更 */
+.image {
+  text-align: center;
+  margin-top: 1rem; /* 適切な余白を追加 */
+}
+

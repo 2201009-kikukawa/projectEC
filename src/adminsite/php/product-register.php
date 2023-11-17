@@ -63,7 +63,12 @@
             <br>
             <div class="image">
                 <h3 class="required">画像の添付</h3>
-                <input type="file" id="image" name="image" class="" accept="image/*">
+                <label for="image" class="custom-file-upload">
+                    ファイルからアップロード
+                    <span class="label-text">(画像を選択)</span>
+                </label>
+                <input type="file" id="image" name="image" class="" accept="image/*" onchange="previewImage(event)">
+                <img id="imagePreview" src="#" alt="プレビュー画像" style="display:none; max-width: 300px; margin-top: 10px;">
             </div>
 
             <button type="submit" class="button-input">登録</button>
