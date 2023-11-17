@@ -1,0 +1,83 @@
+/* カート一覧のタイトル */
+h1 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  /* カートアイテムコンテナ */
+  #app {
+    padding: 1rem;
+  }
+  
+  /* 商品名 */
+  .syohin {
+    font-size: 1.2rem; /* 見出しとして少し大きめのサイズ */
+    font-weight: bold; /* 太字にする */
+    margin-bottom: 0.5rem; /* 下の要素との間隔 */
+  }
+  
+  /* 商品説明 */
+  .stsumeis {
+    font-size: 1rem;
+    color: #555; /* 説明文は少し控えめな色にする */
+    margin-bottom: 1rem; /* 画像との間隔 */
+  }
+  
+  /* 商品画像 */
+  img {
+    width: 300px;
+  }
+  
+  /* 個数の調整ボタン */
+  .button {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd; /* 軽い枠線を追加 */
+    background-color: #f8f8f8; /* ボタンの背景色 */
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* 価格表示 */
+  .price {
+    font-size: 1.2rem; /* フォントサイズは画像に基づいて適宜調整してください */
+    font-weight: bold; /* 太字設定 */
+    margin: 1rem 0;
+  }
+  
+  /* 小計表示 */
+  .total {
+    font-size: 1.2rem; /* フォントサイズは画像に基づいて適宜調整してください */
+    margin: 1rem 0;
+  }
+  
+  /* ナビゲーションボタン */
+  input[type="submit"], button {
+    background-color: #007bff; /* ボタンの背景色 */
+    color: #ffffff; /* テキストの色 */
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 5px; /* 角丸のサイズ */
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+  }
+  
+  /* ナビゲーションボタンのホバー効果 */
+  input[type="submit"]:hover, button:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+  }
+  
+  /* 個数調整のフレックスボックスコンテナ */
+.count-container {
+    display: flex; /* フレックスボックスを適用 */
+    align-items: center; /* アイテムを垂直方向に中央揃え */
+    justify-content: center; /* アイテムを水平方向に中央揃え */
+    margin: 1rem 0; /* 上下に余白を設定 */
+  }
+  
+  /* 個数表示 */
+  .count-display {
+    margin: 0 1rem; /* ボタンとの余白を設定 */
+  }
