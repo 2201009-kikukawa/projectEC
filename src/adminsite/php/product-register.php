@@ -51,7 +51,7 @@
 
                 <div class="container-right">
                     <h3 class="required">商品の詳細記入欄</h3>
-                    <textarea name="explanation" rows="6" cols="60"></textarea>
+                    <textarea name="explanation" rows="6" cols="60" required></textarea>
                     <br>
                     <h3 class="required">価格</h3>
                     <input type="text" name="price" class="form-input-price" required />
