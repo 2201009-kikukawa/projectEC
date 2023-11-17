@@ -89,5 +89,5 @@ if (isset($_GET['id'])) {
 } else {
     echo "商品 ID が指定されていません。";
 }
-?>
+?> 
 
