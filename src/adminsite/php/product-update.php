@@ -71,10 +71,9 @@
                 <img id="imagePreview" src="#" alt="プレビュー画像" style="display:none; max-width: 300px; margin-top: 10px;">
             </div>
 
-            <button type="submit" class="button-input">登録</button>
+            <button type="submit" class="button-input">更新</button>
             <!-- jsの読み込み -->
             <script src="../script/product-update.js"></script>
-            <script src="../script/validate/product-register-validate.js"></script>
         </div>
     </form>
 </body>

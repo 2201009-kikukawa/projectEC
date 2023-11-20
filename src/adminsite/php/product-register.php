@@ -22,6 +22,7 @@
                 <div class="container-left">
                     <h3 class="required">商品名</h3>
                     <input type="text" name="product_name" class="form-input" required />
+                    <p id="productNameError" class="error-message"></p>
                     <br>
                     <h3 class="required">魚の種類</h3>
                     <select>
@@ -74,7 +75,6 @@
             <button type="submit" class="button-input">登録</button>
             <!-- jsの読み込み -->
             <script src="../script/product-register.js"></script>
-            <script src="../script/validate/product-register-validate.js"></script>
         </div>
     </form>
 </body>
