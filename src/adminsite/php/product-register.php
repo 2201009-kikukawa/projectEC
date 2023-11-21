@@ -26,21 +26,21 @@
                     <br>
                     <h3 class="required">魚の種類</h3>
                     <select>
-                        <option value="1">魚種別</option>
-                        <option value="2">貝類・魚卵</option>
-                        <option value="3">加工品</option>
+                        <option value="0">魚種別</option>
+                        <option value="1">貝類・魚卵</option>
+                        <option value="2">加工品</option>
                     </select>
                     <h5>更に詳しく</h5>
-                    <select>
-                        <option value="1">マグロ</option>
-                        <option value="2">サーモン</option>
-                        <option value="3">イカ</option>
-                        <option value="4">イクラ</option>
-                        <option value="5">うに</option>
-                        <option value="6">とびっこ</option>
-                        <option value="7">魚の缶詰</option>
-                        <option value="8">干しもの</option>
-                        <option value="9">調理済み食品</option>
+                    <select name="subclass">
+                        <option value="0">マグロ</option>
+                        <option value="1">サーモン</option>
+                        <option value="2">イカ</option>
+                        <option value="3">イクラ</option>
+                        <option value="4">うに</option>
+                        <option value="5">とびっこ</option>
+                        <option value="6">魚の缶詰</option>
+                        <option value="7">干しもの</option>
+                        <option value="8">調理済み食品</option>
                     </select>
                     <br>
                     <h3 class="required">出品先選択</h3>
