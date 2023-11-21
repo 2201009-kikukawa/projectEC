@@ -9,18 +9,9 @@ $sql->execute([
   $_POST['price'], 0,
   $_POST['number'],
   $_POST['image'],$_POST['product_type'],
-  $_POST[''],$_POST['']
+  $_POST[''],$_POST['subclass']
 ]);
 ?>
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html>
