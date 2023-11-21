@@ -12,7 +12,7 @@ try {
 
     $row = $sql->fetch(PDO::FETCH_ASSOC);//データベースにアクセスできるかのエラーチェック
 
-    if ($row && password_verify($pass, $row['password'])) {
+    if ($row && password_verify($pass, $row['PASSWORD'])) {
         $_SESSION['login'] = true;
         $_SESSION['name'] = $account;
 
