@@ -1,3 +1,27 @@
+<?php session_start(); ?>
+<?php require 'db-connect.php'; ?>
+<?php
+$pdo = new PDO($connect, USER, PASS);
+
+$sql = $pdo->prepare('insert into product values(null,?,?,?,?,null,?,?,?,?,?)');
+$sql->execute([
+  $_POST['product_name'], $_POST['explanation'],
+  $_POST['price'], 0,
+  $_POST['number'],
+  $_POST['image'],$_POST['product_type'],
+  $_POST[''],$_POST['']
+]);
+?>
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
