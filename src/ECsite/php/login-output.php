@@ -1,26 +1,32 @@
+<?php session_start(); ?>
+<?php include("./menu.php"); ?>
+<?php require 'db-connect.php'; ?>
 <?php
-require 'db-connect.php'; 
+unset($_SESSION['member']);
+$pdo=new PDO($connect,USER,PASS);
 
-$account = $_POST['name'];
-$pass = $_POST['pass'];
+$sql=$pdo->prepare('select * from member where account_name=?');
+$sql->execute([$_POST['name']]);
+$row = $sql->fetch();
 
-try {
-    $pdo = new PDO($connect, USER, PASS);
+if ($row && password_verify($_POST['pass'],$row['PASSWORD'])) {
+    $_SESSION['member'] = [
+    'id' => $row['member_id'],
+    'mell' => $row['mell'],
+    'password' => $row['PASSWORD'],
+    'account_name' => $row['account_name'],
+    'birthday' => $row['birthday'],
+    'gender' => $row['gender'],
+    'post_num' => $row['post_num'],
+    'address' => $row['address'],
+    'payment_id' => $row['payment_id']
+];
 
-    $sql = $pdo->prepare('SELECT * FROM member WHERE account_name = ?');
-    $sql->execute([$account]);
 
-    $row = $sql->fetch(PDO::FETCH_ASSOC);//データベースにアクセスできるかのエラーチェック
-
-    if ($row && password_verify($pass, $row['PASSWORD'])) {
-        $_SESSION['login'] = true;
-        $_SESSION['name'] = $account;
-
-        header('top.php');//ログインできた場合トップページに遷移
-    } else {
-        echo 'パスワードまたはログインが間違っています。';
-    }
-} catch (PDOException $e) {
-    echo 'データベースエラー: ' . $e->getMessage();
+     // ログイン成功時の処理
+     header('Location: top.php'); // top.phpにリダイレクト
+     exit(); // リダイレクトしたらスクリプトの実行を終了
+} else {
+    echo 'ログイン名またはパスワードが違います。';
 }
 ?>
