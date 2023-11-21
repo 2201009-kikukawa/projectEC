@@ -44,9 +44,9 @@
                     </select>
                     <br>
                     <h3 class="required">出品先選択</h3>
-                    <select>
+                    <select name="product_type">
+                        <option value="0">一般商品</option>
                         <option value="1">オークション商品</option>
-                        <option value="2">一般商品</option>
                     </select>
                 </div>
 
