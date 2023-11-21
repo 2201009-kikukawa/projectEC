@@ -67,7 +67,8 @@ if (isset($_GET['id'])) {
             echo 'レビュー   '.$averageRating.'   ';
             $averageRating.displayStars($averageRating);
             echo ' 投稿数: '.count($reviewDetails).'件';
-            echo '<a href="post-review.php">レビューを投稿</a>';
+            echo '<form action="post-review.php" method="post">';
+            echo '<input type="submit" value="レビューを投稿">';
             foreach ($reviewDetails as $review) {
                 echo '<p><strong>ユーザー名:</strong>', $review['account_name'], '</p>';
                 echo '<p><strong>評価: </strong>'.$review['review_value'];
@@ -80,9 +81,6 @@ if (isset($_GET['id'])) {
             echo 'レビュー情報がありません。';
         }
 
-        echo '<p><input type="submit" value="カートに入れる"></p>';
-        echo '<input type="button" value="戻る" onClick="history.go(-1)">';
-        echo '</form>';
     } else {
         echo "商品が見つかりません。";
     }
@@ -90,4 +88,14 @@ if (isset($_GET['id'])) {
     echo "商品 ID が指定されていません。";
 }
 ?> 
+<footer>
+    <?php
+    echo '<form>';
+    echo '<input type="button" value="戻る" onclick="javascript:history.go(-1)">';
+    echo '</form>';
+    echo '<form action="cart-show.php" method="post">';
+    echo '<input type="submit" value="カートに入れる">';
+    echo '</form>';
+    ?>
+</footer>
 
