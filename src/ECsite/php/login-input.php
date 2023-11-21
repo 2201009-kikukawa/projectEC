@@ -8,19 +8,25 @@
 
 <body>
   <?php include("./menu.php"); ?>
-  <form action="login-output.php" method="POST"> <!-- フォームのアクションを適切なファイルに指定する -->
-    <h1>鮮魚Online🐟</h1>
+  <form action="login-output.php" method="POST">
+    <h1>鮮魚Online</h1>
     <h3>ログインページ</h3>
     <div class="form-input">
-    <label for="name">アカウント名:</label>
-    <input type="text" id="name" name="name" required><br>
-    <label for="pass">パスワード:</label>
-    <input type="password" id="pass" name="pass" required>
+      <div class="form-input-account">
+        <label for="name">アカウント名:</label>
+        <input type="text" class="account_name" id="name" name="name" required><br>
+      </div>
+      <div class="form-input-password">
+        <label for="pass">パスワード:</label>
+        <input type="password" class="password" id="pass" name="pass" required>
+      </div>
+      <button type="submit" class="button-input">ログイン</button>
     </div>
-    <button type="submit" class="button-input">ログイン</button>
-    <br><a href="member-register.php">
-      新規登録はこちらから
-    </a></br>
+    <div class="center">
+      <a href="member-register.php">
+        新規登録はこちらから
+      </a>
+    </div>
     <img src="../image/umi2.png" alt="umi2" class="img">
   </form>
 </body>
