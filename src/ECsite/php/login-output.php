@@ -32,7 +32,11 @@ if ($row && password_verify($_POST['pass'], $row['PASSWORD'])) {
         'gender' => $row['gender'],
         'post_num' => $row['post_num'],
         'address' => $row['address'],
-        'payment_id' => $row['payment_id']
+        'payment_id' => $row['payment_id'],
+        'credit_number'=>"",
+        'month'=>"",
+        'year'=>"",
+        'securitycode'=>""
     ];
     // ログイン成功時の処理
     echo '<script>window.location.href = "top.php";</script>';
