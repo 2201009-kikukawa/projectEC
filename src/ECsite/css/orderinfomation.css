@@ -1,0 +1,51 @@
+/* お届け先のテキストボックス */
+#saki {
+    width: 916px;
+    height: 81px;
+    background: #D9D9D9;
+    border: none; 
+    border-radius: 12px; 
+    margin-bottom: 20px; 
+}
+
+/* 支払い方法のテキストボックス */
+#houhou {
+    width: 916px;
+    height: 81px;
+    background: #D9D9D9;
+    border: none; 
+    border-radius: 12px; 
+    margin-bottom: 20px; 
+}
+
+/* お届け日のテキストボックス */
+#hi {
+    width: 916px;
+    height: 81px;
+    background: #D9D9D9;
+    border: none; 
+    border-radius: 12px; 
+    margin-bottom: 20px; 
+}
+
+/* 戻るボタン */
+.button-container button:nth-child(1) {
+    width: 228px;
+    height: 75px;
+    border: none; 
+    border-radius: 12px;
+    background: #D9D9D9;
+    color: #fff; 
+    margin-right: auto; 
+}
+
+/* 確定ボタン */
+.button-container button:nth-child(2) {
+    width: 228px;
+    height: 75px;
+    border: none; 
+    border-radius: 12px;
+    background: #00F;
+    color: #fff; 
+    margin-left: auto; 
+}
