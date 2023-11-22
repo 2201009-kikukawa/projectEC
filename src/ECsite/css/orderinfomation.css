@@ -1,25 +1,49 @@
-/* 支払い方法のセレクトボックス */
+/* お届け先のテキストボックス */
+#saki {
+  width: 916px;
+  height: 81px;
+  background: #D9D9D9;
+  border: none; 
+  border-radius: 12px; 
+  margin-bottom: 20px; 
+}
+
+.contents-container {
+  margin: 1rem auto;
+  width: 80%;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
+.button-post {
+  color: #fff;
+  background: #00f;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.4rem 3rem 0.4rem;
+  text-align: center;
+  margin-left: auto; /* 左寄せ */
+}
+
+.button-back {
+  color: #000;
+  border: none;
+  font-size: 1rem;
+  border-radius: 14px;
+  padding: 0.4rem 3rem 0.4rem;
+  text-align: center;
+  margin-right: auto; /* 右寄せ */
+}
+
+/* 支払い方法のテキストボックス */
 #houhou {
   width: 916px;
   height: 81px;
   background: #D9D9D9;
-  border: none;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  appearance: none; /* デフォルトの矢印を非表示にする */
-  padding-right: 61px; /* 右側に矢印のスペースを作る */
-}
-
-#houhou::after {
-  content: ""; /* 疑似要素を追加 */
-  width: 53px; /* 矢印の幅 */
-  height: 45px; /* 矢印の高さ */
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='45' viewBox='0 0 53 45' fill='none'%3E%3Cpath d='M26.8071 44.1607L0.163072 0.801333L52.9899 0.521294L26.8071 44.1607Z' fill='white'/%3E%3C/svg%3E") no-repeat; /* SVGデータを埋め込んで表示 */
-  position: absolute;
-  top: 50%; /* 上下中央に配置 */
-  right: 10px; /* 右側にオフセット */
-  transform: translateY(-50%); /* 上下中央に配置 */
-  pointer-events: none; /* 矢印がクリックを妨げないようにする */
+  border: none; 
+  border-radius: 12px; 
+  margin-bottom: 20px; 
 }
 
 /* お届け日のテキストボックス */
@@ -27,29 +51,29 @@
   width: 916px;
   height: 81px;
   background: #D9D9D9;
-  border: none;
-  border-radius: 12px;
-  margin-bottom: 20px;
+  border: none; 
+  border-radius: 12px; 
+  margin-bottom: 20px; 
 }
 
 /* 戻るボタン */
 .button-container button:nth-child(1) {
   width: 228px;
   height: 75px;
-  border: none;
+  border: none; 
   border-radius: 12px;
   background: #D9D9D9;
-  color: #fff;
-  margin-right: auto;
+  color: #fff; 
+  margin-right: auto; 
 }
 
 /* 確定ボタン */
 .button-container button:nth-child(2) {
   width: 228px;
   height: 75px;
-  border: none;
+  border: none; 
   border-radius: 12px;
   background: #00F;
-  color: #fff;
-  margin-left: auto;
+  color: #fff; 
+  margin-left: auto; 
 }
