@@ -25,8 +25,8 @@
         <input type="text" id="hi" name="hi" placeholder="年/月/日" required><br><br>
 
         <div class="button-container">
-            <button type="submit" class="button-input">戻る</button>
-            <button type="submit" class="button-input">確定</button>
+            <button type="submit" class="button-post">戻る</button>
+            <button type="submit" class="button-back">確定</button>
         </div>
     </center>
     </form>
