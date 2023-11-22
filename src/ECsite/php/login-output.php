@@ -17,9 +17,11 @@
 unset($_SESSION['member']);
 $pdo = new PDO($connect, USER, PASS);
 
-$sql = $pdo->prepare('select * from member where account_name=?');
-$sql->execute([$_POST['name']]);
+$sql = $pdo->prepare('select * from member where account_name=:name');
+$sql -> bindParam(':name',$_POST['name']);
+$sql->execute();
 $row = $sql->fetch();
+$password_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
 if ($row && password_verify($_POST['pass'], $row['PASSWORD'])) {
     $_SESSION['member'] = [
