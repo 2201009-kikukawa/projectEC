@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.4rem;
+  color: #ffa500;
+  -webkit-text-stroke: 2px black;
+  padding: 0.2rem;
+}
+
+h3 {
+  text-align: center;
+}
+
+.form-input {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  margin: 1rem auto;
+  width: 40%;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.form-input label {
+  text-align: right;
+  width: 30%; /* 追加 */
+  font-size: 1rem;
+}
+
+.img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-width: 30%;
+  max-height: 100%;
+}
+
+.button-input {
+  display: block;
+  margin: 2rem auto;
+  color: #fff;
+  background: #4169e1;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+  border-radius: 14px;
+  padding: 0.4rem 1rem 0.4rem;
+  text-align: center;
+}
+
+.form-input-account,
+.form-input-password {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.account_name{
+  text-align: justify;
+  text-justify: auto;
+  width: 100%;
+  padding: 0.3rem 0;
+  border-width: 0.5px;
+  background: #D9D9D9;
+  border: none;
+  margin: 0.3rem;
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.password {
+  text-align: justify;
+  text-justify: auto;
+  width: 100%;
+  padding: 0.3rem 0;
+  border-width: 0.5px;
+  background: #D9D9D9;
+  border: none;
+  margin: 0.3rem;
+  margin-top: 0.1rem;
+}

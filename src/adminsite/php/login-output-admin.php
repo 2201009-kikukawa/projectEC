@@ -14,29 +14,25 @@
 
 </html>
 <?php
-unset($_SESSION['member']);
+unset($_SESSION['shop']);
 $pdo = new PDO($connect, USER, PASS);
 
-$sql = $pdo->prepare('select * from member where account_name=:name');
-$sql -> bindParam(':name',$_POST['name']);
+$sql = $pdo->prepare('select * from shop where login_id = :login_id');
+$sql->bindParam(':login_id', $_POST['login_id']);
 $sql->execute();
 $row = $sql->fetch();
-$password_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-if ($row && password_verify($_POST['pass'], $row['PASSWORD'])) {
-    $_SESSION['member'] = [
-        'id' => $row['member_id'],
-        'mell' => $row['mell'],
-        'password' => $row['PASSWORD'],
-        'account_name' => $row['account_name'],
-        'birthday' => $row['birthday'],
-        'gender' => $row['gender'],
-        'post_num' => $row['post_num'],
-        'address' => $row['address'],
-        'payment_id' => $row['payment_id']
+if ($row && $row['password'] == $_POST['pass']) {
+    $_SESSION['shop'] = [
+        'shop_id' => $row['shop_id'],
+        'shop_name' => $row['shop_name'],
+        'login_id' => $row['login_id'],
+        'password' => $row['password'],
+        'mail' => $row['mail'],
+        'shop_person' => $row['shop_person']
     ];
     // ログイン成功時の処理
-    echo '<script>window.location.href = "top.php";</script>';
+    echo '<script>window.location.href = "product-register.php";</script>';
     exit(); // リダイレクトしたらスクリプトの実行を終了
 } else {
     echo 'ログイン名またはパスワードが違います。';

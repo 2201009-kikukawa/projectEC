@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php include("./menu.php"); ?>
 <?php
 $pdo = new PDO($connect, USER, PASS);
 
@@ -9,7 +10,7 @@ $sql->execute([
   $_POST['price'], 0,
   $_POST['number'],
   $_POST['image'],$_POST['product_type'],
-  $_POST[''],$_POST['subclass']
+  $_SESSION['shop']['shop_id'],$_POST['subclass']
 ]);
 ?>
 

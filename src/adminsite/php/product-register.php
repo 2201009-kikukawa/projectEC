@@ -9,9 +9,8 @@
 </head>
 
 <body>
-
     <!-- ヘッダーの読み込み -->
-
+    <?php include("./menu.php"); ?>
     <form action="product-register-completed.php" method="post">
         <div class="contents-container">
             <h1>新規商品登録</h1>
