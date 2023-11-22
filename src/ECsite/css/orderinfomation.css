@@ -8,6 +8,34 @@
     margin-bottom: 20px; 
 }
 
+.contents-container {
+    margin: 1rem auto;
+    width: 80%;
+    padding: 1rem;
+    max-width: 1200px;
+  }
+
+  .button-post {
+    color: #fff;
+    background: #00f;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 14px;
+    padding: 0.4rem 3rem 0.4rem;
+    text-align: center;
+    margin-left: auto; /* 左寄せ */
+  }
+  
+  .button-back {
+    color: #000;
+    border: none;
+    font-size: 1rem;
+    border-radius: 14px;
+    padding: 0.4rem 3rem 0.4rem;
+    text-align: center;
+    margin-right: auto; /* 右寄せ */
+  }
+
 /* 支払い方法のテキストボックス */
 #houhou {
     width: 916px;

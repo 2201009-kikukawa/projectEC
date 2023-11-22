@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../css/orderinfomation.css">
 </head>
 <body>
+<div class="contents-container">
     <?php include("./menu.php"); ?>
     <center>
         <h3>注文情報入力</h3>
@@ -30,5 +31,6 @@
     </center>
     </form>
     </div>
+</div>
 </body>
 </html>
