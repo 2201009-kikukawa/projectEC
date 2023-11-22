@@ -38,9 +38,5 @@ if ($row && password_verify($_POST['pass'], $row['PASSWORD'])) {
     exit(); // リダイレクトしたらスクリプトの実行を終了
 } else {
     echo 'ログイン名またはパスワードが違います。';
-    // デバッグのために以下を追加
-    echo '<pre>';
-    var_dump($_POST['name'], $_POST['pass'], $row,password_verify('Gin28281213', '$2y$10$ns.2HuToHeCuEZDZTF/k4eA'));
-    echo '</pre>';
 }
 ?>
