@@ -29,15 +29,22 @@ new Vue({
             });
         },
         productsearch(subclassId) {
-            if (subclassId === null) {
-                // 全ての商品を表示
-                this.filteredProducts = this.products;
-            } else {
-                // 特定のサブクラスに絞り込み
-                this.filteredProducts = this.products.filter(product => product.subclass_id === subclassId);
-            }
-        this.products = this.filteredProducts;
-        }
+            axios.get('../php/get-products.php')
+                .then(response => {
+                    this.products = response.data;
+                    if (subclassId === null) {
+                        // 全ての商品を表示
+                        this.filteredProducts = this.products;
+                    } else {
+                        // 特定のサブクラスに絞り込み
+                        this.filteredProducts = this.products.filter(product => product.subclass_id === subclassId);
+                    }
+                    this.products = this.filteredProducts;
+                })
+                .catch(error => {
+                    console.error('データの取得に失敗しました', error);
+                });
+        },
     },
     computed: {
         sortedProducts: function () {
