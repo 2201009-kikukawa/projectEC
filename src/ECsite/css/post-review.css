@@ -47,7 +47,7 @@ h1 {
   border-radius: 14px;
   padding: 0.4rem 3rem 0.4rem;
   text-align: center;
-  margin-left: auto; /* 右寄せ */
+  margin-left: auto; /* 左寄せ */
 }
 
 .button-back {

@@ -5,8 +5,8 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <div class="centered-search">
-  <form method="get" action="#" class="search_container">
-    <input type="text" size="25" placeholder="キーワード検索">
+  <form method="post" action="searchproductshow.php" class="search_container">
+    <input type="text" size="25" name="key" placeholder="キーワード検索">
     <input type="submit" value="&#xf002">
   </form>
 </div>
@@ -15,57 +15,36 @@
    
     <div class="search_area">
         
-      <form id="selectForm">
-     <span id="sizeBox">
+      <form action="searchproductshow.php" method="post" id="selectForm">
+          <span id="sizeBox1">
             <label>
-              <input type="checkbox" name="shibori" value="ア行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">ア行</span></label>
+              <input type="checkbox" name="shibori1" value="1" class="checkbox_input size_sort">
+              <span class="checkbox_parts"> 1000円未満</span></label><br>
             <label>
-              <input type="checkbox" name="shibori" value="イ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">ハ行</span></label>
+              <input type="checkbox" name="shibori2" value="2" class="checkbox_input size_sort">
+              <span class="checkbox_parts"> 1000円以上5000円未満</span></label><br>
             <label>
-              <input type="checkbox" name="shibori" value="1000円未満" class="checkbox_input size_sort">
-              <span class="checkbox_parts"> 1000円未満</span></label>
+              <input type="checkbox" name="shibori3" value="3" class="checkbox_input size_sort">
+              <span class="checkbox_parts"> 5000円以上10000円未満</span></label><br>
             <label>
-              <input type="checkbox" name="shibori" value="カ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">カ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="マ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">マ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="1000円以上5000円未満" class="checkbox_input size_sort">
-              <span class="checkbox_parts"> 1000円以上5000円未満</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="サ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">サ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="ヤ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">ヤ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="5000円以上" class="checkbox_input size_sort">
-              <span class="checkbox_parts"> 5000円以上</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="タ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">タ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="ラ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">ラ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="海水魚" class="checkbox_input size_sort">
-              <span class="checkbox_parts"> 海水魚</span></label>
-              <label>
-              <input type="checkbox" name="shibori" value="ナ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">ナ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="ワ行" class="checkbox_input size_sort">
-              <span class="checkbox_parts">ワ行</span></label>
-            <label>
-              <input type="checkbox" name="shibori" value="貝類・加工品" class="checkbox_input size_sort">
-              <span class="checkbox_parts"> 貝類・加工品</span></label>
+              <input type="checkbox" name="shibori4" value="4" class="checkbox_input size_sort">
+              <span class="checkbox_parts">10000円以上</span></label><br>
           </span>
-          
+          <span id="sizeBox2">
+            <label>
+              <input type="checkbox" name="shibori5" value="0" class="checkbox_input size_sort">
+              <span class="checkbox_parts"> 魚類</span></label><br>
+            <label>
+              <input type="checkbox" name="shibori6" value="1" class="checkbox_input size_sort">
+              <span class="checkbox_parts"> 貝類・魚卵</span></label><br>
+            <label>
+              <input type="checkbox" name="shibori7" value="2" class="checkbox_input size_sort">
+              <span class="checkbox_parts"> 加工品</span></label><br>
+          </span>
+    </div>
+          <div class = buttonarea>
             <input type="reset" name="shibori" class="re-button" value="絞り込み項目をリセット">
             <input type="submit" name="shibori" class="kensaku-button" value="検索">
-        </div>
+          </div>
       </form>
-    </div>
+</div>
