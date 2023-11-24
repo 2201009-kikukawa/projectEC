@@ -16,7 +16,7 @@
             <center>
                 <label for="saki">お届け先</label><br><br>
                 <input type="text" id="saki" name="saki" required><br><br>
-                
+                <div class="select-arrow">
                 <label for="houhou">支払い方法</label><br><br>
                 <select id="houhou" name="houhou" required>
                     <option value="credit_card">クレジットカード</option>
