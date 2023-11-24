@@ -17,7 +17,7 @@
         <img src="../image/kensaku.png" alt="検索" style="width: 25px; margin-bottom: 5px;">
         検索
       </a>
-      <a href="tsuchi.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
+      <a href="notice.php" style="display: flex; align-items: center; text-decoration: none; flex-direction: column;">
       <img src="../image/beru.png" alt="通知" style="width: 25px; margin-bottom: 5px;">
         通知
       </a>
