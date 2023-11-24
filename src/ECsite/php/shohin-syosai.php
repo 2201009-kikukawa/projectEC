@@ -90,11 +90,14 @@ if (isset($_GET['id'])) {
 ?> 
 <footer>
     <?php
+    
+    echo '<form action="cart-show.php" method="post">';
+    echo '<input type="hidden" name="product_id" value="' . htmlspecialchars($product['product_id']) . '">';
+    echo '<input type="number" name="quantity" value="1">';
+    echo '<input type="submit" value="カートに入れる">';
+    echo '</form>';
     echo '<form>';
     echo '<input type="button" value="戻る" onclick="javascript:history.go(-1)">';
-    echo '</form>';
-    echo '<form action="cart-show.php" method="post">';
-    echo '<input type="submit" value="カートに入れる">';
     echo '</form>';
     ?>
 </footer>

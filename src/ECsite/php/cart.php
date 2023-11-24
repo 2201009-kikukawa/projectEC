@@ -1,73 +1,80 @@
 <?php
-session_start(); // セッションを開始
-require 'menu.php';
 
-// カート内の商品の合計金額を計算する関数
-function calculateTotal($cart) {
-    $total = 0;
-    foreach ($cart as $item) {
-        $total += $item['price'] * $item['count'];
+require 'db-connect.php'; // データベース接続
+
+// カートに商品を追加
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset($_POST['quantity'])) {
+    $product_id = $_POST['product_id'];
+    $quantity = $_POST['quantity'];
+
+    // 商品情報をデータベースから取得
+    $stmt = $pdo->prepare("SELECT * FROM product WHERE product_id = ?");
+    $stmt->execute([$product_id]);
+    $product = $stmt->fetch();
+
+    if ($product) {
+        if (!isset($_SESSION['product'][$product_id])) {
+            $_SESSION['product'][$product_id] = array(
+                'name' => $product['product_name'], 
+                'price' => $product['price'], 
+                'count' => $quantity
+            );
+        } else {
+            $_SESSION['product'][$product_id]['count'] += $quantity;
+        }
     }
-    return $total;
 }
 
-// カート内の商品を削除する
-if (isset($_GET['action']) && $_GET['action'] == 'delete') {
-    $id = $_GET['id'];
-    unset($_SESSION['product'][$id]);
+// カートの内容を表示
+echo '<div id="cart-app">';
+if (!empty($_SESSION['product'])) {
+    echo '<table>';
+    echo '<tr><th>商品番号</th><th>商品名</th><th>価格</th><th>個数</th><th>小計</th><th>操作</th></tr>';
+    foreach ($_SESSION['product'] as $id => $product) {
+        echo "<tr>";
+        echo "<td>", htmlspecialchars($id), "</td>";
+        echo "<td>", htmlspecialchars($product['name']), "</td>";
+        echo "<td>", htmlspecialchars($product['price']), "</td>";
+        echo "<td><button @click=\"decrement('$id')\">-</button> {{ counts['$id'] }} <button @click=\"increment('$id')\">+</button></td>";
+        echo "<td>{{ counts['$id'] * {$product['price']} }}</td>";
+        echo "<td><a href=\"cart-delete.php?id=", htmlspecialchars($id), "\">削除</a></td>";
+        echo "</tr>";
+    }
+    echo '</table>';
+} else {
+    echo 'カートに商品がありません。';
 }
-
-// カート内の商品情報を取得
-$cart = isset($_SESSION['product_id']) ? $_SESSION['product_id'] : [];
-$total = calculateTotal($cart);
+echo '</div>';
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>カート一覧</title>
-  <link rel="stylesheet" href="../css/cart.css">
-</head>
-<body>
-    <h1>カート一覧</h1>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    <?php if (!empty($cart)): ?>
-        <table>
-            <tr>
-                
-                <th>商品番号</th>
-                <th>商品画像</th>
-                <th>商品名</th>
-                <th>価格</th>
-                <th>商品説明</th>
-                <th>数量</th>
-                <th>小計</th>
-                <th>操作</th>
-            </tr>
-            <?php foreach ($cart as $id => $product): ?>
-                <tr>
-                    <td><?= htmlspecialchars($id) ?></td>
-                    <td><?= htmlspecialchars($product['picture']) ?></td>
-                    <td><?= htmlspecialchars($product['product_name']) ?></td>
-                    <td><?= htmlspecialchars($product['price']) ?></td>
-                    <td><?= htmlspecialchars($product['product_date']) ?></td>
-                    <td><?= htmlspecialchars($product['count']) ?></td>
-                    <td><?= htmlspecialchars($product['price'] * $product['count']) ?></td>
-                    <td><a href="?action=delete&id=<?= htmlspecialchars($id) ?>">削除</a></td>
-                </tr>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Vue({
+        el: '#cart-app',
+        data: {
+            counts: {}
+            // ここにPHPから取得した初期数量をセット
+        },
+        mounted: function() {
+            // カートの初期状態を設定
+            <?php foreach ($_SESSION['product'] as $id => $product): ?>
+                this.counts['<?= $id ?>'] = <?= $product['count'] ?>;
             <?php endforeach; ?>
-            <tr>
-                <td colspan="5">合計金額: <?= htmlspecialchars($total) ?></td>
-            </tr>
-        </table>
-        <a href=".php">お買い物に戻る</a>
-        <a href=".php">会計</a>
-    <?php else: ?>
-        <p>カートに商品がありません。</p>
-    <?php endif; ?>
+        },
+        methods: {
+            increment: function(id) {
+                this.counts[id] += 1;
+                // ここでAjaxリクエストやフォーム送信を行い、サーバーに変更を通知する
+            },
+            decrement: function(id) {
+                if (this.counts[id] > 0) {
+                    this.counts[id] -= 1;
+                    // ここでAjaxリクエストやフォーム送信を行い、サーバーに変更を通知する
+                }
+            }
+        }
+    });
+});
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="../script/cart.js"></script>
-</body>
-</html>
+</script>

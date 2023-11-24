@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function () {
 new Vue({
     el: '#app',
     data: {
@@ -20,4 +21,4 @@ new Vue({
       }
     }
   });
-  
+});
