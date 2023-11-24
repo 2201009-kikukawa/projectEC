@@ -23,7 +23,6 @@
                     <option value="bank_transfer">銀行振込</option>
                     <!-- 追加の支払い方法をここに追加 -->
                 </select><br><br>
-                
                 <label for="hi">お届け日</label><br><br>
                 <input type="text" id="hi" name="hi" placeholder="年/月/日" required><br><br>
 
