@@ -3,91 +3,16 @@
 * {
   margin: 0;
   padding: 0;
-} 
-
-/*商品画像*/
-.product-image{
-    width: 665px;
-    height: 333px;
-    flex-shrink: 0;
-    border: 1px solid #000;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    position: relative;
-    top: 60px;
-} 
-
-/*商品名(1)*/
-.product-name-1{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -270px;
-    left: 700px;
 }
 
-/*商品名(2)*/
-.product-name-2{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
-    left: 700;
+.contents-container {
+  margin: 1rem auto;
+  width: 92%;
+  padding: 1rem;
+  max-width: 1200px;
 }
 
-/*商品価格(1)*/
-.product-price-1{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
-    left: 700;
+.image {
+    width: 520px;
+    height: 300px;
 }
-
-/*商品価格(2)*/
-.product-price-2{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
-    left: 700;
-}
-
-/*商品説明(1)*/
-.product-data-1{    
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
-}
-
-/*商品説明(2)*/
-.product-data-2{
-    width: 1289px;
-    height: 260px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    position: relative;
-    top: -280px;
-    font-size: 45px;
-}
-
