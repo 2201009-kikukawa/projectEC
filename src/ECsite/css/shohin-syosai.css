@@ -3,91 +3,91 @@
 * {
   margin: 0;
   padding: 0;
-} 
+}
+
+/*商品用*/
 
 /*商品画像*/
 .product-image{
-    width: 665px;
-    height: 333px;
-    flex-shrink: 0;
-    border: 1px solid #000;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    position: relative;
-    top: 60px;
-} 
+    width: 50vw; /* ビューポートの幅の50% */
+    height: 50vh; /* ビューポートの高さの50% */
+}
 
 /*商品名(1)*/
 .product-name-1{
     color: #000;
     font-family: Inter;
-    font-size: 60px;
+    font-size: 3rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     position: relative;
-    top: -270px;
-    left: 700px;
+    top: -17rem;
+    left: 37rem;
 }
 
 /*商品名(2)*/
 .product-name-2{
     color: #000;
     font-family: Inter;
-    font-size: 60px;
+    font-size: 3rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     position: relative;
-    top: -280;
-    left: 700;
+    top: -17rem;
+    left: 37rem;
 }
 
 /*商品価格(1)*/
 .product-price-1{
     color: #000;
     font-family: Inter;
-    font-size: 60px;
+    font-size: 3rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     position: relative;
-    top: -280;
-    left: 700;
+    top: -17rem;
+    left: 37rem;
 }
 
 /*商品価格(2)*/
 .product-price-2{
     color: #000;
     font-family: Inter;
-    font-size: 60px;
+    font-size: 3rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     position: relative;
-    top: -280;
-    left: 700;
+    top: -17rem;
+    left: 37rem;
 }
 
 /*商品説明(1)*/
 .product-data-1{    
     color: #000;
     font-family: Inter;
-    font-size: 60px;
+    font-size: 3rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     position: relative;
-    top: -280;
+    top: 19rem;
+    left: -35rem;
 }
 
 /*商品説明(2)*/
 .product-data-2{
-    width: 1289px;
-    height: 260px;
-    border: 2px solid #000;
-    border-radius: 10px;
+    color: #000;
+    font-family: Inter;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     position: relative;
-    top: -280px;
-    font-size: 45px;
+    top: 2rem;
+    left: -35rem;
 }
 

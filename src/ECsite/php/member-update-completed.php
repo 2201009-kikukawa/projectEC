@@ -10,7 +10,7 @@ $register_birthdate = $_POST['register_birthdate']; // フォームからの日�
 // 日付のフォーマットを変更
 $birthdate_formatted = date('Y-m-d', strtotime($register_birthdate));
 
-$sql = $pdo->prepare('update member set mell=?, PASSWORD=?, account_name=?,birthday=?, gender=?, post_num=?,address=?,payment_id=? where menber_id=?');
+$sql = $pdo->prepare('update member set mell=?, PASSWORD=?, account_name=?,birthday=?, gender=?, post_num=?,address=?,payment_id=? where member_id=?');
 $sql->execute([
     $_POST['register_mell'], $password_hash,
     $_POST['register_account_name'],$birthdate_formatted,
@@ -39,7 +39,7 @@ $expiration_date = date('Y-m-d', strtotime($expiration_date));
 
 
 
-$sql = $pdo->prepare('update credit set credit_number=?, lifetime=?, securitycode=? where menber_id=?');
+$sql = $pdo->prepare('update credit set credit_number=?, lifetime=?, securitycode=? where member_id=?');
 $sql->execute([
     $_POST['credit_name'],$expiration_date,
     $_POST['securitycord'],$id
