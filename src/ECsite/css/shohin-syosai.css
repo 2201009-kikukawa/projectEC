@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contents-container {
+  margin: 1rem auto;
+  width: 92%;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
+.contents-container-sub {
+  display: flex; /* Flexboxを使用して子要素を水平に配置 */
+}
+
+.image {
+  width: 520px;
+  height: 200px;
+}
+
+.product-info {
+  flex: 1; /* 残りのスペースを取るように設定 */
+  margin-left: 6rem;
+}
+
+.subtitle {
+  font-size: 2.2rem;
+}
+
+.subtitle-review {
+  font-size: 1.4rem;
+}
+
+.item {
+  font-size: 1.7rem;
+  background-color: #d9d9d9;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.explanation {
+  font-size: 1rem;
+  border: 1px solid #000; /* 黒い囲みを追加 */
+  padding: 10px; /* 囲みの内側に余白を追加 */
+  margin-bottom: 2rem;
+  background-color: #fff6f6;
+}
+
+.button-input {
+  margin-left:35rem;
+  display: block;
+  color: #fff;
+  background: #7fffd4;
+  border: 1px solid #333;
+  font-size: 1rem;
+  border-radius: 14px;
+  padding: 0.5rem 2rem 0.5rem;
+}

@@ -46,14 +46,17 @@ if (isset($_GET['id'])) {
     $product = $productQuery->fetch();
 
     if ($product) {
+        echo '<div class="contents-container-sub">';
         echo '<img alt="image" class="image" src="../image/', $product['picture'], '">';
-        echo '<form action="cart-show.php" method="post">';
-        echo '商品名';
-        echo "<p>{$product['product_name']}</p>";
-        echo '<p>価格</p>';
-        echo "<p>{$product['price']} 円</p>";
-        echo '<p>商品説明</p>';
-        echo "<p>{$product['product_data']}</p>";
+        echo '<div class="product-info">';
+        echo '<P class="subtitle">商品名</P>';
+        echo "<p class='item'>{$product['product_name']}</p>";
+        echo '<p class="subtitle">価格</p>';
+        echo "<p class='item'>{$product['price']} 円</p>";
+        echo '</div>';
+        echo '</div>';
+        echo '<p class="subtitle">商品説明</p>';
+        echo "<p class='explanation'>{$product['product_data']}</p>";
 
         // レビュー情報とユーザー名を取得するクエリを実行
         $reviewDetailsQuery = $pdo->prepare(
@@ -69,11 +72,18 @@ if (isset($_GET['id'])) {
 
         if ($reviewDetails) {
             $averageRating = calculateAverageRating($reviewDetails); // レビューの平均評価を計算する関数を想定
-            echo 'レビュー   ' . $averageRating . '   ';
+            echo '<div class="contents-container-sub">';
+            echo '<div class="subtitle-review">';
+            echo 'レビュー ' . $averageRating . '   ';
             $averageRating . displayStars($averageRating);
             echo ' 投稿数: ' . count($reviewDetails) . '件';
+            echo '</div>';
             echo '<form action="post-review.php" method="post">';
-            echo '<input type="submit" value="レビューを投稿">';
+            echo '<input type="submit" class="button-input" value="レビューを投稿">';
+            echo '</form>';
+            echo '</div>';
+            echo '<br>';
+            echo '<hr>';
             foreach ($reviewDetails as $review) {
                 echo '<p><strong>ユーザー名:</strong>', $review['account_name'], '</p>';
                 echo '<p><strong>評価: </strong>' . $review['review_value'];
@@ -81,9 +91,13 @@ if (isset($_GET['id'])) {
                 echo '</p>';
                 echo '<p><strong>投稿日:</strong>', $review['review_date'], '</p>';
                 echo '<p>', $review['review_text'], '</p>';
+                echo '<hr>';
             }
         } else {
             echo 'レビュー情報がありません。';
+            echo '<form action="post-review.php" method="post">';
+            echo '<input type="submit" class="button-input" value="レビューを投稿">';
+            echo '</form>';
         }
     } else {
         echo "商品が見つかりません。";
@@ -101,9 +115,7 @@ echo '</div>';
     echo '<input type="number" name="quantity" value="1">';
     echo '<input type="submit" value="カートに入れる">';
     echo '</form>';
-    echo '<form>';
     echo '<input type="button" value="戻る" onclick="javascript:history.go(-1)">';
-    echo '</form>';
     echo '</div>';
     ?>
 </footer>
