@@ -1,0 +1,102 @@
+body {
+    /* アニメーションの設定に応じて調整 */
+    position: relative; /* スライドショーのための相対位置設定 */
+}
+
+
+  
+  .centered-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -210px;
+  left:170;
+
+      position: absolute;
+    top: 50%;  /* ページの垂直中央 */
+    
+    transform: translate(-50%, -50%); /* 中央揃え */
+    z-index: 100; /* 前面に表示 */
+  }
+    
+  .search_container {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #999;
+    padding: 3px 5px;
+    border-radius: 20px;
+    height: 2.3em;
+    width: 340px;
+    overflow: hidden;
+    margin-bottom: 0; /* 余白を取り除く */
+    text-align: center;
+}
+
+  .search_container input[type="text"]{
+    border: none;
+    height: 2.0em;
+    width: 340px;
+    text-align: center;
+  }
+    .search_container input[type="text"]:focus {
+      outline: 0;
+    }
+    .search_container input[type="submit"]{
+      cursor: pointer;
+      font-family: FontAwesome;
+      border: none;
+      background: #3879D9;
+      color: #fff;
+      position: absolute;
+      width: 3.5em;
+      height: 3.0em;
+      right:0px;
+      top: -3px;
+      outline : none;
+    }
+
+
+.slideshow-container {
+    position: absolute;
+    top: 50%;  /* ページの垂直中央 */
+    left: 50%; /* ページの水平中央 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    z-index: 100; /* 前面に表示 */
+}
+  .mySlides {
+    display: none;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
