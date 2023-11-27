@@ -3,91 +3,59 @@
 * {
   margin: 0;
   padding: 0;
-} 
-
-/*商品画像*/
-.product-image{
-    width: 665px;
-    height: 333px;
-    flex-shrink: 0;
-    border: 1px solid #000;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    position: relative;
-    top: 60px;
-} 
-
-/*商品名(1)*/
-.product-name-1{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -270px;
-    left: 700px;
 }
 
-/*商品名(2)*/
-.product-name-2{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
-    left: 700;
+.contents-container {
+  margin: 1rem auto;
+  width: 92%;
+  padding: 1rem;
+  max-width: 1200px;
 }
 
-/*商品価格(1)*/
-.product-price-1{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
-    left: 700;
+.contents-container-sub {
+  display: flex; /* Flexboxを使用して子要素を水平に配置 */
 }
 
-/*商品価格(2)*/
-.product-price-2{
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
-    left: 700;
+.image {
+  width: 520px;
+  height: 200px;
 }
 
-/*商品説明(1)*/
-.product-data-1{    
-    color: #000;
-    font-family: Inter;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: relative;
-    top: -280;
+.product-info {
+  flex: 1; /* 残りのスペースを取るように設定 */
+  margin-left: 6rem;
 }
 
-/*商品説明(2)*/
-.product-data-2{
-    width: 1289px;
-    height: 260px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    position: relative;
-    top: -280px;
-    font-size: 45px;
+.subtitle {
+  font-size: 2.2rem;
 }
 
+.subtitle-review {
+  font-size: 1.4rem;
+}
+
+.item {
+  font-size: 1.7rem;
+  background-color: #d9d9d9;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.explanation {
+  font-size: 1rem;
+  border: 1px solid #000; /* 黒い囲みを追加 */
+  padding: 10px; /* 囲みの内側に余白を追加 */
+  margin-bottom: 2rem;
+  background-color: #fff6f6;
+}
+
+.button-input {
+  margin-left:35rem;
+  display: block;
+  color: #fff;
+  background: #7fffd4;
+  border: 1px solid #333;
+  font-size: 1rem;
+  border-radius: 14px;
+  padding: 0.5rem 2rem 0.5rem;
+}
