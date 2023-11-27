@@ -96,7 +96,7 @@ if (isset($_GET['id'])) {
         } else {
             echo 'レビュー情報がありません。';
             echo '<form action="post-review.php" method="post">';
-            echo '<input type="submit" class="button-input" value="レビューを投稿">';
+            echo '<input type="submit" class="button-input-nothing" value="レビューを投稿">';
             echo '</form>';
         }
     } else {

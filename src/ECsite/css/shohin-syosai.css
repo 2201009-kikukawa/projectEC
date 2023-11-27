@@ -50,7 +50,17 @@
 }
 
 .button-input {
-  margin-left:35rem;
+  margin-left: 35rem;
+  display: block;
+  color: #fff;
+  background: #7fffd4;
+  border: 1px solid #333;
+  font-size: 1rem;
+  border-radius: 14px;
+  padding: 0.5rem 2rem 0.5rem;
+}
+
+.button-input-nothing {
   display: block;
   color: #fff;
   background: #7fffd4;
