@@ -23,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
             $_SESSION['product'][$product_id]['count'] += $quantity;
         }
     }
+}else{
+    echo 'エラー';
 }
 
 // カートの内容を表示
@@ -46,35 +48,3 @@ if (!empty($_SESSION['product'])) {
 }
 echo '</div>';
 ?>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Vue({
-        el: '#cart-app',
-        data: {
-            counts: {}
-            // ここにPHPから取得した初期数量をセット
-        },
-        mounted: function() {
-            // カートの初期状態を設定
-            <?php foreach ($_SESSION['product'] as $id => $product): ?>
-                this.counts['<?= $id ?>'] = <?= $product['count'] ?>;
-            <?php endforeach; ?>
-        },
-        methods: {
-            increment: function(id) {
-                this.counts[id] += 1;
-                // ここでAjaxリクエストやフォーム送信を行い、サーバーに変更を通知する
-            },
-            decrement: function(id) {
-                if (this.counts[id] > 0) {
-                    this.counts[id] -= 1;
-                    // ここでAjaxリクエストやフォーム送信を行い、サーバーに変更を通知する
-                }
-            }
-        }
-    });
-});
-
-</script>
