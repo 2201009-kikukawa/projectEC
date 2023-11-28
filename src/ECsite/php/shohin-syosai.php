@@ -57,6 +57,10 @@ if (isset($_GET['id'])) {
         echo '</div>';
         echo '<p class="subtitle">商品説明</p>';
         echo "<p class='explanation'>{$product['product_data']}</p>";
+        $_SESSION['product']=[
+            'image'=>$product['picture'], 'product_name'=>$product['product_name'],
+            'price'=>$product['price'],'product_data'=>$product['product_data']
+            ];
 
         // レビュー情報とユーザー名を取得するクエリを実行
         $reviewDetailsQuery = $pdo->prepare(
