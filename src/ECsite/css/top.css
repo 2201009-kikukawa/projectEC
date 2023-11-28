@@ -3,6 +3,24 @@ body {
     position: relative; /* スライドショーのための相対位置設定 */
 }
 
+.my-buttons {
+    position: absolute; /* ページに対して固定 */
+    top: 117px; /* 上端からの距離 */
+    right: 60px; /* 右端からの距離 */
+    z-index: 300; /* 高い値に設定 */
+}
+
+.top-button {
+    padding: 6px 29px;
+    color: #fff;
+    background: #FA8072;
+    font-size: 1.0rem;
+    border-radius: 14px;
+    text-align: center;
+    border: none;
+}
+
+
 .sidebar {
     position: absolute; /* 位置を絶対位置に変更 */
     top: 165px; /* 上端からの距離 */

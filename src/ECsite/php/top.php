@@ -13,6 +13,11 @@
 <!-- アニメーション（umianime.php） -->
 <?php require 'umianime.php'; ?>
 
+<div class="my-buttons">
+    <button onclick="window.location.href='./productshow.php'" class="top-button">商品一覧へ</button>
+</div>
+
+
 <aside class="sidebar">
     <div class="sidemenu">
         <div class="menuitem">魚種別</div>
