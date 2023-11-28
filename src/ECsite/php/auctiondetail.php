@@ -34,7 +34,7 @@
             <div class="maincontiner">
                 <div class="mainitem1">
                     <div class="imgarea">
-                        <img class="imgitem" src="../image/<?php echo $product['picyure']?>">
+                        <img class="imgitem" src="../image/<?php echo $product['picture']?>">
                     </div><br>
                     <div class="textarea">
                         <div class="textitem"><?php echo $product['product_data']?></div>
