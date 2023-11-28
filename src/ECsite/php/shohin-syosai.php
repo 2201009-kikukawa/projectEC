@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 function displayStars($rating)
 {
@@ -57,6 +58,7 @@ if (isset($_GET['id'])) {
         echo '</div>';
         echo '<p class="subtitle">商品説明</p>';
         echo "<p class='explanation'>{$product['product_data']}</p>";
+        unset($_SESSION['product']);
         $_SESSION['product']=[
             'image'=>$product['picture'], 'product_name'=>$product['product_name'],
             'price'=>$product['price'],'product_data'=>$product['product_data']

@@ -18,6 +18,10 @@ h1 {
   max-width: 1200px;
 }
 
+.contents-container-sub {
+  display: flex; /* Flexboxを使用して子要素を水平に配置 */
+}
+
 .required_item {
   text-align: right;
   color: red;
@@ -105,4 +109,21 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+}
+
+.image {
+  width: 300px;
+  height: 150px;
+}
+
+.name-price {
+  display: block;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.price {
+  font-size: 2rem;
 }
