@@ -37,10 +37,12 @@ $product_data = $_SESSION['product']['product_data'];
             echo $product_name;
             echo '</div>';
             echo '<div class="price">';
-            echo $price;
+            echo $price."円";
             echo '</div>';
             echo '</div>';
+            echo '<div class="explanation">';
             echo $product_data;
+            echo '</div>';
             echo '</div>';
             ?>
 
