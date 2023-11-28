@@ -1,24 +1,30 @@
-document.addEventListener('DOMContentLoaded', function () {
 new Vue({
     el: '#app',
     data: {
-      count: 0,
-      price: 100
-    },
-    computed: {
-      total: function() {
-        return this.count * this.price;
-      }
+        cart: cartData
     },
     methods: {
-      increment: function() {
-        this.count += 1;
-      },
-      decrement: function() {
-        if (this.count > 0) {
-          this.count -= 1;
+        plus: function (id) {
+            this.cart[id].count++;
+        },
+        minus: function (id) {
+            if (this.cart[id].count > 1) {
+                this.cart[id].count--;
+            }
+        },
+        remove: function (id) {
+            axios.post('remove-from-cart.php', {
+                productId: id
+            })
+            .then(response => {
+                Vue.delete(this.cart, id);
+            })
+            .catch(error => {
+                console.error('カートからアイテムを削除する際にエラーが発生しました:', error);
+            });
+        },
+        calculateTotal: function () {
+            return Object.values(this.cart).reduce((total, item) => total + (item.price * item.count), 0);
         }
-      }
     }
-  });
 });
