@@ -60,6 +60,7 @@ if (isset($_GET['id'])) {
         echo "<p class='explanation'>{$product['product_data']}</p>";
         unset($_SESSION['product']);
         $_SESSION['product']=[
+            'id'=>$product_id,
             'image'=>$product['picture'], 'product_name'=>$product['product_name'],
             'price'=>$product['price'],'product_data'=>$product['product_data']
             ];

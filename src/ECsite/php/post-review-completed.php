@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<?php require 'post-review-completed-output.php'?>
     <!-- ヘッダーの読み込み -->
     <?php include("./menu.php"); ?>
     <form action="shohin-syosai.php" method="post">
