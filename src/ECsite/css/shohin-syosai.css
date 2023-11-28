@@ -76,11 +76,10 @@
   border: none;
   font-size: 1rem;
   border-radius: 14px;
-  padding: 0.5rem 1rem 0.5rem;
+  padding: 0.25rem 3rem 0.25rem;
 }
 
 .button-cart {
-  margin-left: 35rem;
   display: block;
   color: #fff;
   background: #FF8C00;
@@ -88,4 +87,9 @@
   font-size: 1rem;
   border-radius: 14px;
   padding: 0.5rem 2rem 0.5rem;
+}
+
+.contents-container-sub-cart {
+  display: flex;
+  justify-content: space-between; /* 子要素の間に空白を挿入し、右端に寄せる */
 }

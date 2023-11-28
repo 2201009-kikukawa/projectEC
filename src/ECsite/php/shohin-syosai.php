@@ -110,12 +110,16 @@ echo '</div>';
 <footer>
     <?php
     echo '<div class="contents-container">';
+    echo '<div class="contents-container-sub-cart">';
+    echo '<input type="button" class="button-back" value="戻る" onclick="javascript:history.go(-1)">';
     echo '<form action="cart-show.php" method="post">';
     echo '<input type="hidden" name="product_id" value="' . htmlspecialchars($product['product_id']) . '">';
+    echo '<div class="cart-post">';
     echo '<input type="number" name="quantity" value="1">';
     echo '<input type="submit" class="button-cart" value="カートに入れる">';
+    echo '</div>';
     echo '</form>';
-    echo '<input type="button" class="button-back" value="戻る" onclick="javascript:history.go(-1)">';
+    echo '</div>';
     echo '</div>';
     ?>
 </footer>
