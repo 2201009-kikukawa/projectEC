@@ -8,50 +8,122 @@ h1 {
   #app {
     padding: 1rem;
   }
-  
-  /* 商品名 */
-  .syohin {
-    font-size: 1.2rem; /* 見出しとして少し大きめのサイズ */
-    font-weight: bold; /* 太字にする */
-    margin-bottom: 0.5rem; /* 下の要素との間隔 */
+
+  .title{
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    top: 22px;
+  }
+
+  .totalprice{
+    font-size: 28px;
+    position: relative;
+    left: 11%;
+  }
+
+  .mainitem{
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+    left: 10%;
+  }
+
+  .flex1{
+    flex: 1;
+    width: 70%;
+    margin-left: 60px;
   }
   
-  /* 商品説明 */
-  .stsumeis {
+  .productarea{
+    display: flex;
+    width: 120%;
+  }
+
+  .flex2{
+    position: relative;
+    width: 100%;
+  }
+
+  .textarea{
+    margin-top: 40px;
+    width: 35%;
+    height: 40%;
+    background: #D9D9D9;
+    position: relative;
+    left: 35%;
+  }
+
+  .incrementarea{
+    display: flex;
+    position: relative;
+    left: 27px;
+    margin-top: 9px;
+    border-radius: 70px;
+    background: #D9D9D9;
+    width: 333px;
+    height: 67px;
+  }
+
+  .minus{
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 5px;
     font-size: 1rem;
-    color: #555; /* 説明文は少し控えめな色にする */
-    margin-bottom: 1rem; /* 画像との間隔 */
-  }
-  
-  /* 商品画像 */
-  img {
-    width: 300px;
-  }
-  
-  /* 個数の調整ボタン */
-  .button {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ddd; /* 軽い枠線を追加 */
-    background-color: #f8f8f8; /* ボタンの背景色 */
     cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  /* 価格表示 */
-  .price {
-    font-size: 1.2rem; /* フォントサイズは画像に基づいて適宜調整してください */
-    font-weight: bold; /* 太字設定 */
     margin: 1rem 0;
+    margin-left: 25px;
+    text-align: center;
+    padding: 10px;
+    width: 100px;
   }
-  
-  /* 小計表示 */
-  .total {
-    font-size: 1.2rem; /* フォントサイズは画像に基づいて適宜調整してください */
-    margin: 1rem 0;
+
+  .productnum{
+    width: 10%;
+    text-align: center;
+    padding-top: 22px;
+    margin-left: 25px;
   }
-  
+
+  .productcontent{
+    margin-left: 10%;
+  }
+
+  .productname{
+    font-size: 45px;
+    margin-top: 34px;
+  }
+
+  .productprice{
+    font-size: 40px;
+    margin-top: 25px;
+  }
+
+  .plus{
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 20px;
+  }
+
+  .image{
+    width: 100%;
+  }
+
+  .delete{
+    position: relative;
+    left: 75%;
+    width: 135%;
+    border-radius: 50px;
+    z-index: 50;
+  }
+
+  .buttonarea{
+    display: flex;
+  }
+
   /* ナビゲーションボタン */
   input[type="submit"], button {
     background-color: #007bff; /* ボタンの背景色 */
@@ -68,16 +140,52 @@ h1 {
   input[type="submit"]:hover, button:hover {
     background-color: #0056b3; /* ホバー時の背景色 */
   }
-  
-  /* 個数調整のフレックスボックスコンテナ */
-.count-container {
-    display: flex; /* フレックスボックスを適用 */
-    align-items: center; /* アイテムを垂直方向に中央揃え */
-    justify-content: center; /* アイテムを水平方向に中央揃え */
-    margin: 1rem 0; /* 上下に余白を設定 */
+
+  .pagerinkarea{
+    display: flex;
   }
-  
-  /* 個数表示 */
-  .count-display {
-    margin: 0 1rem; /* ボタンとの余白を設定 */
+
+  .changereturn{
+    border-radius: 14px;
+    background: #D9D9D9;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    left: 15%;
+    margin-left: 5%;
   }
+
+  .productlink{
+    color: black;
+    font-size: 25px;
+    text-decoration: auto;
+    position: relative;
+    top: 5px;
+  }
+
+  .changeorder{
+    border-radius: 14px;
+    background-color: #3395ff;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    left: 60%;
+    margin-left: -25%;
+  }
+
+  .orderlink{
+    color: white;
+    font-size: 25px;
+    text-decoration: auto;
+    position: relative;
+    top: 5px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  } 

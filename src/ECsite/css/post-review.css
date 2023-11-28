@@ -18,6 +18,10 @@ h1 {
   max-width: 1200px;
 }
 
+.contents-container-sub {
+  display: flex; /* Flexboxを使用して子要素を水平に配置 */
+}
+
 .required_item {
   text-align: right;
   color: red;
@@ -105,4 +109,33 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+}
+
+.image {
+  width: 300px;
+  height: 150px;
+}
+
+.name-price {
+  display: block;
+  margin-left: 5rem;
+}
+
+.name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: #d9d9d9;
+}
+
+.price {
+  font-size: 2rem;
+  background: #d9d9d9;
+}
+
+.explanation {
+  font-size: 1rem;
+  border: 1px solid #000; /* 黒い囲みを追加 */
+  padding: 10px; /* 囲みの内側に余白を追加 */
+  margin-left: 7rem;
+  background-color: #fff6f6;
 }

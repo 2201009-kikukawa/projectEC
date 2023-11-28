@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 function displayStars($rating)
 {
@@ -57,6 +58,11 @@ if (isset($_GET['id'])) {
         echo '</div>';
         echo '<p class="subtitle">商品説明</p>';
         echo "<p class='explanation'>{$product['product_data']}</p>";
+        unset($_SESSION['product']);
+        $_SESSION['product']=[
+            'image'=>$product['picture'], 'product_name'=>$product['product_name'],
+            'price'=>$product['price'],'product_data'=>$product['product_data']
+            ];
 
         // レビュー情報とユーザー名を取得するクエリを実行
         $reviewDetailsQuery = $pdo->prepare(
@@ -96,7 +102,7 @@ if (isset($_GET['id'])) {
         } else {
             echo 'レビュー情報がありません。';
             echo '<form action="post-review.php" method="post">';
-            echo '<input type="submit" class="button-input" value="レビューを投稿">';
+            echo '<input type="submit" class="button-input-nothing" value="レビューを投稿">';
             echo '</form>';
         }
     } else {
@@ -110,12 +116,16 @@ echo '</div>';
 <footer>
     <?php
     echo '<div class="contents-container">';
+    echo '<div class="contents-container-sub-cart">';
+    echo '<input type="button" class="button-back" value="戻る" onclick="javascript:history.go(-1)">';
     echo '<form action="cart-show.php" method="post">';
     echo '<input type="hidden" name="product_id" value="' . htmlspecialchars($product['product_id']) . '">';
+    echo '<div class="cart-post">';
     echo '<input type="number" name="quantity" value="1">';
-    echo '<input type="submit" value="カートに入れる">';
+    echo '<input type="submit" class="button-cart" value="カートに入れる">';
+    echo '</div>';
     echo '</form>';
-    echo '<input type="button" value="戻る" onclick="javascript:history.go(-1)">';
+    echo '</div>';
     echo '</div>';
     ?>
 </footer>

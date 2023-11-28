@@ -50,7 +50,7 @@
 }
 
 .button-input {
-  margin-left:35rem;
+  margin-left: 35rem;
   display: block;
   color: #fff;
   background: #7fffd4;
@@ -58,4 +58,38 @@
   font-size: 1rem;
   border-radius: 14px;
   padding: 0.5rem 2rem 0.5rem;
+}
+
+.button-input-nothing {
+  display: block;
+  color: #fff;
+  background: #7fffd4;
+  border: 1px solid #333;
+  font-size: 1rem;
+  border-radius: 14px;
+  padding: 0.5rem 2rem 0.5rem;
+}
+
+.button-back {
+  display: block;
+  background: #D9D9D9;
+  border: none;
+  font-size: 1rem;
+  border-radius: 14px;
+  padding: 0.25rem 3rem 0.25rem;
+}
+
+.button-cart {
+  display: block;
+  color: #fff;
+  background: #FF8C00;
+  border: none;
+  font-size: 1rem;
+  border-radius: 14px;
+  padding: 0.5rem 2rem 0.5rem;
+}
+
+.contents-container-sub-cart {
+  display: flex;
+  justify-content: space-between; /* 子要素の間に空白を挿入し、右端に寄せる */
 }

@@ -1,3 +1,12 @@
+<?php session_start(); ?>
+<?php
+$image = $product_name = $price = $product_data = '';
+
+$image = $_SESSION['product']['image'];
+$product_name = $_SESSION['product']['product_name'];
+$price = $_SESSION['product']['price'];
+$product_data = $_SESSION['product']['product_data'];
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -19,6 +28,24 @@
                 <h3 class="required">必須項目</h3>
             </div>
             <hr>
+            <br>
+            <?php
+            echo '<div class="contents-container-sub">';
+            echo '<img alt="image" class="image" src="../image/', $image, '">';
+            echo '<div class="name-price">';
+            echo '<div class="name">';
+            echo $product_name;
+            echo '</div>';
+            echo '<div class="price">';
+            echo $price."円";
+            echo '</div>';
+            echo '</div>';
+            echo '<div class="explanation">';
+            echo $product_data;
+            echo '</div>';
+            echo '</div>';
+            ?>
+
             <br>
             <hr>
             <p class="recommend">おすすめ度</p>
