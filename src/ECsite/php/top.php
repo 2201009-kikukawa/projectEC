@@ -13,6 +13,28 @@
 <!-- アニメーション（umianime.php） -->
 <?php require 'umianime.php'; ?>
 
+<aside class="sidebar">
+    <div class="sidemenu">
+        <div class="menuitem">魚種別</div>
+        <ul>
+            <li><a href="#" @click="productsearch(0)">マグロ</a></li>
+            <li><a href="#" @click="productsearch(1)">サーモン</a></li>
+            <li><a href="#" @click="productsearch(2)">イカ</a></li>
+        </ul>
+        <div class="menuitem">貝類・魚卵</div>
+        <ul>
+            <li><a href="#" @click="productsearch(3)">イクラ</a></li>
+            <li><a href="#" @click="productsearch(4)">うに</a></li>
+            <li><a href="#" @click="productsearch(5)">とびっこ</a></li>
+        </ul>
+        <div class="menuitem">加工品</div>
+        <ul>
+            <li><a href="#" @click="productsearch(6)">魚の缶詰</a></li>
+            <li><a href="#" @click="productsearch(7)">干しもの</a></li>
+            <li><a href="#" @click="productsearch(8)">調理済み食品</a></li>
+        </ul>
+    </div>
+</aside>
 
 <div class="centered-search">
   <form method="post" action="searchproductshow.php" class="search_container">
@@ -23,15 +45,15 @@
 
 <div class="slideshow-container">
     <div class="mySlides fade">
-        <img src="../image/umi1.png" style="width:300px">
+        <img src="../image/sample1" style="width:770px">
     </div>
 
     <div class="mySlides fade">
-        <img src="../image/肉.png" style="width:300px">
+        <img src="../image/sample2.png" style="width:770px">
     </div>
 
     <div class="mySlides fade">
-        <img src="../image/my.png" style="width:300px">
+        <img src="../image/sample3" style="width:770px">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
