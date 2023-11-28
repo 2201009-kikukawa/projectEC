@@ -3,13 +3,65 @@ body {
     position: relative; /* スライドショーのための相対位置設定 */
 }
 
+.sidebar {
+    position: absolute; /* 位置を絶対位置に変更 */
+    top: 165px; /* 上端からの距離 */
+    left: 15px; /* 左端からの距離 */
+    width: 250px;
+    height: 550px;
+    background: #FA8072;
+    z-index: 200; /* 高い値に設定 */
+    border-radius: 5px; /* 角丸にする */
+    overflow: auto; /* コンテンツがはみ出した場合のスクロールバー */
+}
+
+
+.sidemenu{
+    background: #FFF;
+    width: 200px;
+    height: 520px;
+    text-align: center;
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    border-radius: 5px; /* 角丸にする */
+}
+
+.sidebar .sidemenu ul {
+    list-style: none; /* リストのマーカーを削除 */
+    padding: 0;
+    text-align: center; /* リストのテキストを中央に配置 */
+}
+
+.sidebar .sidemenu ul li {
+    margin-bottom: 10px; /* リストアイテム間の余白を追加 */
+}
+
+.sidebar .sidemenu ul li a {
+    text-decoration: none; /* リンクのアンダーラインを削除 */
+    color: #333; /* リンクの色を設定 */
+    border-radius: 5px; /* 角丸にする */
+}
+
+.sidebar .sidemenu ul li a:hover {
+    background-color: #ddd; /* ホバー時の背景色を変更 */
+}
+
+.menuitem{
+    font-weight: bold;
+    text-align: center;
+    background-color: #0074a2;
+    padding: 10px; /* パディングを設定 */
+    border-radius: 5px; /* 角丸にする */
+    color: #cab7b7;
+}
 
   
   .centered-search {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -210px;
+    margin-top: -230px;
   left:170;
 
       position: absolute;
@@ -26,7 +78,7 @@ body {
     padding: 3px 5px;
     border-radius: 20px;
     height: 2.3em;
-    width: 340px;
+    width: 310px;
     overflow: hidden;
     margin-bottom: 0; /* 余白を取り除く */
     text-align: center;
@@ -58,8 +110,8 @@ body {
 
 .slideshow-container {
     position: absolute;
-    top: 50%;  /* ページの垂直中央 */
-    left: 50%; /* ページの水平中央 */
+    top: 33%;  /* ページの垂直中央 */
+    left: 66%; /* ページの水平中央 */
     transform: translate(-50%, -50%); /* 中央揃え */
     z-index: 100; /* 前面に表示 */
 }
