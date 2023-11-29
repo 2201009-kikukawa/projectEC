@@ -21,6 +21,11 @@
                 <select id="houhou" name="houhou" required>
                     <option value="credit_card">コンビニ払い</option>
                     <option value="bank_transfer">携帯払い</option>
+                    <?php 
+                        if(isset($_SESSION["member"])){
+                            echo '<option value="credit">クレジット払い</option>';
+                        }
+                    ?>
                     <!-- 追加の支払い方法をここに追加 -->
                 </select><br><br>
                 <label for="hi">お届け日</label><br><br>
