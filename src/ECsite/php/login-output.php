@@ -42,6 +42,9 @@ if ($row && password_verify($_POST['pass'], $row['PASSWORD'])) {
     echo '<script>window.location.href = "top.php";</script>';
     exit(); // リダイレクトしたらスクリプトの実行を終了
 } else {
-    echo 'ログイン名またはパスワードが違います。';
+    echo '<script>';
+        echo 'alert("アカウント名もしくはパスワードが間違っています");';
+        echo 'window.location.href = "login-input.php";'; // 間違った場合は前のページに戻る
+        echo '</script>';
 }
 ?>
