@@ -19,5 +19,5 @@ function showSlides(n) {
 
 function showSlidesAuto() {
   showSlides(slideIndex += 1);
-  setTimeout(showSlidesAuto, 10000); 
+  setTimeout(showSlidesAuto, 5000); 
 }
