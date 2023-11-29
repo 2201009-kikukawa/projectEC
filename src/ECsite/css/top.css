@@ -170,3 +170,96 @@ body {
     from {opacity: .4} 
     to {opacity: 1}
   }
+
+  #app {
+    position: absolute; 
+    top: 400; 
+    left: 460; 
+    z-index: 1200; 
+}
+
+.todaysale {
+    color: #FFD770; 
+    font-size: 30px; 
+    font-weight: bold; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+
+
+
+
+  .rankingarea{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+
+.mainitem{
+    width: 200px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 39px;
+    border: 6px solid #FFF;
+    background: #FFFCFC;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+}
+
+.mainitem:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #000;
+    border-radius: 39px; /* 角丸にする */
+}
+
+.itemimg{
+    position: relative;
+}
+
+img{
+    border: solid 1px #000;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+.mainitemtxt{
+    margin: 10px;
+    position: relative;
+    top: 20px;
+    background-color:rgb(217, 217, 217) ;
+    border:solid 1px #000;
+    border-radius: 15px;
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+    height: 40%;
+    text-decoration: none;
+}
+
+
+.price{
+    color: #FF8C00;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+}
+
+.shopname,
+.itemname,
+.price {
+    margin-top: 10px; /* 各要素間の上部の余白を追加 */
+}
+
+.rankingarea a{
+    text-decoration: none;
+}
