@@ -12,15 +12,15 @@
         <center>
             <h2>注文情報入力</h2>
         </center>
-        <form action="submit_form.php" method="post"> <!-- フォームを追加 -->
+        <form action="submit_form.php" method="post"> 
             <center>
                 <label for="saki">お届け先</label><br><br>
                 <input type="text" id="saki" name="saki" required><br><br>
                 <div class="select-arrow">
                 <label for="houhou">支払い方法</label><br><br>
                 <select id="houhou" name="houhou" required>
-                    <option value="credit_card">クレジットカード</option>
-                    <option value="bank_transfer">銀行振込</option>
+                    <option value="credit_card">コンビニ払い</option>
+                    <option value="bank_transfer">携帯払い</option>
                     <!-- 追加の支払い方法をここに追加 -->
                 </select><br><br>
                 <label for="hi">お届け日</label><br><br>
@@ -30,7 +30,7 @@
                     <button type="submit" class="button-back"><a href="cyumon-kanryou.php" class="button-back">確定</a></button>
                 </div>
             </center>
-        </form> <!-- フォームを追加 -->
+        </form> 
     </div>
 </body>
 </html>
