@@ -6,6 +6,15 @@
 ?>
 <script>
     var productData = <?php echo $productdate ?>;
+    function formatTime(timeInSeconds) {
+        const hours = Math.floor(timeInSeconds / 3600);
+        const minutes = Math.floor((timeInSeconds % 3600) / 60);
+        const seconds = timeInSeconds % 60;
+
+        const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        return formattedTime;
+    }
 </script>
 <html lang="ja">
     <head>
@@ -64,7 +73,7 @@
 
             <footer>
                 <div class="returnbutton">
-                    <a href="#" class="returnbuttontxt">戻る</a>
+                    <a href="auctionshow.php" class="returnbuttontxt">戻る</a>
                 </div>
             </footer>
         </div>
@@ -73,3 +82,19 @@
         <script src="../script/auctiondetail.js"></script>
     </body>
 </html>
+
+<script>
+    var productData = <?php echo $productdate ?>;
+    var remainingTime = <?php echo json_encode($product['remaining_time']); ?>;
+    
+    var intervalId = setInterval(function () {
+        var formattedTime = formatTime(remainingTime);
+
+        if (formattedTime === '00:00:00') {
+            clearInterval(intervalId);
+            window.location.href = 'auctionfinish.php';
+        }
+
+        remainingTime -= 1000;
+    }, 1000);
+</script>
