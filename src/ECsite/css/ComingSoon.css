@@ -1,0 +1,25 @@
+.comingsoon{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.comingarea{
+    position: absolute;
+}
+
+.comingsoon2{
+    text-align: center;
+}
+
+.link{
+    text-align: center;
+    background: #00bfff;
+    border: solid;
+    border-radius: 25px;
+}
+
+.alink{
+    text-decoration: none;
+    color: white;
+}
