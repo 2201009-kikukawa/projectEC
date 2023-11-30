@@ -185,6 +185,11 @@ h1 {
     top: 5px;
   }
 
+  .no-items-messages{
+    text-align: center;
+    font-size: 25px;
+  }
+
   * {
     margin: 0;
     padding: 0;
