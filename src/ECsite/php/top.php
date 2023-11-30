@@ -16,7 +16,7 @@
 <?php require 'umianime.php'; ?>
 
 <div class="my-buttons">
-    <button onclick="window.location.href='./productshow.php'" class="top-button">商品一覧へ</button>
+    <button onclick="window.location.href='./searchproductshow.php'" class="top-button">商品一覧へ</button>
 </div>
 
 
