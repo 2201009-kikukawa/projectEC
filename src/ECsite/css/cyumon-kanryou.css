@@ -1,0 +1,40 @@
+/* cyumon-kanryou.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contents-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333; /* ヘッダーの文字色 */
+}
+
+#meihi {
+    width: 100%; /* テキストボックスを横幅100%に */
+    height: 200px;
+    background: #D9D9D9;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 10px; /* 内側の余白を追加 */
+    font-size: 1rem; /* テキストサイズを変更 */
+}
+
+.button-input {
+    width: 20%; /* ボタンを横幅100%に */
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #00F;
+    color: #fff;
+    font-size: 1rem; /* ボタンの文字サイズを変更 */
+    cursor: pointer;
+}
+
+.button-input:hover {
+    background: #007acc; /* ホバー時の色を変更 */
+}
