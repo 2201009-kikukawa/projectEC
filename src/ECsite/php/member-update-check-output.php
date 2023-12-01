@@ -1,5 +1,10 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+<?php
 require 'db-connect.php';
 
 $pdo = new PDO($connect, USER, PASS);

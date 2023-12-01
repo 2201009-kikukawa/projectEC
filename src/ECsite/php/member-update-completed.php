@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <?php require 'db-connect.php'; ?>
 <?php
 $password_hash = password_hash($_POST['register_pass'], PASSWORD_DEFAULT);

@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <?php
 $id = $mell = $password = $account_name = $birthday = $gender = $post_num = $address = $payment_id = $credit_number = $month = $year = $securitycode = '';
 if (isset($_SESSION['member'])) {

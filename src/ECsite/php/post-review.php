@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <?php
 $image = $product_name = $price = $product_data = '';
 

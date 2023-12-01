@@ -1,3 +1,8 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <?php require 'menu.php'; ?>
 <link rel="stylesheet" href="../css/member-update-check.css">
 <h1>会員情報の更新・確認</h1>

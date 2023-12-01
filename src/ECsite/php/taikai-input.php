@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <?php require 'menu.php'; ?>
 <link rel="stylesheet" href="../css/taikai.css">
 <h2>退会ページ</h2>
