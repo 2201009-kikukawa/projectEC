@@ -31,7 +31,7 @@
                 <label for="hi">お届け日</label><br><br>
                 <input type="text" id="hi" name="hi" placeholder="年/月/日" required><br><br>
                 <div class="button-container">
-                    <button type="submit" class="button-post"><a href="cart.php" class="button-post">戻る</a></button>
+                    <button type="submit" class="button-post"><a href="cart-show.php" class="button-post">戻る</a></button>
                     <button type="submit" class="button-back"><a href="cyumon-kanryou.php" class="button-back">確定</a></button>
                 </div>
             </center>
