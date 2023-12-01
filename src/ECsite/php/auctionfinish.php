@@ -12,7 +12,7 @@ if (session_status() == PHP_SESSION_NONE) {
 </head>
 <body>
     <?php require 'get-auctiondetail.php' ?>
-    <?php require 'umianime.php'?>
+   
 
     
 </body>
