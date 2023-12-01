@@ -17,7 +17,6 @@
   <div class="menu">
     <div class="menu-right">
     <?php
-    // ユーザーがログインしているかどうかを確認
     if (isset($_SESSION['member'])) {
         // ログインしている場合はログアウトリンクを表示
         echo '<a href="logout.php" class="btn_06">ログアウト</a>';
