@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require 'menu.php'; ?>
 <link rel="stylesheet" href="../css/shohin-shibori.css">
 <link rel="stylesheet" href="../script/shohin-shibori.js">

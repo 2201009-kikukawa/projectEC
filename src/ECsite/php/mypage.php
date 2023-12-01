@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require 'menu.php'; ?>
 <link rel="stylesheet" href="../css/mypage.css">
 <h1>マイページ</h1>

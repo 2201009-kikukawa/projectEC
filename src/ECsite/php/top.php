@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require 'menu.php'; ?>
 <link rel="stylesheet" href="../css/top.css">
 
