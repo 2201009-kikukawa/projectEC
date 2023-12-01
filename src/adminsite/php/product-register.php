@@ -1,3 +1,8 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,7 +16,7 @@
 <body>
     <!-- ヘッダーの読み込み -->
     <?php include("./menu.php"); ?>
-    <form action="product-register-completed.php" method="post">
+    <form action="product-register-completed.php" method="post" enctype="multipart/form-data">
         <div class="contents-container">
             <h1>新規商品登録</h1>
             <div class="required_item">
@@ -31,12 +36,12 @@
                     </select>
                     <h5>更に詳しく</h5>
                     <select name="subclass">
-                        <option value="0">マグロ</option>
-                        <option value="1">サーモン</option>
-                        <option value="2">イカ</option>
-                        <option value="3">イクラ</option>
-                        <option value="4">うに</option>
-                        <option value="5">とびっこ</option>
+                        <option value="0">赤身</option>
+                        <option value="1">白身</option>
+                        <option value="2">甲殻類</option>
+                        <option value="3">魚卵</option>
+                        <option value="4">貝</option>
+                        <option value="5">海藻</option>
                         <option value="6">魚の缶詰</option>
                         <option value="7">干しもの</option>
                         <option value="8">調理済み食品</option>
