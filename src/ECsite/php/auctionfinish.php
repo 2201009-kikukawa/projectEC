@@ -14,6 +14,6 @@ if (session_status() == PHP_SESSION_NONE) {
     <?php require 'get-auctiondetail.php' ?>
     <?php require 'umianime.php'?>
 
-    <div class = "text"></div>
+    
 </body>
 </html>

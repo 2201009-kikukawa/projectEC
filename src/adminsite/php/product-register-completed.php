@@ -19,6 +19,19 @@ $sql->execute([
     $_SESSION['shop']['shop_id'], $_POST['subclass']
 ]);
 
+// 新しく挿入された商品の product_id を取得
+$newProductId = $pdo->lastInsertId();
+
+if($_POST['product_type'] == 1){
+  $sql = $pdo->prepare('insert into auction values(null,?,?,?,?,?,?,?)');
+  $sql->execute([
+    $newProductId,$_POST['price'],
+    $_POST['price'],'06:00:00',
+    '12:00:00', 'テスト',
+    $_SESSION['shop']['shop_id']
+  ]);
+}
+
 // 画像のアップロード
 if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     $targetDir = "../../ECsite/image/";
@@ -33,7 +46,6 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
     if (in_array($imageFileType, $allowedExtensions)) {
         // ファイルを移動
         move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile);
-        echo "ファイルがアップロードされました。";
     } else {
         echo "許可されていないファイル形式です。";
     }
