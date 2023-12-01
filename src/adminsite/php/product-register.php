@@ -36,8 +36,8 @@ if (session_status() == PHP_SESSION_NONE) {
                     </select>
                     <h5>更に詳しく</h5>
                     <select name="subclass">
-                        <option value="0">赤身</option>
-                        <option value="1">白身</option>
+                        <option value="0">白身</option>
+                        <option value="1">赤身</option>
                         <option value="2">甲殻類</option>
                         <option value="3">魚卵</option>
                         <option value="4">貝</option>
