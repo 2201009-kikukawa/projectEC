@@ -18,7 +18,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <center>
             <h2>注文情報入力</h2>
         </center>
-        <form action="submit_form.php" method="post"> 
+        <form action="cyumon-kanryou.php" method="post"> 
             <center>
                 <label for="saki">お届け先</label><br><br>
                 <input type="text" id="saki" name="saki" required><br><br>
