@@ -1,3 +1,8 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -13,7 +18,7 @@
             <div class="pagetxt">オークション商品</div>
 
             <div class="buttons">
-                <button type="submit" class="auctionbutton"><a href="productshow.php" class="auctiontxt">一般商品に切り替える</a></button>
+                <button type="submit" class="auctionbutton"><a href="searchproductshow.php" class="auctiontxt">一般商品に切り替える</a></button>
                 <button type="button" class="allshow" @click="allshow"><div class="allshowtxt">すべて</div></button>
 
                 <select v-model="selectedSort" class="sort" @change="updatesort">
