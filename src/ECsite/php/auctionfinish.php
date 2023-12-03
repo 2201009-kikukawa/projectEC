@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
     $picture = $name = $currentprice = '';
     $picture = $_SESSION['product_auction']['picture'];
     $name = $_SESSION['product_auction']['name'];
-    $currentprice = $_SESSION['product_auction']['currentprice'];
+    $currentprice = $_SESSION['product_auction']['price'];
     echo '<div class="contents-container">';
     echo '<div class="contents-container-sub">';
     echo '<img alt="image" class="image" src="../image/', $picture, '">';

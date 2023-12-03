@@ -8,14 +8,6 @@ if (session_status() == PHP_SESSION_NONE) {
 $productId = $_GET['id'];
 require 'get-auctiondetail.php';
 $productdate = json_encode($product); // 商品データを JSON にエンコードし変数に格納
-// セッションのunset処理
-unset($_SESSION['product_auction']);
-
-$_SESSION['product_auction'] = [
-    'price' => $product['currentprice'],
-    'name' => $product['product_name'],
-    'picture' => $product['picture'],
-];
 ?>
 <script>
     var productData = <?php echo $productdate ?>;
@@ -115,3 +107,14 @@ $_SESSION['product_auction'] = [
         remainingTime -= 1000;
     }, 1000);
 </script>
+
+<?php
+// セッションのunset処理
+unset($_SESSION['product_auction']);
+
+$_SESSION['product_auction'] = [
+    'price' => $product['currentprice'],
+    'name' => $product['product_name'],
+    'picture' => $product['picture'],
+];
+?>
