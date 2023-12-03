@@ -15,14 +15,17 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
     <!-- ヘッダーの読み込み -->
     <?php include("./menu.php"); ?>
-    <?php require 'get-auctiondetail.php' ?>
     <?php
+    $picture = $name = $currentprice = '';
+    $picture = $_SESSION['product_auction']['picture'];
+    $name = $_SESSION['product_auction']['name'];
+    $currentprice = $_SESSION['product_auction']['currentprice'];
     echo '<div class="contents-container">';
     echo '<div class="contents-container-sub">';
-    echo '<img alt="image" class="image" src="../image/', $product['picture'], '">';
+    echo '<img alt="image" class="image" src="../image/', $picture, '">';
     echo '<div class="product-info">';
-    echo "<p class='item'>{$product['product_name']}</p>";
-    echo "<p class='item'>{$product['currentprice']} 円</p>";
+    echo "<p class='item'>{$name}</p>";
+    echo "<p class='item'>{$currentprice} 円</p>";
     echo '</div>';
     echo '</div>';
     echo '</div>';

@@ -26,8 +26,8 @@ if($_POST['product_type'] == 1){
   $sql = $pdo->prepare('insert into auction values(null,?,?,?,?,?,?,?)');
   $sql->execute([
     $newProductId,$_POST['price'],
-    $_POST['price'],'00:00:01',
-    '24:00:00', 'テスト',
+    $_POST['price'],'10:00:00',
+    '10:23:00', 'テスト',
     $_SESSION['shop']['shop_id']
   ]);
 }
