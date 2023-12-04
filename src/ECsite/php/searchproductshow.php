@@ -53,7 +53,15 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="pagetxt">一般商品</div>
 
             <div class="buttons">
-                <button type="submit" class="auctionbutton"><a href="auctionshow.php" class="auctiontxt">オークションに切り替える</a></button>
+
+            <?php
+                if (isset($_SESSION['member'])) {
+                    echo '<button type="submit" class="auctionbutton"><a href="auctionshow.php" class="auctiontxt">オークションに切り替える</a></button>';
+                } else {
+                    echo '<button type="button" class="auctionbutton" @click="showLoginAlert"><a href="#" class="auctiontxt">オークションに切り替える</a></button>';
+                }
+            ?>
+
                 <button type="button" class="allshow" @click="allshow"><div class="allshowtxt">すべて</div></button>
 
                 <select v-model="selectedSort" class="sort" @change="updatesort">
@@ -108,3 +116,4 @@ if (session_status() == PHP_SESSION_NONE) {
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="../script/searchproductshow.js"></script>
 </body>
+</html>
