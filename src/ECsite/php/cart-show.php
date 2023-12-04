@@ -56,7 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
 
     <?php if (empty($_SESSION['cart'])) : ?>
         <hr>
-        <div class="no-items-message">カートに商品がありません。</div>
+        <div class="no-items-message" style="
+        text-align: center;
+        font-size: 25px;">カートに商品がありません。</div>
         <hr>
     <?php else : ?>
         <div class="totalprice">小計:{{ calculateTotal() }}</div>
