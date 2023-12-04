@@ -21,6 +21,7 @@ if (session_status() == PHP_SESSION_NONE) {
     $name = $_SESSION['product_auction']['name'];
     $currentprice = $_SESSION['product_auction']['price'];
     echo '<div class="contents-container">';
+    echo '<form action="orderinfomation.php" method="post">';
     echo '<div class="contents-container-sub">';
     echo '<img alt="image" class="image" src="../image/', $picture, '">';
     echo '<div class="product-info">';
@@ -31,8 +32,10 @@ if (session_status() == PHP_SESSION_NONE) {
     echo '</div>';
     echo '</div>';
     echo "<p class='bid'>ご落札おめでとうございます！</p>";
-    echo '<p>上記の商品のご落札が確定しました。</p>';
-    echo "<label>注文フォームの入力をお願いいたします。</label>";
+    echo '<p class="text">上記の商品のご落札が確定しました。</p>';
+    echo "<p class='text'>注文フォームの入力をお願いいたします。</p>";
+    echo '<input type="submit" class="button-form" value="注文フォームへ">';
+    echo '</form>';
     echo '</div>';
     ?>
 

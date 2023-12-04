@@ -39,4 +39,23 @@
 
 .bid {
     font-size: 1.7rem;
+    text-align: center;
+    margin-top: 2rem;
 }
+
+.text {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.button-form {
+    display: block;
+    color: #fff;
+    background: #4169E1;
+    border: none;
+    font-size: 1rem;
+    border-radius: 14px;
+    padding: 0.5rem 2rem 0.5rem;
+    margin: 0 auto; /* 追加 */
+    margin-top: 1.5rem;
+  }

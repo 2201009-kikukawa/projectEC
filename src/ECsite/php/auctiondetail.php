@@ -8,9 +8,11 @@ if (session_status() == PHP_SESSION_NONE) {
 $productId = $_GET['id'];
 require 'get-auctiondetail.php';
 $productdate = json_encode($product); // 商品データを JSON にエンコードし変数に格納
+$Username = json_encode($_SESSION['member']['account_name']);
 ?>
 <script>
     var productData = <?php echo $productdate ?>;
+    var Username = <?php echo $Username?>;
 
     function formatTime(timeInSeconds) {
         const hours = Math.floor(timeInSeconds / 3600);

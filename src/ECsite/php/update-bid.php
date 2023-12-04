@@ -5,6 +5,7 @@ $data = json_decode($request_body,true);
 
 $productId = $data["productId"];
 $bitPrice = $data["bitPrice"];
+$username = $data["username"];
 // データベース接続とクエリの実行
 $pdo = new PDO($connect, USER, PASS);
     $sql = "UPDATE auction SET currentprice = ? WHERE product_id = ?";

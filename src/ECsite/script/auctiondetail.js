@@ -4,6 +4,7 @@ new Vue({
         bitPrice: 0, 
         productData: productData, 
         productId: 0,
+        UserName: Username,
     },
     methods: {
         formatTime: formatTime,
@@ -12,7 +13,8 @@ new Vue({
             if (this.bitPrice > this.productData.currentprice) {
                 axios.post('update-bid.php', {
                     productId: this.productData.product_id,
-                    bitPrice: this.bitPrice
+                    bitPrice: this.bitPrice,
+                    username: this.UserName
                 })
                 .then(response => {
                     if (response) {
