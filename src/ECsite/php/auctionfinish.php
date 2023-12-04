@@ -24,10 +24,15 @@ if (session_status() == PHP_SESSION_NONE) {
     echo '<div class="contents-container-sub">';
     echo '<img alt="image" class="image" src="../image/', $picture, '">';
     echo '<div class="product-info">';
+    echo '<P class="subtitle">商品名</P>';
     echo "<p class='item'>{$name}</p>";
+    echo '<p class="subtitle">価格</p>';
     echo "<p class='item'>{$currentprice} 円</p>";
     echo '</div>';
     echo '</div>';
+    echo "<p class='bid'>ご落札おめでとうございます！</p>";
+    echo '<p>上記の商品のご落札が確定しました。</p>';
+    echo "<label>注文フォームの入力をお願いいたします。</label>";
     echo '</div>';
     ?>
 
