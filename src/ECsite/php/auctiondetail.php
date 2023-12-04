@@ -118,5 +118,6 @@ $_SESSION['product_auction'] = [
     'price' => $product['currentprice'],
     'name' => $product['product_name'],
     'picture' => $product['picture'],
+    'account_name' => $product['finish_user']
 ];
 ?>
