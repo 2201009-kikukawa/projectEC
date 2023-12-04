@@ -75,6 +75,9 @@ new Vue({
                         console.error('データの取得に失敗しました', error);
                     });
             }
+        },
+        showLoginAlert() {
+            alert('オークション機能を使う場合はログインしてください。');
         }
     },
     mounted() {
