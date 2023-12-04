@@ -8,10 +8,11 @@ $bitPrice = $data["bitPrice"];
 $username = $data["username"];
 // データベース接続とクエリの実行
 $pdo = new PDO($connect, USER, PASS);
-    $sql = "UPDATE auction SET currentprice = ? WHERE product_id = ?";
+    $sql = "UPDATE auction SET finish_user = ?, currentprice = ? WHERE product_id = ?";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(1,$bitPrice);
-    $stmt->bindParam(2,$productId);
+    $stmt->bindParam(1,$username);
+    $stmt->bindParam(2,$bitPrice);
+    $stmt->bindParam(3,$productId);
 
     if ($stmt->execute()) {
         $response = true;
