@@ -29,15 +29,15 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="sidemenu">
         <div class="menuitem">魚種別</div>
         <ul>
-            <li><a href="#" @click="productsearch(0)">マグロ</a></li>
-            <li><a href="#" @click="productsearch(1)">サーモン</a></li>
-            <li><a href="#" @click="productsearch(2)">イカ</a></li>
+            <li><a href="#" @click="productsearch(0)">白身</a></li>
+            <li><a href="#" @click="productsearch(1)">赤身</a></li>
+            <li><a href="#" @click="productsearch(2)">甲殻類</a></li>
         </ul>
         <div class="menuitem">貝類・魚卵</div>
         <ul>
-            <li><a href="#" @click="productsearch(3)">イクラ</a></li>
-            <li><a href="#" @click="productsearch(4)">うに</a></li>
-            <li><a href="#" @click="productsearch(5)">とびっこ</a></li>
+            <li><a href="#" @click="productsearch(3)">魚卵</a></li>
+            <li><a href="#" @click="productsearch(4)">貝</a></li>
+            <li><a href="#" @click="productsearch(5)">海藻</a></li>
         </ul>
         <div class="menuitem">加工品</div>
         <ul>
