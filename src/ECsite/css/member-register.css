@@ -68,3 +68,8 @@ h1 {
   border: none;
 }
 
+#buttonEye {
+  position: absolute;
+  top: 60%;
+  right: 22%;
+}

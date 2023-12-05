@@ -62,10 +62,34 @@ accountNameField.addEventListener('input', function () {
     } else if (accountNameValue.length > 50) {
         accountNameError.textContent = 'アカウント名は50文字以内で入力してください。';
     } else {
-        accountNameError.textContent = '';
+        checkAccount(accountNameValue);
     }
     validateForm();
 });
+
+// アカウント名の重複チェック
+function checkAccount(accountName) {
+    const url = '../php/check_account.php';
+    const formData = new FormData();
+    formData.append('account_name', accountName);
+
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            accountNameError.textContent = data.message;
+        } else {
+            accountNameError.textContent = '';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
 
 // 生年月日のバリデーション
 const birthdateField = document.getElementById('birthdate');

@@ -10,8 +10,23 @@ if (session_status() == PHP_SESSION_NONE) {
     <meta charset="UTF-8" />
     <!-- cssの読み込み -->
     <link rel="stylesheet" href="../css/member-register.css" />
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>会員登録画面</title>
 </head>
+
+<script>
+    function pushHideButton() {
+    var txtPass = document.getElementById("password");
+    var btnEye = document.getElementById("buttonEye");
+    if (txtPass.type === "text") {
+      txtPass.type = "password";
+      btnEye.className = "fa fa-eye";
+    } else {
+      txtPass.type = "text";
+      btnEye.className = "fa fa-eye-slash";
+    }
+  }
+</script>
 
 <body>
 
@@ -28,7 +43,8 @@ if (session_status() == PHP_SESSION_NONE) {
             <span class="error" id="email-error" style="color: red;"></span>
             <br>
             <h2 class="required">パスワード</h2>
-            <input type="text" name="register_pass" class="form-input" id="password" required />
+            <input type="password" name="register_pass" class="form-input" id="password" required />
+            <span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
             <span class="error" id="password-error" style="color: red;"></span>
             <br>
             <h2 class="required">アカウント名</h2>
