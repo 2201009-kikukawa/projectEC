@@ -80,7 +80,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <p id="imageError" class="error-message" style="color: red;"></p> <!-- 画像のエラーメッセージを表示する要素 -->
             </div>
 
-            <button type="submit" class="button-input">登録</button>
+            <button type="submit" class="button-input" onclick="validateImage()">登録</button>
             <!-- jsの読み込み -->
             <script src="../script/product-register.js"></script>
             <script src="../script/validate/product-register-validate.js"></script>

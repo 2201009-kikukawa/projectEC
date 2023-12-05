@@ -58,20 +58,20 @@ numberField.addEventListener('input', function () {
     validateForm();
 });
 
-// 画像の添付のバリデーション
-const imageField = document.getElementById('image');
-const imageError = document.getElementById('imageError');
-
-imageField.addEventListener('change', function () {
+function validateImage() {
+    const imageField = document.getElementById('image');
+    const imageError = document.getElementById('imageError');
     const imageValue = imageField.value;
 
+    // 画像が添付されていない場合
     if (!imageValue) {
         imageError.textContent = '画像を添付してください';
+        event.preventDefault(); // フォーム送信をキャンセル
     } else {
+        // 画像が添付されている場合はエラーメッセージをクリア
         imageError.textContent = '';
     }
-    validateForm();
-});
+}
 
 // 送信ボタンがクリックされたときのフォーム全体のバリデーション
 const submitButton = document.querySelector('button[type="submit"]');
