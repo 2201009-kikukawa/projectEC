@@ -61,11 +61,11 @@ if (session_status() == PHP_SESSION_NONE) {
                     <br>
                     <h3 class="required">価格</h3>
                     <input type="text" name="price" class="form-input-price" required />
-                    <p id="priceError" class="error-message"></p> <!-- 価格のエラーメッセージを表示する要素 -->
+                    <p id="priceError" class="error-message" style="color: red;"></p> <!-- 価格のエラーメッセージを表示する要素 -->
                     <br>
                     <h3 class="required">個数</h3>
                     <input type="text" name="number" class="form-input-number" required />
-                    <p id="numberError" class="error-message"></p> <!-- エラーメッセージを表示する要素 -->
+                    <p id="numberError" class="error-message" style="color: red;"></p> <!-- エラーメッセージを表示する要素 -->
                 </div>
             </div>
             <br>
@@ -75,8 +75,9 @@ if (session_status() == PHP_SESSION_NONE) {
                     ファイルからアップロード
                     <span class="label-text">(画像を選択)</span>
                 </label>
-                <input type="file" id="image" name="image" class="" accept="image/*" onchange="previewImage(event)">
+                <input type="file" id="image" name="image" class="" accept="image/*" onchange="previewImage(event)" required>
                 <img id="imagePreview" src="#" alt="プレビュー画像" style="display:none; max-width: 300px; margin-top: 10px;">
+                <p id="imageError" class="error-message" style="color: red;"></p> <!-- 画像のエラーメッセージを表示する要素 -->
             </div>
 
             <button type="submit" class="button-input">登録</button>
