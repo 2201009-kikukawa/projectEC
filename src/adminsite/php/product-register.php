@@ -26,7 +26,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div class="container-left">
                     <h3 class="required">商品名</h3>
                     <input type="text" name="product_name" class="form-input" required />
-                    <p id="productNameError" class="error-message"></p>
+                    <p id="productNameError" class="error-message" style="color: red;"></p> <!-- エラーメッセージを表示する要素 -->
                     <br>
                     <h3 class="required">魚の種類</h3>
                     <select>
@@ -57,12 +57,15 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div class="container-right">
                     <h3 class="required">商品の詳細記入欄</h3>
                     <textarea name="explanation" rows="6" cols="60" required></textarea>
+                    <p id="explanationError" class="error-message" style="color: red;"></p> <!-- 商品の詳細記入欄のエラーメッセージを表示する要素 -->
                     <br>
                     <h3 class="required">価格</h3>
                     <input type="text" name="price" class="form-input-price" required />
+                    <p id="priceError" class="error-message"></p> <!-- 価格のエラーメッセージを表示する要素 -->
                     <br>
                     <h3 class="required">個数</h3>
                     <input type="text" name="number" class="form-input-number" required />
+                    <p id="numberError" class="error-message"></p> <!-- エラーメッセージを表示する要素 -->
                 </div>
             </div>
             <br>
@@ -79,6 +82,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <button type="submit" class="button-input">登録</button>
             <!-- jsの読み込み -->
             <script src="../script/product-register.js"></script>
+            <script src="../script/validate/product-register-validate.js"></script>
         </div>
     </form>
 </body>
