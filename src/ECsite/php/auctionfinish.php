@@ -41,6 +41,23 @@ if (session_status() == PHP_SESSION_NONE) {
         echo '<input type="submit" class="button-form" value="注文フォームへ">';
         echo '</form>';
         echo '</div>';
+    } else {
+        echo '<div class="contents-container">';
+        echo '<form action="productshow.php" method="post">';
+        echo '<div class="contents-container-sub">';
+        echo '<img alt="image" class="image" src="../image/', $picture, '">';
+        echo '<div class="product-info">';
+        echo '<P class="subtitle">商品名</P>';
+        echo "<p class='item'>{$name}</p>";
+        echo '<p class="subtitle">価格</p>';
+        echo "<p class='item'>{$currentprice} 円</p>";
+        echo '</div>';
+        echo '</div>';
+        echo "<p class='bid'>残念ながら上記の商品をご落札できませんでした。</p>";
+        echo '<p class="text">他の商品もご検討ください。</p>';
+        echo '<input type="submit" class="button-form" value="商品一覧へ戻る">';
+        echo '</form>';
+        echo '</div>';
     }
     ?>
 
