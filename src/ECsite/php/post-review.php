@@ -19,8 +19,13 @@ $product_data = $_SESSION['product']['product_data'];
     <!-- cssの読み込み -->
     <link rel="stylesheet" href="../css/post-review.css" />
     <title>レビュー投稿画面</title>
+    <script>
+        function logincheck() {
+            alert("ログインしてください。");
+            return false; 
+        }
+    </script>
 </head>
-
 <body>
 
     <!-- ヘッダーの読み込み -->
@@ -74,7 +79,11 @@ $product_data = $_SESSION['product']['product_data'];
 
             <div class="button-container">
                 <button type="button" class="button-back" onClick="history.go(-1)">戻る</button>
-                <button type="submit" class="button-post">投稿する</button>
+                <?php if (isset($_SESSION['member'])) : ?>
+                    <button type="submit" class="button-post">投稿する</button>
+                <?php else : ?>
+                    <button type="button" class="button-post" onClick="logincheck()">投稿する</button>
+                <?php endif; ?>
             </div>
         </form>
     </div>
