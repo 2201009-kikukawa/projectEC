@@ -24,7 +24,7 @@ function confirmAccountDeletion() {
         echo 'return confirm("アカウントを削除しますか？");';
     } else {
         echo 'alert("アカウントを削除するにはログインしてください");';
-        echo 'return false;'; // PHPから直接 false を返すように修正
+        echo 'return false;';
     }
     ?>
 }
