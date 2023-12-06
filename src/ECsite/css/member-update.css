@@ -88,6 +88,10 @@ h1 {
   align-items: center;
 }
 
+#buttonEye {
+  margin-left: -50px; 
+}
+
 h2,h3{
   margin-top: 1rem;
 }

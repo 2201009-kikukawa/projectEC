@@ -30,6 +30,7 @@ if (isset($_SESSION['member'])) {
     <meta charset="UTF-8" />
     <!-- cssの読み込み -->
     <link rel="stylesheet" href="../css/member-update.css" />
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>会員情報更新画面</title>
 </head>
 
