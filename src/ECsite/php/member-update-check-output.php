@@ -3,7 +3,6 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-
 <?php
 require 'db-connect.php';
 
@@ -22,7 +21,7 @@ if (isset($username) && isset($password)) {
     }
 
     if (password_verify($password, $storedPassword)) {
-        header("Location: member-update.php");
+        header("Location:member-update.php");
         exit();
     } else {
         echo '<script>';
