@@ -28,10 +28,15 @@ h1 {
   color: red;
 }
 
+
+.pass-eye {
+  display: flex;
+  align-items: center;
+}
+
 .form-input {
   text-align: justify;
   text-justify: auto;
-  display: block;
   width: 100%;
   padding: 0.8rem 0;
   border-width: 0.5px;
@@ -69,11 +74,9 @@ h1 {
 }
 
 #buttonEye {
-  position: absolute;
-  top: 60%;
-  right: 22%;
+  margin-left: -30px; 
 }
 
-.pass-eye {
-  
+h2,h3{
+  margin-top: 1rem;
 }
