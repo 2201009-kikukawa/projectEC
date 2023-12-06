@@ -16,16 +16,16 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <script>
     function pushHideButton() {
-    var txtPass = document.getElementById("password");
-    var btnEye = document.getElementById("buttonEye");
-    if (txtPass.type === "text") {
-      txtPass.type = "password";
-      btnEye.className = "fa fa-eye";
-    } else {
-      txtPass.type = "text";
-      btnEye.className = "fa fa-eye-slash";
+        var txtPass = document.getElementById("password");
+        var btnEye = document.getElementById("buttonEye");
+        if (txtPass.type === "text") {
+            txtPass.type = "password";
+            btnEye.className = "fa fa-eye";
+        } else {
+            txtPass.type = "text";
+            btnEye.className = "fa fa-eye-slash";
+        }
     }
-  }
 </script>
 
 <body>
@@ -70,21 +70,21 @@ if (session_status() == PHP_SESSION_NONE) {
             <span class="error" id="address-error" style="color: red;"></span>
             <br>
             <h3 class="required">お支払方法の登録</h3>
-            <input type="radio" name="credit" value="1" class="custom-radio" />クレジットカード・デビットカード<br />
-            <input type="radio" name="credit" value="2" class="custom-radio" />コンビニ払い<br />
-            <input type="radio" name="credit" value="3" class="custom-radio" />携帯払い<br />
+            <input type="radio" name="credit" value="1" class="custom-radio" onclick="toggleCreditCardFields(true)" />クレジットカード・デビットカード<br />
+            <input type="radio" name="credit" value="2" class="custom-radio" onclick="toggleCreditCardFields(false)" />コンビニ払い<br />
+            <input type="radio" name="credit" value="3" class="custom-radio" onclick="toggleCreditCardFields(false)" />携帯払い<br />
             <span class="error" id="payment-error" style="color: red;"></span>
             <br>
             <h2>クレジットを登録されたお客様</h2>
             クレジットカード・デビットカード
-            <input type="text" name="credit_name" class="credit_debit-input" id="credit-card-number"/>
+            <input type="text" name="credit_name" class="credit_debit-input" id="credit-card-number" required/>
             <span class="error" id="credit-card-number-error" style="color: red;"></span>
             <br><br>
             クレジットカード有効期間
-            <select id="month" name="month"class="credit-input"></select>月
+            <select id="month" name="month" class="credit-input"></select>月
             <select id="year" name="year" class="credit-input"></select>年<br /><br>
             セキュリティコード
-            <input type="text" name="securitycord" class="credit-input" id="security-code" />
+            <input type="text" name="securitycord" class="credit-input" id="security-code" required/>
             <span class="error" id="security-code-error" style="color: red;"></span>
             <br>
             <button type="submit" class="button-input">会員情報を登録する</button>
