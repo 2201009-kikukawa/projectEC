@@ -56,16 +56,13 @@ if ($loggedIn) {
                     <script src="https://cdn.jsdelivr.net/npm/datepicker.js"></script>
 
                     <!-- お届け日のinput要素 -->
-                    <label for="deliveryDate">お届け日（2日後から選択可能）</label>
-                    <input type="date" id="deliveryDate" name="deliveryDate" min="<?php echo date('Y-m-d', strtotime('+2 days')); ?>">
+                    <label for="deliveryDate">お届け日（2日後から選択可能）</label><br>
+                    <div><input type="date" id="deliveryDate" name="deliveryDate" min="<?php echo date('Y-m-d', strtotime('+2 days')); ?>"></div>
 
                     <div class="button-container">
                         <!-- 戻るボタンを常に表示 -->
                         <button type="submit" class="button-post"><a href="cart-show.php" class="button-post">戻る</a></button>
-                        <!-- ログインしている場合は確定ボタンを表示 -->
-                        <?php if($loggedIn): ?>
-                            <button type="submit" class="button-back">確定</button>
-                        <?php endif; ?>
+                        <button type="submit" class="button-back">確定</button>
                     </div>
                 </div>
             </center>
