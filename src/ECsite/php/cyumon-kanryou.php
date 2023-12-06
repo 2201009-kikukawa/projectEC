@@ -1,10 +1,10 @@
 <?php
 session_start();
-
+require 'db-connect.php';
 // ログインしているかを確認
 $loggedIn = isset($_SESSION["member"]);
 $productname = array();
-
+$pdo = new PDO($connect,USER,PASS);
 // フォームから送信された情報を受け取り、セッションに保存する
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $_SESSION['deliveryDate'] = $_POST['deliveryDate'];
@@ -19,6 +19,12 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
         $text = $cartItem['text'];//商品説明文
 
         $productname[] = $name;
+
+        $sql = "UPDATE product SET today_sales = today_sales + :count WHERE product_id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':count', $count);
+        $stmt->bindParam(':id', $product_id);
+        $stmt->execute();
     }
 }
 
