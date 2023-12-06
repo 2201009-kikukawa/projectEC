@@ -63,7 +63,6 @@ if (isset($_SESSION['member'])) {
                 <button type="button" class="button-edit">編集</button>
             </div>
             <span class="error" id="email-error" style="color: red;"></span>
-            <br>
             <h2 class="required">パスワード</h2>
             <div class="input-edit">
                 <input type="password" name="register_pass" class="form-input" id="password" required />

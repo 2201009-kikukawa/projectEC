@@ -88,3 +88,7 @@ h1 {
   align-items: center;
 }
 
+h2,h3{
+  margin-top: 1rem;
+}
+
