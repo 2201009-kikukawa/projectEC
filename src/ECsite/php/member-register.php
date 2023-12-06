@@ -43,8 +43,10 @@ if (session_status() == PHP_SESSION_NONE) {
             <span class="error" id="email-error" style="color: red;"></span>
             <br>
             <h2 class="required">パスワード</h2>
-            <input type="password" name="register_pass" class="form-input" id="password" required />
-            <span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
+            <div class="pass-eye">
+                <input type="password" name="register_pass" class="form-input" id="password" required />
+                <span id="buttonEye" class="fa fa-eye" onclick="pushHideButton()"></span>
+            </div>
             <span class="error" id="password-error" style="color: red;"></span>
             <br>
             <h2 class="required">アカウント名</h2>
@@ -77,14 +79,14 @@ if (session_status() == PHP_SESSION_NONE) {
             <br>
             <h2>クレジットを登録されたお客様</h2>
             クレジットカード・デビットカード
-            <input type="text" name="credit_name" class="credit_debit-input" id="credit-card-number" required/>
+            <input type="text" name="credit_name" class="credit_debit-input" id="credit-card-number" required />
             <span class="error" id="credit-card-number-error" style="color: red;"></span>
             <br><br>
             クレジットカード有効期間
             <select id="month" name="month" class="credit-input"></select>月
             <select id="year" name="year" class="credit-input"></select>年<br /><br>
             セキュリティコード
-            <input type="text" name="securitycord" class="credit-input" id="security-code" required/>
+            <input type="text" name="securitycord" class="credit-input" id="security-code" required />
             <span class="error" id="security-code-error" style="color: red;"></span>
             <br>
             <button type="submit" class="button-input">会員情報を登録する</button>
