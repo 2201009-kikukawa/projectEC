@@ -34,7 +34,9 @@ unset($_SESSION['cart']);
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- ... ここにheadタグ内の残りのコードを追加 -->
+  <meta charset="UTF-8">
+    <title>オークション終了画面</title>
+    <link rel="stylesheet" href="../css/cyumonkanryou.css">
 </head>
 <body>
     <?php include("./menu.php"); ?>
