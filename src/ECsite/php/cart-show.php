@@ -50,8 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
     <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
+<div class="header"><?php require 'menu.php' ?></div>
 <div class="content" id="app">
-    <div class="header"><?php require 'menu.php' ?></div>
     <div class="title">カート一覧</div><br>
 
     <?php if (empty($_SESSION['cart'])) : ?>
