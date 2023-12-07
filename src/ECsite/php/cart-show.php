@@ -60,6 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
         text-align: center;
         font-size: 25px;">カートに商品がありません。</div>
         <hr>
+        <div class="pagerinkarea">
+            <div class="changereturn2"><a href="searchproductshow.php" class="productlink">お買い物に戻る</a></div><br>
+        </div>
     <?php else : ?>
         <div class="totalprice">小計:{{ calculateTotal() }}</div>
         <hr>
@@ -90,12 +93,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
         </div>
         <hr>
         </div>
+
+        <div class="pagerinkarea">
+            <div class="changereturn"><a href="searchproductshow.php" class="productlink">お買い物に戻る</a></div><br>
+            <div class="changeorder"><a href="orderinfomation.php"class="orderlink">会計</a></div>
+        </div>
+    </div>
     <?php endif; ?>
 
-    <div class="pagerinkarea">
-        <div class="changereturn"><a href="searchproductshow.php" class="productlink">お買い物に戻る</a></div><br>
-        <div class="changeorder"><a href="orderinfomation.php"class="orderlink">会計</a></div>
-    </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="../script/cart.js"></script>
