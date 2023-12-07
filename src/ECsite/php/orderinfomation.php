@@ -57,7 +57,7 @@ if ($loggedIn) {
 
                     <!-- お届け日のinput要素 -->
                     <label for="deliveryDate">お届け日（2日後から選択可能）</label><br>
-                    <div><input type="date" class="date" id="deliveryDate" name="deliveryDate" min="<?php echo date('Y-m-d', strtotime('+2 days')); ?>"></div>
+                    <div><input type="date" class="date" id="deliveryDate" name="deliveryDate" min="<?php echo date('Y-m-d', strtotime('+2 days')); ?>" required></div>
 
                     <div class="button-container">
                         <!-- 戻るボタンを常に表示 -->
