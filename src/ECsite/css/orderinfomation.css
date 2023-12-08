@@ -5,14 +5,21 @@
   padding: 0;
 } 
 
+.contents-container {
+  margin: 1rem auto;
+  width: 80%;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
 /* お届け先のテキストボックスとラベル */
 #saki, #saki + label {
-  width: 800px;
+  width: 100%;
   text-align: left; /* 左揃え */
 }
 
 #saki {
-  height: 80px;
+  height: 50px;
   background: #D9D9D9;
   border: none; 
   border-radius: 12px; 
@@ -21,12 +28,12 @@
 
 /* 支払い方法のテキストボックスとラベル */
 #houhou, #houhou + label {
-  width: 800px;
+  width: 100%;
   text-align: left; /* 左揃え */
 }
 
 #houhou {
-  height: 80px;
+  height: 50px;
   background: #D9D9D9;
   border: none; 
   border-radius: 12px; 
@@ -55,34 +62,39 @@
 
 /* 戻るボタン */
 .button-container button:nth-child(1) {
-  width: 228px;
-  height: 75px;
+  display: block;
+  padding:0.8rem 2.6rem 0.8rem;
   border: none; 
   border-radius: 12px;
   background: #D9D9D9;
   color: #fff; 
   margin-right: auto; 
-  font-size: 2rem; /* 文字サイズを変更 */
+  font-size: 1.2rem; /* 文字サイズを変更 */
 }
 
 /* 確定ボタン */
 .button-container button:nth-child(2) {
-  width: 228px;
-  height: 75px;
+  display: block;
+  padding:0.8rem 2.6rem 0.8rem;
   border: none; 
   border-radius: 12px;
   background: #00F;
   color: #fff; 
   margin-left: auto; 
-  font-size: 2rem; /* 文字サイズを変更 */
+  font-size: 1.2rem; /* 文字サイズを変更 */
 }
 
 
 .date{
-    height: 80px;
+    height: 50px;
     background: #D9D9D9;
     border: none;
     border-radius: 12px;
-    margin-bottom: 20px;
-    width: 58%;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+h2 {
+  text-align: left;
+  margin-top: 12px; 
 }

@@ -25,38 +25,41 @@ if ($loggedIn) {
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>注文情報入力</title>
     <link rel="stylesheet" href="../css/orderinfomation.css">
 </head>
+
 <body>
     <?php include("./menu.php"); ?>
     <div class="contents-container">
         <center>
-            <h2>注文情報入力</h2>
+            <h1>注文情報入力</h1>
         </center>
-        <form action="cyumon-kanryou.php" method="post"> 
+        <form action="cyumon-kanryou.php" method="post">
             <center>
-                <label for="saki">お届け先</label><br><br>
-                <input type="text" id="saki" name="saki" value="<?php echo htmlspecialchars($address); ?>" required><br><br>
+                <h2 for="saki">お届け先</h2>
+                <input type="text" id="saki" name="saki" value="<?php echo htmlspecialchars($address); ?>" required>
+                <hr>
                 <div class="select-arrow">
-                    <label for="houhou">支払い方法</label><br><br>
+                    <h2 for="houhou">支払い方法</h2>
                     <select id="houhou" name="houhou" required>
-                        <?php 
-                            if($loggedIn){
-                                echo '<option value="credit">クレジット払い</option>';
-                            }
+                        <?php
+                        if ($loggedIn) {
+                            echo '<option value="credit">クレジット払い</option>';
+                        }
                         ?>
                         <option value="credit_card">コンビニ払い</option>
                         <option value="bank_transfer">携帯払い</option>
                         <!-- 追加の支払い方法をここに追加 -->
-                    </select><br><br>
+                    </select>
                     <script src="https://cdn.jsdelivr.net/npm/datepicker.js"></script>
-
+                    <hr>
                     <!-- お届け日のinput要素 -->
-                    <label for="deliveryDate">お届け日（2日後から選択可能）</label><br>
+                    <h2 for="deliveryDate">お届け日（2日後から選択可能）</h2>
                     <div><input type="date" class="date" id="deliveryDate" name="deliveryDate" min="<?php echo date('Y-m-d', strtotime('+2 days')); ?>" required></div>
 
                     <div class="button-container">
@@ -66,7 +69,8 @@ if ($loggedIn) {
                     </div>
                 </div>
             </center>
-        </form> 
+        </form>
     </div>
 </body>
+
 </html>

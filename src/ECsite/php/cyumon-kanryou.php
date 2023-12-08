@@ -36,7 +36,7 @@ unset($_SESSION['cart']);
 <head>
   <meta charset="UTF-8">
     <title>オークション終了画面</title>
-    <link rel="stylesheet" href="../css/cyumonkanryou.css">
+    <link rel="stylesheet" href="../css/cyumon-kanryou.css">
 </head>
 <body>
     <?php include("./menu.php"); ?>
