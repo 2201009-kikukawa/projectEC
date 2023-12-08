@@ -181,7 +181,6 @@ main{
 }
 
 img{
-    border: solid 1px #000;
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: -20px;
@@ -221,4 +220,6 @@ main a{
     text-decoration: none;
 }
 
-
+.product-image {
+    border: solid 1px #000;
+}

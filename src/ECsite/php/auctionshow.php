@@ -56,7 +56,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div v-for="product in sortedProducts" :key="product.product_id" class="mainitem">
                     <a :href="'auctiondetail.php?id=' + product.product_id">
                         <div class="itemimg">
-                            <img :src="'../image/' + product.picture" alt="魚の写真" style="height:100px; width: 170px;">
+                            <img :src="'../image/' + product.picture" alt="魚の写真" class="product-image" style="height:100px; width: 170px;">
                         </div>
 
                         <div class="mainitemtxt">
