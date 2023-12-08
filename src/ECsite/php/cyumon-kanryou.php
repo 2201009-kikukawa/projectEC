@@ -7,25 +7,32 @@ $productname = array();
 $pdo = new PDO($connect,USER,PASS);
 // フォームから送信された情報を受け取り、セッションに保存する
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $orderdate = array();
   $_SESSION['deliveryDate'] = $_POST['deliveryDate'];
+  $_SESSION['saki'] = $_POST['saki'];
+
+  $orderdate['deliveryDate'] = $_SESSION['deliveryDate'];
+  $orderdate['saki'] = $_SESSION['saki'];
 }
 
 if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $product_id => $cartItem) {
-        $name = $cartItem['name'];//商品名
-        $price = $cartItem['price'];//価格
-        $count = $cartItem['count'];//個数
-        $picture = $cartItem['picture'];//画像パス
-        $text = $cartItem['text'];//商品説明文
-
-        $productname[] = $name;
+        $orderData['products'][] = array(
+            'name' => $cartItem['name'],
+            'price' => $cartItem['price'],
+            'count' => $cartItem['count'],
+            'picture' => $cartItem['picture'],
+            'text' => $cartItem['text']
+        );
+        $productname[] = $cartItem['name'];
 
         $sql = "UPDATE product SET today_sales = today_sales + :count, inventory = inventory - :count WHERE product_id = :id";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':count', $count);
+        $stmt->bindParam(':count', $cartItem['count']);
         $stmt->bindParam(':id', $product_id);
         $stmt->execute();
     }
+    require 'orderinsert.php';
 }
 
 unset($_SESSION['cart']);
