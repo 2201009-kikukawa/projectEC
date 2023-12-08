@@ -19,6 +19,7 @@
 .image {
   width: 520px;
   height: 200px;
+  border: solid 1px #000;
 }
 
 .product-info {
