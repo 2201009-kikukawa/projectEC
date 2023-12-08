@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
 
         <div class="pagerinkarea">
             <div class="changereturn"><a href="searchproductshow.php" class="productlink">お買い物に戻る</a></div><br>
-            <div class="changeorder"><a href="orderinfomation.php"class="orderlink">会計</a></div>
+            <div class="changeorder"><a href="#"class="orderlink" @click = "checkout">会計</a></div>
         </div>
     </div>
     <?php endif; ?>
