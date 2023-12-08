@@ -22,7 +22,8 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
             'price' => $cartItem['price'],
             'count' => $cartItem['count'],
             'picture' => $cartItem['picture'],
-            'text' => $cartItem['text']
+            'text' => $cartItem['text'],
+            'id' => $product_id
         );
         $productname[] = $cartItem['name'];
 
