@@ -1,13 +1,15 @@
 new Vue({
     el: '#app',
     data: {
-        cart: cartData
+        cart: cartData,
     },
     methods: {
-        plus: function (id) {
-            this.cart[id].count++;
+        plusmethod: function (id) {
+            if (this.cart[id].count < this.cart[id].inventory) {
+                this.cart[id].count++;
+            }
         },
-        minus: function (id) {
+        minusmethod: function (id) {
             if (this.cart[id].count > 1) {
                 this.cart[id].count--;
             }
@@ -28,3 +30,4 @@ new Vue({
         }
     }
 });
+

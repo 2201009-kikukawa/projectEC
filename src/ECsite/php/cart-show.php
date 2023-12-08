@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
                 'name' => $product['product_name'],
                 'price' => $product['price'],
                 'count' => $quantity,
+                'inventory' => $product['inventory'],
                 'picture' => $product['picture'],
                 'text' => $product['product_data']
             );
@@ -78,10 +79,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id']) && isset
                     </div>
                     <div class = "buttonarea">
                         <div class = "incrementarea">
-                            <button type="button" class = "minus" @click="minus(id)">-</button>
+                            <button type="button" class = "minus" @click="minusmethod(id)">-</button>
                             <div class = "productnum">{{item.count}}</div>
-                            <button type="button" class = "plus" @click="plus(id)">+</button>
+                            <button type="button" class = "plus" @click="plusmethod(id)">+</button>
                         </div>
+                        <div class = errormessage id = "error"></div>
                         <div class = deletebutton>
                             <button type="button" class = "delete" @click="remove(id)">削除</button>
                         </div>
