@@ -20,7 +20,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
 
         $productname[] = $name;
 
-        $sql = "UPDATE product SET today_sales = today_sales + :count WHERE product_id = :id";
+        $sql = "UPDATE product SET today_sales = today_sales + :count, inventory = inventory - :count WHERE product_id = :id";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':count', $count);
         $stmt->bindParam(':id', $product_id);
