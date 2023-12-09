@@ -43,7 +43,7 @@ if (session_status() == PHP_SESSION_NONE) {
         echo '</div>';
     } else {
         echo '<div class="contents-container">';
-        echo '<form action="productshow.php" method="post">';
+        echo '<form action="auctionshow.php" method="post">';
         echo '<div class="contents-container-sub">';
         echo '<img alt="image" class="image" src="../image/', $picture, '">';
         echo '<div class="product-info">';
