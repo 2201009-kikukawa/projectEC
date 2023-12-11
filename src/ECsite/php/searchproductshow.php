@@ -51,6 +51,11 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="content" id="app">
         <header>
             <div class="pagetxt">一般商品</div>
+            <div class="pagination" v-if="totalPages >= 2">
+                    <button @click="prevPage" :disabled="currentPage === 1">前のページ</button>
+                    <span>{{ currentPage }} / {{ totalPages }}</span>
+                    <button @click="nextPage" :disabled="currentPage === totalPages">次のページ</button>
+            </div>
 
             <div class="buttons">
 
@@ -97,7 +102,7 @@ if (session_status() == PHP_SESSION_NONE) {
             </aside>
 
             <main>
-                <div v-for="product in sortedProducts" :key="product.id" class="mainitem">
+                <div v-for="product in paginatedProducts" :key="product.id" class="mainitem">
                     <a :href="'shohin-syosai.php?id=' + product.product_id">
                         <div class="itemimg">
                             <img :src="'../image/' + product.picture" alt="魚の写真" class="product-image" style="height:100px; width: 170px;">

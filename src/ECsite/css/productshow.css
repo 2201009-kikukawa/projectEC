@@ -223,3 +223,8 @@ main a{
 .product-image {
     border: solid 1px #000;
 }
+
+.pagination{
+    margin-top: -15px;
+    margin-left: 20px;
+}
