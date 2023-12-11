@@ -59,15 +59,15 @@ $product_data = $_SESSION['product']['product_data'];
             <hr>
             <p class="recommend">おすすめ度</p>
             <div class="rating-stars">
-                <input type="radio" name="rating" id="star1" value="1" />
+                <input type="radio" name="rating" id="star1" value="5" />
                 <label for="star1"></label>
-                <input type="radio" name="rating" id="star2" value="2" />
+                <input type="radio" name="rating" id="star2" value="4" />
                 <label for="star2"></label>
                 <input type="radio" name="rating" id="star3" value="3" />
                 <label for="star3"></label>
-                <input type="radio" name="rating" id="star4" value="4" />
+                <input type="radio" name="rating" id="star4" value="2" />
                 <label for="star4"></label>
-                <input type="radio" name="rating" id="star5" value="5" />
+                <input type="radio" name="rating" id="star5" value="1" />
                 <label for="star5"></label>
             </div>
             <p id="rating-error" class="error"></p>
