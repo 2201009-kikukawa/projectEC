@@ -35,7 +35,12 @@ const priceError = document.getElementById('priceError');
 priceField.addEventListener('input', function () {
     const priceValue = priceField.value.trim();
 
-    if (priceValue.length > 10) {
+    // 半角数字の正規表現を追加
+    const isNumeric = /^[0-9]+$/;
+
+    if (!isNumeric.test(priceValue)) {
+        priceError.textContent = '半角数字で入力してください';
+    } else if (priceValue.length > 10) {
         priceError.textContent = '価格は10桁以内で入力してください';
     } else {
         priceError.textContent = '';
@@ -50,13 +55,19 @@ const numberError = document.getElementById('numberError');
 numberField.addEventListener('input', function () {
     const numberValue = numberField.value.trim();
 
-    if (numberValue.length > 10) {
+    // 半角数字の正規表現を追加
+    const isNumeric = /^[0-9]+$/;
+
+    if (!isNumeric.test(numberValue)) {
+        numberError.textContent = '半角数字で入力してください';
+    } else if (numberValue.length > 10) {
         numberError.textContent = '個数は10桁以内で入力してください';
     } else {
         numberError.textContent = '';
     }
     validateForm();
 });
+
 
 function validateImage() {
     const imageField = document.getElementById('image');
