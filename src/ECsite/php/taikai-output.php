@@ -22,13 +22,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sqlorderid = $pdo->prepare('SELECT * FROM orderhistory o LEFT JOIN member m ON o.member_id = m.member_id WHERE m.member_id = :member');
         $sqlorderid->bindParam(':member', $_SESSION['member']['id']);
         $sqlorderid->execute();
-        $orderData = $sqlorderid->fetch(PDO::FETCH_ASSOC);
+        $orderData = $sqlorderid->fetchAll(PDO::FETCH_ASSOC);
         
         if ($orderData) {
-            $sqlDeleteordetail = $pdo->prepare('DELETE FROM orderdetail WHERE order_id = :id');
-            $sqlDeleteordetail->bindParam(':id', $orderData['order_id']);
-            $sqlDeleteordetail->execute();
+            $orderIds = array_column($orderData, 'order_id');
+        
+            foreach ($orderIds as $orderId) {
+                $sqlDeleteordetail = $pdo->prepare('DELETE FROM orderdetail WHERE order_id = :id');
+                $sqlDeleteordetail->bindParam(':id', $orderId);
+                $sqlDeleteordetail->execute();
+            }
         }
+        
         
         $sqlDeleteorderhistory = $pdo->prepare('DELETE FROM orderhistory WHERE member_id = :id');
         $sqlDeleteorderhistory->bindParam(':id', $_SESSION['member']['id']);
