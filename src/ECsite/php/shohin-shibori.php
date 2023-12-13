@@ -38,13 +38,13 @@ if (session_status() == PHP_SESSION_NONE) {
           </span>
           <span id="sizeBox2">
             <label>
-              <input type="checkbox" name="shibori5" value="0" class="checkbox_input size_sort">
+              <input type="checkbox" name="shibori5" value="1" class="checkbox_input size_sort">
               <span class="checkbox_parts"> 魚類</span></label><br>
             <label>
-              <input type="checkbox" name="shibori6" value="1" class="checkbox_input size_sort">
+              <input type="checkbox" name="shibori6" value="2" class="checkbox_input size_sort">
               <span class="checkbox_parts"> 貝類・魚卵</span></label><br>
             <label>
-              <input type="checkbox" name="shibori7" value="2" class="checkbox_input size_sort">
+              <input type="checkbox" name="shibori7" value="3" class="checkbox_input size_sort">
               <span class="checkbox_parts"> 加工品</span></label><br>
           </span>
     </div>
