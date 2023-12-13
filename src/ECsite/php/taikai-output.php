@@ -33,6 +33,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $sqlDeleteordetail->execute();
             }
         }
+
+        $sqlreview = $pdo->prepare('SELECT * FROM member m LEFT JOIN review r ON m.member_id = r.member_id WHERE m.member_id = :member');
+        $sqlreview->bindParam(':member', $_SESSION['member']['id']);
+        $sqlreview->execute();
+        $reviewData = $sqlreview->fetchAll(PDO::FETCH_ASSOC);
+        
+        if ($reviewData) {
+            $reviewIds = array_column($reviewData, 'review_id');
+        
+            foreach ($reviewIds as $reviewId) {
+                $sqlDeletereview = $pdo->prepare('DELETE FROM review WHERE review_id = :id');
+                $sqlDeletereview->bindParam(':id', $reviewId);
+                $sqlDeletereview->execute();
+            }
+        }
         
         
         $sqlDeleteorderhistory = $pdo->prepare('DELETE FROM orderhistory WHERE member_id = :id');
