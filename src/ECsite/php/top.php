@@ -24,26 +24,25 @@ if (session_status() == PHP_SESSION_NONE) {
     <button onclick="window.location.href='./searchproductshow.php'" class="top-button">商品一覧へ</button>
 </div>
 
-
 <aside class="sidebar">
     <div class="sidemenu">
         <div class="menuitem">魚種別</div>
         <ul>
-            <li><a href="#" @click="productsearch(0)">白身</a></li>
-            <li><a href="#" @click="productsearch(1)">赤身</a></li>
-            <li><a href="#" @click="productsearch(2)">甲殻類</a></li>
+            <li><a href="searchproductshow.php?id=0">白身</a></li>
+            <li><a href="searchproductshow.php?id=1">赤身</a></li>
+            <li><a href="searchproductshow.php?id=2">甲殻類</a></li>
         </ul>
         <div class="menuitem">貝類・魚卵</div>
         <ul>
-            <li><a href="#" @click="productsearch(3)">魚卵</a></li>
-            <li><a href="#" @click="productsearch(4)">貝</a></li>
-            <li><a href="#" @click="productsearch(5)">海藻</a></li>
+            <li><a href="searchproductshow.php?id=3">魚卵</a></li>
+            <li><a href="searchproductshow.php?id=4">貝</a></li>
+            <li><a href="searchproductshow.php?id=5">海藻</a></li>
         </ul>
         <div class="menuitem">加工品</div>
         <ul>
-            <li><a href="#" @click="productsearch(6)">魚の缶詰</a></li>
-            <li><a href="#" @click="productsearch(7)">干しもの</a></li>
-            <li><a href="#" @click="productsearch(8)">調理済み食品</a></li>
+            <li><a href="'searchproductshow.php?id=6">魚の缶詰</a></li>
+            <li><a href="'searchproductshow.php?id=7">干しもの</a></li>
+            <li><a href="'searchproductshow.php?id=8">調理済み食品</a></li>
         </ul>
     </div>
 </aside>
@@ -118,5 +117,11 @@ function showSlides(n) {
 function showSlidesAuto() {
   showSlides(slideIndex += 1);
   setTimeout(showSlidesAuto, 10000); 
+    var currentSlideIndex = slideIndex - 1;
+    var productId = currentSlideIndex % 9; 
+    var url = 'searchproductshow.php?id=' + productId;
+    document.querySelector('.slideshow-container .mySlides:first-child a').href = url;
 }
+
+
 </script>

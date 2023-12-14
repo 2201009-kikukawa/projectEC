@@ -8,7 +8,9 @@ new Vue({
         currentPage: 1,
         itemsPerPage: 8,
         paginatedProducts: [],
-        totalPages: 0
+        totalPages: 0,
+        flag: flag,
+        idFromUrl: idFromUrl
     },
     methods: {
         updatesort() {
@@ -30,7 +32,8 @@ new Vue({
             axios.get('../php/get-products.php')
                 .then(response => {
                     this.products = response.data;
-                    this.filteredProducts = this.products;
+                    this.filteredProducts = this.products; 
+                    this.currentPage = 1;
 
                     this.updateTotalPages();
                     this.updatePaginatedProducts();
@@ -42,16 +45,15 @@ new Vue({
         productsearch(subclassId) {
             axios.get('../php/get-products.php')
                 .then(response => {
-                    this.products = response.data;
                     if (subclassId === null) {
                         // 全ての商品を表示
-                        this.filteredProducts = this.products;
+                        this.filteredProducts = response.data;
                     } else {
                         // 特定のサブクラスに絞り込み
-                        this.filteredProducts = this.products.filter(product => product.subclass_id === subclassId);
+                        this.filteredProducts = response.data.filter(product => product.subclass_id === Number(subclassId));
                     }
                     this.currentPage = 1;
-                    
+
                     this.updateTotalPages();
                     this.updatePaginatedProducts();
                 })
@@ -75,7 +77,6 @@ new Vue({
                         this.products = response.data;
                         this.filteredProducts = this.products;
                         this.currentPage = 1;
-                        
                         this.updateTotalPages();
                         this.updatePaginatedProducts();
                     })
@@ -87,15 +88,22 @@ new Vue({
                     .then(response => {
                         this.products = response.data;
                         this.filteredProducts = this.products;
-
-                        this.updateTotalPages();
-                        this.updatePaginatedProducts();
+                        console.log("Filtered Products after Axios:", this.filteredProducts); // 追加
+                        if (this.flag) {
+                            this.productsearch(this.idFromUrl);
+                        } else {
+                            this.currentPage = 1;
+        
+                            this.updateTotalPages();
+                            this.updatePaginatedProducts();
+                        }
                     })
                     .catch(error => {
                         console.error('データの取得に失敗しました', error);
                     });
             }
         },
+        
         showLoginAlert() {
             alert('オークション機能を使う場合はログインしてください。');
         },

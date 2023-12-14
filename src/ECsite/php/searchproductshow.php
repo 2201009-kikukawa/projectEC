@@ -45,7 +45,15 @@ if (session_status() == PHP_SESSION_NONE) {
         });
         $jsonData = json_encode($filteredVariables);
     ?>
-    <script> 
+    <script>
+        var flag = false;
+        var urlParams = new URLSearchParams(window.location.search);
+        var idFromUrl = urlParams.get('id');
+        
+        if (idFromUrl !== null) {
+            flag = true;
+        } 
+        
         var jsonData = <?php echo $jsonData ?>; 
     </script>
     <div class="content" id="app">
