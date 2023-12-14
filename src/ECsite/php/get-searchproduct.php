@@ -4,7 +4,7 @@ require 'db-connect.php';
 $pdo = new PDO($connect, USER, PASS);
 
 $product = array();
-$product1 = $product2 = $product3 = $product4 = $product5 = $product6 = $product7 = array();
+$product1 = $product2 = $product3 = $product4 = $product5 = $product6 = $product7 = $product8 = array();
 $request_body = file_get_contents('php://input');
 $date = json_decode($request_body,true);
 $key = !empty($date['key']) ? $date['key'] : "";
@@ -61,10 +61,10 @@ if (!empty($key)) {
     $keyParam = '%' . $key . '%';
     $sql->bindParam(':key', $keyParam, PDO::PARAM_STR);
     $sql->execute();
-    $product = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $product8 = $sql->fetchAll(PDO::FETCH_ASSOC);
 }
 
-$product = array_merge($product1,$product2,$product3,$product4,$product5,$product6,$product7);
+$product = array_merge($product1,$product2,$product3,$product4,$product5,$product6,$product7,$product8);
 header('Content-Type: application/json');
 echo json_encode($product);
 ?>

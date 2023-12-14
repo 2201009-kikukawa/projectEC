@@ -63,7 +63,7 @@ new Vue({
         },
         searchform() {
             if (Object.values(this.searchdate).some(value => value !== '')) {
-                axios.post('get-searchproduct.php', {
+                axios.post('../php/get-searchproduct.php', {
                         shibori1: this.searchdate.shibori1,
                         shibori2: this.searchdate.shibori2,
                         shibori3: this.searchdate.shibori3,
@@ -74,9 +74,11 @@ new Vue({
                         key: this.searchdate.key
                     })
                     .then(response => {
+                        console.log('API Response:', response.data); // Log the response
                         this.products = response.data;
                         this.filteredProducts = this.products;
                         this.currentPage = 1;
+                        console.log("Search Date:", this.searchdate);
                         this.updateTotalPages();
                         this.updatePaginatedProducts();
                     })
@@ -88,7 +90,6 @@ new Vue({
                     .then(response => {
                         this.products = response.data;
                         this.filteredProducts = this.products;
-                        console.log("Filtered Products after Axios:", this.filteredProducts); // 追加
                         if (this.flag) {
                             this.productsearch(this.idFromUrl);
                         } else {
